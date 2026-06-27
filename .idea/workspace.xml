@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0483e6e2-59bf-4dea-b49d-741a483095a9" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0000002229536782" />
+      <entry key="S60" value="1.000675565785695" />
+      <entry key="M2" value="1.0399453689617457" />
+      <entry key="M5" value="1.5077825701512315" />
+      <entry key="M10" value="2.238243843007312" />
+      <entry key="M15" value="2.844490193850741" />
+      <entry key="M30" value="6.304252397160068" />
+      <entry key="H1" value="18.82512207423898" />
+      <entry key="H2" value="57.42890677147055" />
+      <entry key="H4" value="165.21626302339737" />
+      <entry key="D1" value="588.0981947311014" />
+      <entry key="W1" value="757.5759716646426" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="3.917767750580262E-83" />
+      <entry key="MS500" value="3.3007128003102007E-17" />
+      <entry key="S2" value="7.579698560018827E-5" />
+      <entry key="S5" value="0.022483337187669067" />
+      <entry key="S10" value="0.14994444700511278" />
+      <entry key="S30" value="0.5312663424715239" />
+      <entry key="S60" value="0.7329578613844662" />
+      <entry key="M2" value="1.0231189167650774" />
+      <entry key="M5" value="2.602818185917608" />
+      <entry key="M10" value="4.608944720822546" />
+      <entry key="M15" value="5.8687600828119875" />
+      <entry key="M30" value="9.641979302766055" />
+      <entry key="H1" value="20.585536686382383" />
+      <entry key="H2" value="61.760195598788904" />
+      <entry key="H4" value="185.89210058434657" />
+      <entry key="D1" value="672.9973115702574" />
+      <entry key="W1" value="868.4165686696238" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.003852471501927183" />
+      <entry key="MS500" value="0.32896363125725203" />
+      <entry key="S2" value="0.7573833215241382" />
+      <entry key="S5" value="0.9138383794992583" />
+      <entry key="S10" value="1.0839896341947237" />
+      <entry key="S30" value="1.4984869410900794" />
+      <entry key="S60" value="1.7143075896169504" />
+      <entry key="M2" value="2.04912973020545" />
+      <entry key="M5" value="4.091012434475997" />
+      <entry key="M10" value="6.827641812393185" />
+      <entry key="M15" value="8.696003896649923" />
+      <entry key="M30" value="15.93117205079532" />
+      <entry key="H1" value="39.39412453758434" />
+      <entry key="H2" value="119.16712434339435" />
+      <entry key="H4" value="351.07881434124863" />
+      <entry key="D1" value="1261.0788572345878" />
+      <entry key="W1" value="1625.989497048389" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="3FJa9jCoSjg1ThWE5oW5JV4zHJB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.BookingServiceApplication.executor": "Run",
+    "Spring Boot.CategoryServiceApplication.executor": "Run",
+    "Spring Boot.SalonServiceApplication.executor": "Run",
+    "Spring Boot.ServiceOfferingApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/chaitanya/Downloads/demo/booking-service/src/main/java/com/angel",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "settings.sync"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.angel.dto" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/booking-service/src/main/java/com/angel" />
+      <recent name="$PROJECT_DIR$/service-offering/src/main/java/com/angel" />
+      <recent name="$PROJECT_DIR$/service-offering/src/main/java/com/angel/" />
+      <recent name="$PROJECT_DIR$/category-service/src/main/java/com/angel" />
+      <recent name="$PROJECT_DIR$/salon-service/src/main/java/com/angel" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.angel" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.angel.dto" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.PaymentServiceApplication">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="demo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="demo" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <configuration name="BookingServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <module name="booking-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.angel.BookingServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.angel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CategoryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <module name="category-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.angel.CategoryServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.angel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaymentServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <module name="payment-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.angel.PaymentServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.angel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SalonServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <module name="salon-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.angel.SalonServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.angel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceOfferingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <module name="service-offering" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.angel.ServiceOfferingApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.angel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.PaymentServiceApplication" />
+        <item itemvalue="Spring Boot.BookingServiceApplication" />
+        <item itemvalue="Spring Boot.SalonServiceApplication" />
+        <item itemvalue="Spring Boot.ServiceOfferingApplication" />
+        <item itemvalue="Spring Boot.CategoryServiceApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.25134.95" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0483e6e2-59bf-4dea-b49d-741a483095a9" name="Changes" comment="" />
+      <created>1781795477771</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1781795477771</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/category-service/src/main/java/com/angel/CategoryServiceApplication.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
