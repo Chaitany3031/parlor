@@ -4,26 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0483e6e2-59bf-4dea-b49d-741a483095a9" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/controller/PaymentController.java" afterDir="false" />
+    <list default="true" id="0483e6e2-59bf-4dea-b49d-741a483095a9" name="Changes" comment="9:10:31 microservices up">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/service/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/service/PaymentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/service/impl/PaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/service/impl/PaymentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/salon-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/salon-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/salon-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/salon-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-offering/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service-offering/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-offering/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service-offering/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,61 +52,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000275039814028" />
-      <entry key="MS500" value="1.1224275371983659" />
-      <entry key="S2" value="1.591520469974454" />
-      <entry key="S5" value="1.8105651198853092" />
-      <entry key="S10" value="1.9003139041415382" />
-      <entry key="S30" value="1.9717424212319952" />
-      <entry key="S60" value="2.2251328161539403" />
-      <entry key="M2" value="3.556366537169332" />
-      <entry key="M5" value="7.48947973390991" />
-      <entry key="M10" value="12.914485976238653" />
-      <entry key="M15" value="18.764349623013782" />
-      <entry key="M30" value="37.81237528657931" />
-      <entry key="H1" value="71.3464366163656" />
-      <entry key="H2" value="121.84587295201152" />
-      <entry key="H4" value="219.5249416017153" />
-      <entry key="D1" value="699.2815392364906" />
-      <entry key="W1" value="932.7254029189256" />
+      <entry key="MS100" value="1.1349035295630534" />
+      <entry key="MS500" value="1.6698918012139203" />
+      <entry key="S2" value="1.9046928658891944" />
+      <entry key="S5" value="1.960728039908639" />
+      <entry key="S10" value="1.980167353011025" />
+      <entry key="S30" value="1.9933449259103042" />
+      <entry key="S60" value="1.9966669101415702" />
+      <entry key="M2" value="1.998493658189716" />
+      <entry key="M5" value="2.2055062914057606" />
+      <entry key="M10" value="4.91895354919763" />
+      <entry key="M15" value="9.92191826694668" />
+      <entry key="M30" value="28.747116625378357" />
+      <entry key="H1" value="65.65446085825994" />
+      <entry key="H2" value="123.71451254922279" />
+      <entry key="H4" value="226.6809408040352" />
+      <entry key="D1" value="725.1820306159498" />
+      <entry key="W1" value="974.8927833618166" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
       <entry key="S2" value="0.0" />
-      <entry key="S5" value="8.839764936172041E-253" />
-      <entry key="S10" value="9.402002412343892E-127" />
-      <entry key="S30" value="9.79655661766939E-43" />
-      <entry key="S60" value="9.897755716680733E-22" />
-      <entry key="M2" value="3.1472046337342614E-11" />
-      <entry key="M5" value="7.841068955316917E-5" />
-      <entry key="M10" value="0.02922325697450683" />
-      <entry key="M15" value="0.30966914146466845" />
-      <entry key="M30" value="4.463724642952947" />
-      <entry key="H1" value="21.178924894962403" />
-      <entry key="H2" value="59.47822736809965" />
-      <entry key="H4" value="157.77400466345958" />
-      <entry key="D1" value="694.8611594852258" />
-      <entry key="W1" value="960.8415134845231" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="2.733766303137188E-231" />
+      <entry key="S30" value="1.3982574072423259E-77" />
+      <entry key="S60" value="3.739328063312268E-39" />
+      <entry key="M2" value="6.117210157304872E-20" />
+      <entry key="M5" value="2.569369950988766E-8" />
+      <entry key="M10" value="5.289983297982729E-4" />
+      <entry key="M15" value="0.021349205580984226" />
+      <entry key="M30" value="1.1720315178038112" />
+      <entry key="H1" value="10.85237663206335" />
+      <entry key="H2" value="42.57635618076787" />
+      <entry key="H4" value="133.48752654453057" />
+      <entry key="D1" value="675.7700025008712" />
+      <entry key="W1" value="957.0250640468906" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="2.773110800081017E-5" />
-      <entry key="MS500" value="0.16933625899568994" />
-      <entry key="S2" value="1.056906561408246" />
-      <entry key="S5" value="1.5469847556080463" />
-      <entry key="S10" value="1.7584628628912038" />
-      <entry key="S30" value="1.9219246176331162" />
-      <entry key="S60" value="2.198031725764098" />
-      <entry key="M2" value="3.5377839344211655" />
-      <entry key="M5" value="7.477288968199722" />
-      <entry key="M10" value="12.93526692309974" />
-      <entry key="M15" value="19.066581120922393" />
-      <entry key="M30" value="42.26580255785318" />
-      <entry key="H1" value="92.50803618624867" />
-      <entry key="H2" value="181.30162191892225" />
-      <entry key="H4" value="377.2717186604413" />
-      <entry key="D1" value="1394.1248338151267" />
-      <entry key="W1" value="1893.5634435478848" />
+      <entry key="MS100" value="0.916987507169517" />
+      <entry key="MS500" value="1.5708545941150067" />
+      <entry key="S2" value="1.8734266910141992" />
+      <entry key="S5" value="1.9475885273449827" />
+      <entry key="S10" value="1.9734872976684603" />
+      <entry key="S30" value="1.9910932703253252" />
+      <entry key="S60" value="1.9955379319164235" />
+      <entry key="M2" value="1.9979283645845893" />
+      <entry key="M5" value="2.2052637736725744" />
+      <entry key="M10" value="4.919084584130628" />
+      <entry key="M15" value="9.942411960388283" />
+      <entry key="M30" value="29.915983708290135" />
+      <entry key="H1" value="76.49755941793224" />
+      <entry key="H2" value="166.27451157102996" />
+      <entry key="H4" value="360.1452769624466" />
+      <entry key="D1" value="1400.9346300615446" />
+      <entry key="W1" value="1931.9143841192827" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -147,6 +132,7 @@
     &quot;Spring Boot.BookingServiceApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.CategoryServiceApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.EurekaServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.GatewayServerApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.PaymentServiceApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.SalonServiceApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.ServiceOfferingApplication.executor&quot;: &quot;Run&quot;,
@@ -199,14 +185,21 @@
         <entry key="SpringBootApplicationConfigurationType">
           <value>
             <map>
+              <entry key="BookingServiceApplication" value="STOPPED" />
+              <entry key="CategoryServiceApplication" value="STOPPED" />
+              <entry key="EurekaServerApplication" value="STOPPED" />
+              <entry key="GatewayServerApplication" value="STOPPED" />
               <entry key="PaymentServiceApplication" value="STOPPED" />
+              <entry key="SalonServiceApplication" value="STOPPED" />
+              <entry key="ServiceOfferingApplication" value="STOPPED" />
+              <entry key="UserServiceApplication" value="STOPPED" />
             </map>
           </value>
         </entry>
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.PaymentServiceApplication">
+  <component name="RunManager" selected="Spring Boot.GatewayServerApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="demo" />
       <method v="2">
@@ -218,10 +211,10 @@
       <option name="filePath" />
       <method v="2" />
     </configuration>
-    <configuration name="BookingServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
-      <module name="booking-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.angel.BookingServiceApplication" />
+      <module name="eureka-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.angel.EurekaServerApplication" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.angel.*" />
@@ -232,24 +225,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CategoryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="GatewayServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
-      <module name="category-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.angel.CategoryServiceApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.angel.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PaymentServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
-      <module name="payment-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.angel.PaymentServiceApplication" />
+      <module name="gateway-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.angel.GatewayServerApplication" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.angel.*" />
@@ -288,13 +267,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <module name="user-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.angel.UserServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.angel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.PaymentServiceApplication" />
-        <item itemvalue="Spring Boot.BookingServiceApplication" />
+        <item itemvalue="Spring Boot.UserServiceApplication" />
         <item itemvalue="Spring Boot.ServiceOfferingApplication" />
         <item itemvalue="Spring Boot.SalonServiceApplication" />
-        <item itemvalue="Spring Boot.CategoryServiceApplication" />
+        <item itemvalue="Spring Boot.GatewayServerApplication" />
+        <item itemvalue="Spring Boot.EurekaServerApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -322,7 +315,23 @@
       <option name="project" value="LOCAL" />
       <updated>1782554796275</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="9:10:31 microservices up">
+      <option name="closed" value="true" />
+      <created>1782823586786</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1782823586787</updated>
+    </task>
+    <task id="LOCAL-00003" summary="9:10:31 microservices up">
+      <option name="closed" value="true" />
+      <created>1782823651451</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1782823651451</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +353,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="9:10:31 microservices up" />
+    <option name="LAST_COMMIT_MESSAGE" value="9:10:31 microservices up" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
