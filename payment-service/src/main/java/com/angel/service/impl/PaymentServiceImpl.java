@@ -1,15 +1,21 @@
 package com.angel.service.impl;
 
 import com.angel.domain.PaymentMethod;
+import com.angel.domain.PaymentOrderStatus;
 import com.angel.modal.PaymentOrder;
 import com.angel.payload.dto.BookingDTO;
 import com.angel.payload.dto.UserDTO;
 import com.angel.payload.response.PaymentLinkResponse;
 import com.angel.repository.PaymentOrderRepository;
 import com.angel.service.PaymentService;
+import com.razorpay.Payment;
 import com.razorpay.PaymentLink;
 import com.razorpay.RazorpayClient;
 import com.razorpay.RazorpayException;
+import com.stripe.Stripe;
+import com.stripe.exception.StripeException;
+import com.stripe.model.checkout.Session;
+import com.stripe.param.checkout.SessionCreateParams;
 import lombok.RequiredArgsConstructor;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Value;
@@ -21,7 +27,7 @@ public class PaymentServiceImpl implements PaymentService {
     private final PaymentOrderRepository paymentOrderRepository;
 
     @Value("${stripe.api.key}")
-    private String stripeApiKey;
+    private String stripeSecretKey;
 
     @Value("${razorpay.api.key}")
     private String razorpayApiKey;
@@ -31,7 +37,7 @@ public class PaymentServiceImpl implements PaymentService {
 
 
     @Override
-    public PaymentLinkResponse createOrder(UserDTO user, BookingDTO booking, PaymentMethod paymentMethod) throws RazorpayException {
+    public PaymentLinkResponse createOrder(UserDTO user, BookingDTO booking, PaymentMethod paymentMethod) throws RazorpayException, StripeException {
         Long amount = (long) booking.getTotalPrice();
         PaymentOrder order = new PaymentOrder();
         order.setAmount(amount);
@@ -112,7 +118,49 @@ public class PaymentServiceImpl implements PaymentService {
     }
 
     @Override
-    public String createStripePaymentLink(UserDTO user, Long amount, Long orderId) {
-        return "";
+    public String createStripePaymentLink(UserDTO user, Long amount, Long orderId) throws StripeException {
+        Stripe.apiKey=stripeSecretKey;
+        SessionCreateParams params = SessionCreateParams.builder()
+                .addPaymentMethodType(SessionCreateParams.PaymentMethodType.CARD)
+                .setMode(SessionCreateParams.Mode.PAYMENT)
+                .setSuccessUrl("http://localhost:3000/payment-success/"+orderId).
+                setCancelUrl("http://localhost:3000/payment/cancel")
+                .addLineItem(SessionCreateParams.LineItem.builder()
+                        .setQuantity(1L)
+                        .setPriceData(SessionCreateParams.LineItem.PriceData.builder()
+                                .setCurrency("usd")
+                                .setUnitAmount(amount*100)
+                                .setProductData(SessionCreateParams.LineItem.PriceData.ProductData.builder()
+                                        .setName("salon appointment booking").build()
+                        ).build()
+                ).build()
+                ).build();
+        Session session =  Session.create(params);
+        return session.getUrl();
     }
+
+    @Override
+    public Boolean proceedPayment(PaymentOrder paymentOrder, String paymentId, String paymentLinkId) throws RazorpayException {
+        if(paymentOrder.getStatus().equals(PaymentOrderStatus.PENDING)){
+            if(paymentOrder.getPaymentMethod().equals(PaymentMethod.RAZORPAY)){
+                RazorpayClient razorpay = new RazorpayClient(razorpayApiKey,razorpayApiSecret);
+                Payment payment = razorpay.payments.fetch(paymentId);
+                Integer amount = payment.get("amount");
+                String status = payment.get("status");
+                if(status.equals("captured")){
+                    //produce kafa event
+                    paymentOrder.setStatus(PaymentOrderStatus.SUCCESS);
+                    paymentOrderRepository.save(paymentOrder);
+                    return true;
+                }
+                    return false;
+            }else{
+                paymentOrder.setStatus(PaymentOrderStatus.SUCCESS);
+                paymentOrderRepository.save(paymentOrder);
+                return true;
+            }
+        }
+        return false;
+    }
+
 }

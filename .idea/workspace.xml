@@ -4,7 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0483e6e2-59bf-4dea-b49d-741a483095a9" name="Changes" comment="" />
+    <list default="true" id="0483e6e2-59bf-4dea-b49d-741a483095a9" name="Changes" comment="first commit">
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/controller/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/service/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/service/PaymentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/service/impl/PaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/service/impl/PaymentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salon-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/salon-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salon-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/salon-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-offering/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service-offering/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-offering/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service-offering/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +39,21 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Chaitany3031&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Chaitany3031/parlor.git&quot;,
+    &quot;accountId&quot;: &quot;64cb3dc9-e88e-4d15-bd13-a5b7c7a3ebaa&quot;
+  }
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -26,64 +61,71 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0" />
-      <entry key="S30" value="1.0000002229536782" />
-      <entry key="S60" value="1.000675565785695" />
-      <entry key="M2" value="1.0399453689617457" />
-      <entry key="M5" value="1.5077825701512315" />
-      <entry key="M10" value="2.238243843007312" />
-      <entry key="M15" value="2.844490193850741" />
-      <entry key="M30" value="6.304252397160068" />
-      <entry key="H1" value="18.82512207423898" />
-      <entry key="H2" value="57.42890677147055" />
-      <entry key="H4" value="165.21626302339737" />
-      <entry key="D1" value="588.0981947311014" />
-      <entry key="W1" value="757.5759716646426" />
+      <entry key="MS100" value="1.0000275039814028" />
+      <entry key="MS500" value="1.1224275371983659" />
+      <entry key="S2" value="1.591520469974454" />
+      <entry key="S5" value="1.8105651198853092" />
+      <entry key="S10" value="1.9003139041415382" />
+      <entry key="S30" value="1.9717424212319952" />
+      <entry key="S60" value="2.2251328161539403" />
+      <entry key="M2" value="3.556366537169332" />
+      <entry key="M5" value="7.48947973390991" />
+      <entry key="M10" value="12.914485976238653" />
+      <entry key="M15" value="18.764349623013782" />
+      <entry key="M30" value="37.81237528657931" />
+      <entry key="H1" value="71.3464366163656" />
+      <entry key="H2" value="121.84587295201152" />
+      <entry key="H4" value="219.5249416017153" />
+      <entry key="D1" value="699.2815392364906" />
+      <entry key="W1" value="932.7254029189256" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="3.917767750580262E-83" />
-      <entry key="MS500" value="3.3007128003102007E-17" />
-      <entry key="S2" value="7.579698560018827E-5" />
-      <entry key="S5" value="0.022483337187669067" />
-      <entry key="S10" value="0.14994444700511278" />
-      <entry key="S30" value="0.5312663424715239" />
-      <entry key="S60" value="0.7329578613844662" />
-      <entry key="M2" value="1.0231189167650774" />
-      <entry key="M5" value="2.602818185917608" />
-      <entry key="M10" value="4.608944720822546" />
-      <entry key="M15" value="5.8687600828119875" />
-      <entry key="M30" value="9.641979302766055" />
-      <entry key="H1" value="20.585536686382383" />
-      <entry key="H2" value="61.760195598788904" />
-      <entry key="H4" value="185.89210058434657" />
-      <entry key="D1" value="672.9973115702574" />
-      <entry key="W1" value="868.4165686696238" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="8.839764936172041E-253" />
+      <entry key="S10" value="9.402002412343892E-127" />
+      <entry key="S30" value="9.79655661766939E-43" />
+      <entry key="S60" value="9.897755716680733E-22" />
+      <entry key="M2" value="3.1472046337342614E-11" />
+      <entry key="M5" value="7.841068955316917E-5" />
+      <entry key="M10" value="0.02922325697450683" />
+      <entry key="M15" value="0.30966914146466845" />
+      <entry key="M30" value="4.463724642952947" />
+      <entry key="H1" value="21.178924894962403" />
+      <entry key="H2" value="59.47822736809965" />
+      <entry key="H4" value="157.77400466345958" />
+      <entry key="D1" value="694.8611594852258" />
+      <entry key="W1" value="960.8415134845231" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.003852471501927183" />
-      <entry key="MS500" value="0.32896363125725203" />
-      <entry key="S2" value="0.7573833215241382" />
-      <entry key="S5" value="0.9138383794992583" />
-      <entry key="S10" value="1.0839896341947237" />
-      <entry key="S30" value="1.4984869410900794" />
-      <entry key="S60" value="1.7143075896169504" />
-      <entry key="M2" value="2.04912973020545" />
-      <entry key="M5" value="4.091012434475997" />
-      <entry key="M10" value="6.827641812393185" />
-      <entry key="M15" value="8.696003896649923" />
-      <entry key="M30" value="15.93117205079532" />
-      <entry key="H1" value="39.39412453758434" />
-      <entry key="H2" value="119.16712434339435" />
-      <entry key="H4" value="351.07881434124863" />
-      <entry key="D1" value="1261.0788572345878" />
-      <entry key="W1" value="1625.989497048389" />
+      <entry key="MS100" value="2.773110800081017E-5" />
+      <entry key="MS500" value="0.16933625899568994" />
+      <entry key="S2" value="1.056906561408246" />
+      <entry key="S5" value="1.5469847556080463" />
+      <entry key="S10" value="1.7584628628912038" />
+      <entry key="S30" value="1.9219246176331162" />
+      <entry key="S60" value="2.198031725764098" />
+      <entry key="M2" value="3.5377839344211655" />
+      <entry key="M5" value="7.477288968199722" />
+      <entry key="M10" value="12.93526692309974" />
+      <entry key="M15" value="19.066581120922393" />
+      <entry key="M30" value="42.26580255785318" />
+      <entry key="H1" value="92.50803618624867" />
+      <entry key="H2" value="181.30162191892225" />
+      <entry key="H4" value="377.2717186604413" />
+      <entry key="D1" value="1394.1248338151267" />
+      <entry key="W1" value="1893.5634435478848" />
     </decayedShown>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -94,29 +136,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Spring Boot.BookingServiceApplication.executor": "Run",
-    "Spring Boot.CategoryServiceApplication.executor": "Run",
-    "Spring Boot.SalonServiceApplication.executor": "Run",
-    "Spring Boot.ServiceOfferingApplication.executor": "Run",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/chaitanya/Downloads/demo/booking-service/src/main/java/com/angel",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "settings.sync"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BookingServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.BookingServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.CategoryServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.EurekaServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.PaymentServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.SalonServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ServiceOfferingApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UserServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/chaitanya/Downloads/demo&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.angel.dto" />
@@ -128,12 +177,34 @@
       <recent name="$PROJECT_DIR$/category-service/src/main/java/com/angel" />
       <recent name="$PROJECT_DIR$/salon-service/src/main/java/com/angel" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/booking-service/src/main/java/com/angel" />
+      <recent name="$PROJECT_DIR$/booking-service/src/main/java/com" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.angel" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.angel.dto" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="configurationStatuses">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <map>
+              <entry key="PaymentServiceApplication" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="RunManager" selected="Spring Boot.PaymentServiceApplication">
     <configuration default="true" type="JetRunConfigurationType">
@@ -221,8 +292,8 @@
       <list>
         <item itemvalue="Spring Boot.PaymentServiceApplication" />
         <item itemvalue="Spring Boot.BookingServiceApplication" />
-        <item itemvalue="Spring Boot.SalonServiceApplication" />
         <item itemvalue="Spring Boot.ServiceOfferingApplication" />
+        <item itemvalue="Spring Boot.SalonServiceApplication" />
         <item itemvalue="Spring Boot.CategoryServiceApplication" />
       </list>
     </recent_temporary>
@@ -243,10 +314,37 @@
       <option name="presentableId" value="Default" />
       <updated>1781795477771</updated>
     </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1782554796275</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1782554796275</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.validation:jakarta.validation-api" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:io.projectreactor:reactor-core" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-commons" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.cloud:spring-cloud-context" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate.validator:hibernate-validator" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.ws.rs:jakarta.ws.rs-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
+    <option featureType="dependencySupport" implementationName="java:org.projectlombok:lombok" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
