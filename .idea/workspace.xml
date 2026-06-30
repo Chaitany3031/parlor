@@ -4,31 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0483e6e2-59bf-4dea-b49d-741a483095a9" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/controller/PaymentController.java" afterDir="false" />
+    <list default="true" id="0483e6e2-59bf-4dea-b49d-741a483095a9" name="Changes" comment="9:10:31 microservices up">
+      <change afterPath="$PROJECT_DIR$/docker-compose/default/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/booking-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/category-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/payment-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/service/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/service/PaymentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/service/impl/PaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/service/impl/PaymentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/salon-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/salon-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/salon-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/salon-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-offering/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service-offering/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-offering/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service-offering/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="150" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -67,61 +62,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000275039814028" />
-      <entry key="MS500" value="1.1224275371983659" />
-      <entry key="S2" value="1.591520469974454" />
-      <entry key="S5" value="1.8105651198853092" />
-      <entry key="S10" value="1.9003139041415382" />
-      <entry key="S30" value="1.9717424212319952" />
-      <entry key="S60" value="2.2251328161539403" />
-      <entry key="M2" value="3.556366537169332" />
-      <entry key="M5" value="7.48947973390991" />
-      <entry key="M10" value="12.914485976238653" />
-      <entry key="M15" value="18.764349623013782" />
-      <entry key="M30" value="37.81237528657931" />
-      <entry key="H1" value="71.3464366163656" />
-      <entry key="H2" value="121.84587295201152" />
-      <entry key="H4" value="219.5249416017153" />
-      <entry key="D1" value="699.2815392364906" />
-      <entry key="W1" value="932.7254029189256" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0000173999049822" />
+      <entry key="S60" value="1.0147578658017047" />
+      <entry key="M2" value="1.5565985467138774" />
+      <entry key="M5" value="9.581821958755958" />
+      <entry key="M10" value="28.84612473740462" />
+      <entry key="M15" value="47.047976200237784" />
+      <entry key="M30" value="91.6250270031383" />
+      <entry key="H1" value="150.1902278192013" />
+      <entry key="H2" value="237.96807347331898" />
+      <entry key="H4" value="391.40002749760134" />
+      <entry key="D1" value="1097.3834345425182" />
+      <entry key="W1" value="1506.6081439379636" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="8.839764936172041E-253" />
-      <entry key="S10" value="9.402002412343892E-127" />
-      <entry key="S30" value="9.79655661766939E-43" />
-      <entry key="S60" value="9.897755716680733E-22" />
-      <entry key="M2" value="3.1472046337342614E-11" />
-      <entry key="M5" value="7.841068955316917E-5" />
-      <entry key="M10" value="0.02922325697450683" />
-      <entry key="M15" value="0.30966914146466845" />
-      <entry key="M30" value="4.463724642952947" />
-      <entry key="H1" value="21.178924894962403" />
-      <entry key="H2" value="59.47822736809965" />
-      <entry key="H4" value="157.77400466345958" />
-      <entry key="D1" value="694.8611594852258" />
-      <entry key="W1" value="960.8415134845231" />
+      <entry key="S2" value="1.4739344345976126E-88" />
+      <entry key="S5" value="7.36870662539568E-36" />
+      <entry key="S10" value="2.7145361713183486E-18" />
+      <entry key="S30" value="1.3949711022594887E-6" />
+      <entry key="S60" value="0.001181088947970066" />
+      <entry key="M2" value="0.0343681281290178" />
+      <entry key="M5" value="0.27316229397319125" />
+      <entry key="M10" value="0.9805380122625004" />
+      <entry key="M15" value="2.364641075328092" />
+      <entry key="M30" value="7.610217297729395" />
+      <entry key="H1" value="15.35187009916175" />
+      <entry key="H2" value="27.539358436209152" />
+      <entry key="H4" value="70.56748559122427" />
+      <entry key="D1" value="593.8009042377113" />
+      <entry key="W1" value="980.4452405690221" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="2.773110800081017E-5" />
-      <entry key="MS500" value="0.16933625899568994" />
-      <entry key="S2" value="1.056906561408246" />
-      <entry key="S5" value="1.5469847556080463" />
-      <entry key="S10" value="1.7584628628912038" />
-      <entry key="S30" value="1.9219246176331162" />
-      <entry key="S60" value="2.198031725764098" />
-      <entry key="M2" value="3.5377839344211655" />
-      <entry key="M5" value="7.477288968199722" />
-      <entry key="M10" value="12.93526692309974" />
-      <entry key="M15" value="19.066581120922393" />
-      <entry key="M30" value="42.26580255785318" />
-      <entry key="H1" value="92.50803618624867" />
-      <entry key="H2" value="181.30162191892225" />
-      <entry key="H4" value="377.2717186604413" />
-      <entry key="D1" value="1394.1248338151267" />
-      <entry key="W1" value="1893.5634435478848" />
+      <entry key="MS100" value="0.8179020585577811" />
+      <entry key="MS500" value="0.9605948639534766" />
+      <entry key="S2" value="0.9899997047180724" />
+      <entry key="S5" value="0.9959878167538044" />
+      <entry key="S10" value="0.99799189212829" />
+      <entry key="S30" value="0.9993489414030581" />
+      <entry key="S60" value="1.0155888675656595" />
+      <entry key="M2" value="1.5905667083233392" />
+      <entry key="M5" value="9.853967442319249" />
+      <entry key="M10" value="29.824024243578553" />
+      <entry key="M15" value="49.40772391416807" />
+      <entry key="M30" value="99.2265983603139" />
+      <entry key="H1" value="165.53307563457943" />
+      <entry key="H2" value="265.49901691059745" />
+      <entry key="H4" value="461.95613326270785" />
+      <entry key="D1" value="1691.169095523556" />
+      <entry key="W1" value="2487.0498404639634" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -142,11 +137,13 @@
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;Spring Boot.BookingServiceApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.CategoryServiceApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.EurekaServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.GatewayServerApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.PaymentServiceApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.SalonServiceApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.ServiceOfferingApplication.executor&quot;: &quot;Run&quot;,
@@ -154,7 +151,7 @@
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/chaitanya/Downloads/demo&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/chaitanya/Downloads/CB&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -199,29 +196,22 @@
         <entry key="SpringBootApplicationConfigurationType">
           <value>
             <map>
-              <entry key="PaymentServiceApplication" value="STOPPED" />
+              <entry key="EurekaServerApplication" value="STOPPED" />
+              <entry key="GatewayServerApplication" value="STOPPED" />
+              <entry key="SalonServiceApplication" value="STOPPED" />
+              <entry key="ServiceOfferingApplication" value="STOPPED" />
+              <entry key="UserServiceApplication" value="STOPPED" />
             </map>
           </value>
         </entry>
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.PaymentServiceApplication">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="demo" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="demo" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
-    <configuration name="BookingServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.GatewayServerApplication">
+    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
-      <module name="booking-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.angel.BookingServiceApplication" />
+      <module name="eureka-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.angel.EurekaServerApplication" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.angel.*" />
@@ -232,24 +222,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CategoryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="GatewayServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
-      <module name="category-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.angel.CategoryServiceApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.angel.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PaymentServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
-      <module name="payment-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.angel.PaymentServiceApplication" />
+      <module name="gateway-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.angel.GatewayServerApplication" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.angel.*" />
@@ -288,21 +264,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <module name="user-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.angel.UserServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.angel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.PaymentServiceApplication" />
-        <item itemvalue="Spring Boot.BookingServiceApplication" />
+        <item itemvalue="Spring Boot.UserServiceApplication" />
         <item itemvalue="Spring Boot.ServiceOfferingApplication" />
         <item itemvalue="Spring Boot.SalonServiceApplication" />
-        <item itemvalue="Spring Boot.CategoryServiceApplication" />
+        <item itemvalue="Spring Boot.GatewayServerApplication" />
+        <item itemvalue="Spring Boot.EurekaServerApplication" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95" />
-        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.25134.95" />
+        <option value="bundled-jdk-30f59d01ecdd-63390994e64e-intellij.indexing.shared.core-IU-262.8665.258" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.8665.258" />
       </set>
     </attachedChunks>
   </component>
@@ -322,7 +312,23 @@
       <option name="project" value="LOCAL" />
       <updated>1782554796275</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="9:10:31 microservices up">
+      <option name="closed" value="true" />
+      <created>1782823586786</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1782823586787</updated>
+    </task>
+    <task id="LOCAL-00003" summary="9:10:31 microservices up">
+      <option name="closed" value="true" />
+      <created>1782823651451</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1782823651451</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +350,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="9:10:31 microservices up" />
+    <option name="LAST_COMMIT_MESSAGE" value="9:10:31 microservices up" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
