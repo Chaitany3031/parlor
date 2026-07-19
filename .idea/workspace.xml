@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0483e6e2-59bf-4dea-b49d-741a483095a9" name="Changes" comment="9:10:31 microservices up">
-      <change afterPath="$PROJECT_DIR$/docker-compose/default/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/salon-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/salon-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-offering/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service-offering/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0483e6e2-59bf-4dea-b49d-741a483095a9" name="Changes" comment="docker issue" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,61 +50,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0" />
-      <entry key="S30" value="1.0000173999049822" />
-      <entry key="S60" value="1.0147578658017047" />
-      <entry key="M2" value="1.5565985467138774" />
-      <entry key="M5" value="9.581821958755958" />
-      <entry key="M10" value="28.84612473740462" />
-      <entry key="M15" value="47.047976200237784" />
-      <entry key="M30" value="91.6250270031383" />
-      <entry key="H1" value="150.1902278192013" />
-      <entry key="H2" value="237.96807347331898" />
-      <entry key="H4" value="391.40002749760134" />
-      <entry key="D1" value="1097.3834345425182" />
-      <entry key="W1" value="1506.6081439379636" />
+      <entry key="MS100" value="1.0000001724481977" />
+      <entry key="MS500" value="1.075843778399335" />
+      <entry key="S2" value="1.8817546064970463" />
+      <entry key="S5" value="2.4412013060748086" />
+      <entry key="S10" value="2.697742861577662" />
+      <entry key="S30" value="2.8937088333567544" />
+      <entry key="S60" value="2.9604681105724966" />
+      <entry key="M2" value="3.521697338845884" />
+      <entry key="M5" value="11.522761898924069" />
+      <entry key="M10" value="30.76241641857774" />
+      <entry key="M15" value="48.95802771858337" />
+      <entry key="M30" value="93.5382353873639" />
+      <entry key="H1" value="152.11935946905157" />
+      <entry key="H2" value="239.91205235485805" />
+      <entry key="H4" value="393.3540253195743" />
+      <entry key="D1" value="1099.3619703102254" />
+      <entry key="W1" value="1508.6039351039158" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
-      <entry key="S2" value="1.4739344345976126E-88" />
-      <entry key="S5" value="7.36870662539568E-36" />
-      <entry key="S10" value="2.7145361713183486E-18" />
-      <entry key="S30" value="1.3949711022594887E-6" />
-      <entry key="S60" value="0.001181088947970066" />
-      <entry key="M2" value="0.0343681281290178" />
-      <entry key="M5" value="0.27316229397319125" />
-      <entry key="M10" value="0.9805380122625004" />
-      <entry key="M15" value="2.364641075328092" />
-      <entry key="M30" value="7.610217297729395" />
-      <entry key="H1" value="15.35187009916175" />
-      <entry key="H2" value="27.539358436209152" />
-      <entry key="H4" value="70.56748559122427" />
-      <entry key="D1" value="593.8009042377113" />
-      <entry key="W1" value="980.4452405690221" />
+      <entry key="S2" value="6.33612345221108E-89" />
+      <entry key="S5" value="5.2568968102528617E-36" />
+      <entry key="S10" value="2.2927923609112226E-18" />
+      <entry key="S30" value="1.3186258198570486E-6" />
+      <entry key="S60" value="0.0011483143387475128" />
+      <entry key="M2" value="0.03388792442455377" />
+      <entry key="M5" value="0.2716291581448042" />
+      <entry key="M10" value="0.9777824832909012" />
+      <entry key="M15" value="2.360208887725579" />
+      <entry key="M30" value="7.60308181077608" />
+      <entry key="H1" value="15.344671306145406" />
+      <entry key="H2" value="27.53290080641551" />
+      <entry key="H4" value="70.55921151658501" />
+      <entry key="D1" value="593.7892997596063" />
+      <entry key="W1" value="980.4425033238468" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.8179020585577811" />
-      <entry key="MS500" value="0.9605948639534766" />
-      <entry key="S2" value="0.9899997047180724" />
-      <entry key="S5" value="0.9959878167538044" />
-      <entry key="S10" value="0.99799189212829" />
-      <entry key="S30" value="0.9993489414030581" />
-      <entry key="S60" value="1.0155888675656595" />
-      <entry key="M2" value="1.5905667083233392" />
-      <entry key="M5" value="9.853967442319249" />
-      <entry key="M10" value="29.824024243578553" />
-      <entry key="M15" value="49.40772391416807" />
-      <entry key="M30" value="99.2265983603139" />
-      <entry key="H1" value="165.53307563457943" />
-      <entry key="H2" value="265.49901691059745" />
-      <entry key="H4" value="461.95613326270785" />
-      <entry key="D1" value="1691.169095523556" />
-      <entry key="W1" value="2487.0498404639634" />
+      <entry key="MS100" value="0.8705506477228189" />
+      <entry key="MS500" value="1.039607898122411" />
+      <entry key="S2" value="1.8485500723135513" />
+      <entry key="S5" value="2.4211856195493806" />
+      <entry key="S10" value="2.686188622873722" />
+      <entry key="S30" value="2.8894647123218444" />
+      <entry key="S60" value="2.959426293552735" />
+      <entry key="M2" value="3.554254871442459" />
+      <entry key="M5" value="11.79300284647273" />
+      <entry key="M10" value="31.73737880430046" />
+      <entry key="M15" value="51.313226311863545" />
+      <entry key="M30" value="101.13261626126379" />
+      <entry key="H1" value="167.45498115805876" />
+      <entry key="H2" value="267.4365243503573" />
+      <entry key="H4" value="463.9018504509451" />
+      <entry key="D1" value="1693.1360257953786" />
+      <entry key="W1" value="2489.0428942066783" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -351,7 +339,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="9:10:31 microservices up" />
-    <option name="LAST_COMMIT_MESSAGE" value="9:10:31 microservices up" />
+    <MESSAGE value="9:48:03" />
+    <MESSAGE value="docker issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="docker issue" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
