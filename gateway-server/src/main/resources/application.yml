@@ -42,6 +42,16 @@ spring:
           predicates:
             - Path=/api/payments/**
 
+        - id: REVIEW-SERVICE
+          uri: lb://REVIEW-SERVICE
+          predicates:
+            - Path=/api/reviews/**
+
+        - id: NOTIFICATION-SERVICE
+          uri: lb://NOTIFICATION-SERVICE
+          predicates:
+            - Path=/api/notifications/**,/ws/**
+
 eureka:
   instance:
     prefer-ip-address: true

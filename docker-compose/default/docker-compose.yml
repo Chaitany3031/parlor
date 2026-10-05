@@ -1,15 +1,29 @@
+version: '3.8'
+
 services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: salon-rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    networks:
+      - angels
+
   userdb:
     image: mysql:8.0.46
     container_name: userdb
     ports:
-      - 3301:3306
+      - "3301:3306"
     healthcheck:
-      test: ["CMD","mysqladmin","ping","-h","localhost"]
-      interval: 300s
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
       timeout: 5s
-      retries: 10
-      start_period: 300s
+      retries: 5
+      start_period: 30s
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: userdb
@@ -20,13 +34,13 @@ services:
     image: mysql:8.0.46
     container_name: bookingdb
     ports:
-      - 3302:3306
+      - "3302:3306"
     healthcheck:
-      test: [ "CMD","mysqladmin","ping","-h","localhost" ]
-      interval: 300s
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
       timeout: 5s
-      retries: 10
-      start_period: 300s
+      retries: 5
+      start_period: 30s
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: bookingdb
@@ -37,13 +51,13 @@ services:
     image: mysql:8.0.46
     container_name: categorydb
     ports:
-      - 3303:3306
+      - "3303:3306"
     healthcheck:
-      test: [ "CMD","mysqladmin","ping","-h","localhost" ]
-      interval: 300s
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
       timeout: 5s
-      retries: 10
-      start_period: 300s
+      retries: 5
+      start_period: 30s
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: categorydb
@@ -54,13 +68,13 @@ services:
     image: mysql:8.0.46
     container_name: paymentdb
     ports:
-      - 3304:3306
+      - "3304:3306"
     healthcheck:
-      test: [ "CMD","mysqladmin","ping","-h","localhost" ]
-      interval: 300s
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
       timeout: 5s
-      retries: 10
-      start_period: 300s
+      retries: 5
+      start_period: 30s
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: paymentdb
@@ -71,13 +85,13 @@ services:
     image: mysql:8.0.46
     container_name: salondb
     ports:
-      - 3305:3306
+      - "3305:3306"
     healthcheck:
-      test: [ "CMD","mysqladmin","ping","-h","localhost" ]
-      interval: 300s
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
       timeout: 5s
-      retries: 10
-      start_period: 300s
+      retries: 5
+      start_period: 30s
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: salondb
@@ -88,31 +102,64 @@ services:
     image: mysql:8.0.46
     container_name: service-offeringdb
     ports:
-      - 3308:3306
+      - "3308:3306"
     healthcheck:
-      test: [ "CMD","mysqladmin","ping","-h","localhost" ]
-      interval: 300s
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
       timeout: 5s
-      retries: 10
-      start_period: 300s
+      retries: 5
+      start_period: 30s
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: service-offeringdb
     networks:
       - angels
 
+  reviewdb:
+    image: mysql:8.0.46
+    container_name: reviewdb
+    ports:
+      - "3307:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: reviewdb
+    networks:
+      - angels
+
+  notificationdb:
+    image: mysql:8.0.46
+    container_name: notificationdb
+    ports:
+      - "3309:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: notificationdb
+    networks:
+      - angels
+
   eurekaserver:
     image: "chaitanya3031/salon-eureka-server:v1"
+    container_name: eurekaserver
     ports:
       - "8070:8070"
     healthcheck:
-      test: ["CMD-SHELL","curl --fail --silent eurekaserver:8070/actuator/health/readiness | grep UP || exist 1"]
-      interval: 300s
+      test: ["CMD-SHELL", "curl --fail --silent http://localhost:8070/actuator/health/readiness | grep UP || exit 1"]
+      interval: 15s
       timeout: 5s
       retries: 10
-      start_period: 300s
-    container_name: eurekaserver
-
+      start_period: 40s
     deploy:
       resources:
         limits:
@@ -122,20 +169,16 @@ services:
 
   user:
     image: "chaitanya3031/salon-user:v1"
+    container_name: user
     ports:
       - "5001:5001"
-    healthcheck:
-      test: "curl --fail --silent user:5001/actuator/health/readiness | grep UP || exist 1"
-      interval: 300s
-      timeout: 5s
-      retries: 10
-      start_period: 300s
-    container_name: user
     depends_on:
       userdb:
         condition: service_healthy
+      eurekaserver:
+        condition: service_started
     environment:
-      SPRING_APPLICATION_NAME: "user-offering"
+      SPRING_APPLICATION_NAME: "user-service"
       SPRING_DATASOURCE_URL: "jdbc:mysql://userdb:3306/userdb"
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: root
@@ -149,23 +192,23 @@ services:
 
   booking:
     image: "chaitanya3031/booking-service:v1"
+    container_name: booking
     ports:
       - "5005:5005"
-    healthcheck:
-      test: "curl --fail --silent booking:5005/actuator/health/readiness | grep UP || exist 1"
-      interval: 300s
-      timeout: 5s
-      retries: 10
-      start_period: 300s
-    container_name: booking
     depends_on:
       bookingdb:
         condition: service_healthy
+      eurekaserver:
+        condition: service_started
+      rabbitmq:
+        condition: service_started
     environment:
       SPRING_APPLICATION_NAME: "booking-service"
       SPRING_DATASOURCE_URL: "jdbc:mysql://bookingdb:3306/bookingdb"
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: root
+      SPRING_RABBITMQ_HOST: rabbitmq
+      SPRING_RABBITMQ_PORT: 5672
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eurekaserver:8070/eureka/
     deploy:
       resources:
@@ -176,18 +219,14 @@ services:
 
   category:
     image: "chaitanya3031/category-service:v1"
+    container_name: category
     ports:
       - "5003:5003"
-    healthcheck:
-      test: "curl --fail --silent category:5003/actuator/health/readiness | grep UP || exist 1"
-      interval: 300s
-      timeout: 5s
-      retries: 10
-      start_period: 300s
-    container_name: category
     depends_on:
       categorydb:
         condition: service_healthy
+      eurekaserver:
+        condition: service_started
     environment:
       SPRING_APPLICATION_NAME: "category-service"
       SPRING_DATASOURCE_URL: "jdbc:mysql://categorydb:3306/categorydb"
@@ -203,18 +242,14 @@ services:
 
   payment:
     image: "chaitanya3031/payment-service:v1"
+    container_name: payment
     ports:
       - "5006:5006"
-    healthcheck:
-      test: "curl --fail --silent payment:5006/actuator/health/readiness | grep UP || exist 1"
-      interval: 300s
-      timeout: 5s
-      retries: 10
-      start_period: 300s
-    container_name: payment
     depends_on:
       paymentdb:
         condition: service_healthy
+      eurekaserver:
+        condition: service_started
     environment:
       SPRING_APPLICATION_NAME: "payment-service"
       SPRING_DATASOURCE_URL: "jdbc:mysql://paymentdb:3306/paymentdb"
@@ -230,18 +265,14 @@ services:
 
   salon:
     image: "chaitanya3031/salon-service:v1"
+    container_name: salon
     ports:
       - "5002:5002"
-    healthcheck:
-      test: "curl --fail --silent salon:5002/actuator/health/readiness | grep UP || exist 1"
-      interval: 300s
-      timeout: 5s
-      retries: 10
-      start_period: 300s
-    container_name: salon
     depends_on:
       salondb:
         condition: service_healthy
+      eurekaserver:
+        condition: service_started
     environment:
       SPRING_APPLICATION_NAME: "salon-service"
       SPRING_DATASOURCE_URL: "jdbc:mysql://salondb:3306/salondb"
@@ -257,18 +288,14 @@ services:
 
   service-offering:
     image: "chaitanya3031/salon-service-offering:v1"
+    container_name: service-offering
     ports:
       - "5004:5004"
-    healthcheck:
-      test: "curl --fail --silent service-offering:5004/actuator/health/readiness | grep UP || exist 1"
-      interval: 300s
-      timeout: 5s
-      retries: 10
-      start_period: 300s
-    container_name: service-offering
     depends_on:
       service-offeringdb:
         condition: service_healthy
+      eurekaserver:
+        condition: service_started
     environment:
       SPRING_APPLICATION_NAME: "service-offering"
       SPRING_DATASOURCE_URL: "jdbc:mysql://service-offeringdb:3306/service-offeringdb"
@@ -284,23 +311,14 @@ services:
 
   gatewayserver:
     image: "chaitanya3031/salon-gateway-server:v1"
+    container_name: gatewayserver
     ports:
       - "5000:5000"
-    healthcheck:
-      test: "curl --fail --silent gatewayserver:5000/actuator/health/readiness | grep UP || exist 1"
-      interval: 300s
-      timeout: 5s
-      retries: 10
-      start_period: 300s
-    container_name: gatewayserver
-#    depends_on:
-#      userdb:
-#        condition: service_healthy
+    depends_on:
+      eurekaserver:
+        condition: service_started
     environment:
       SPRING_APPLICATION_NAME: "gateway-server"
-#      SPRING_DATASOURCE_URL: "jdbc:mysql://service-offeringdb:3306/service-offeringdb"
-#      SPRING_DATASOURCE_USERNAME: root
-#      SPRING_DATASOURCE_PASSWORD: root
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eurekaserver:8070/eureka/
     deploy:
       resources:
@@ -309,336 +327,6 @@ services:
     networks:
       - angels
 
-#chaitanya3031/payment-service:v1
 networks:
   angels:
-    driver: "bridge"
-
-
-#services:
-#
-#  userdb:
-#    image: mysql:8.0
-#    container_name: userdb
-#    ports:
-#      - 3301:3306
-#    healthcheck:
-#      test: ["CMD","mysqladmin","ping","-h","localhost"]
-#      interval: 300s
-#      timeout: 5s
-#      retries: 10
-#      start_period: 180s
-#    environment:
-#      MYSQL_ROOT_PASSWORD: root
-#      MYSQL_DATABASE: userdb
-#    networks:
-#      - angels
-#
-#  bookingdb:
-#    image: mysql:8.0
-#    container_name: bookingdb
-#    ports:
-#      - 3302:3306
-#    healthcheck:
-#      test: [ "CMD","mysqladmin","ping","-h","localhost" ]
-#      interval: 300s
-#      timeout: 5s
-#      retries: 10
-#      start_period: 180s
-#    environment:
-#      MYSQL_ROOT_PASSWORD: root
-#      MYSQL_DATABASE: bookingdb
-#    networks:
-#      - angels
-#
-#  categorydb_yt:
-#    image: mysql:8.0
-#    container_name: categorydb_yt
-#    ports:
-#      - 3303:3306
-#    healthcheck:
-#      test: [ "CMD","mysqladmin","ping","-h","localhost" ]
-#      interval: 300s
-#      timeout: 5s
-#      retries: 10
-#      start_period: 180s
-#    environment:
-#      MYSQL_ROOT_PASSWORD: root
-#      MYSQL_DATABASE: categorydb_yt
-#    networks:
-#      - angels
-#
-#  salondb_yt:
-#    image: mysql:8.0
-#    container_name: salondb_yt
-#    ports:
-#      - 3304:3306
-#    healthcheck:
-#      test: [ "CMD","mysqladmin","ping","-h","localhost" ]
-#      interval: 300s
-#      timeout: 5s
-#      retries: 10
-#      start_period: 180s
-#    environment:
-#      MYSQL_ROOT_PASSWORD: root
-#      MYSQL_DATABASE: salondb_yt
-#    networks:
-#      - angels
-#
-#  servicesdb_yt:
-#    image: mysql:8.0
-#    container_name: servicesdb_yt
-#    ports:
-#      - 3305:3306
-#    healthcheck:
-#      test: [ "CMD","mysqladmin","ping","-h","localhost" ]
-#      interval: 300s
-#      timeout: 5s
-#      retries: 10
-#      start_period: 180s
-#    environment:
-#      MYSQL_ROOT_PASSWORD: root
-#      MYSQL_DATABASE: servicesdb_yt
-#    networks:
-#      - angels
-#
-#  paymentdb:
-#    image: mysql:8.0
-#    container_name: paymentdb
-#    ports:
-#      - 3307:3306
-#    healthcheck:
-#      test: [ "CMD","mysqladmin","ping","-h","localhost" ]
-#      interval: 300s
-#      timeout: 5s
-#      retries: 10
-#      start_period: 180s
-#    environment:
-#      MYSQL_ROOT_PASSWORD: root
-#      MYSQL_DATABASE: paymentdb
-#    networks:
-#      - angels
-#
-#  eurekaserver:
-#    image: "chaitanya3031/salon-eureka-server:v1"
-#    ports:
-#      - "8070:8070"
-#    healthcheck:
-#      healthcheck:
-#      test: [ "CMD-SHELL","curl --fail --silent http://localhost:8070/actuator/health/readiness | grep UP || exit 1" ]
-#      interval: 300s
-#      timeout: 5s
-#      retries: 10
-#      start_period: 180s
-#    container_name: eurekaserver
-#
-#
-#    deploy:
-#      resources:
-#        limits:
-#          memory: 700m
-#    networks:
-#      - angels
-#
-#  user:
-#    image: "chaitanya3031/salon-user:v1"
-#    ports:
-#      - "5001:5001"
-#    healthcheck:
-#      test: "curl --fail --silent user:5001/actuator/health/readiness | grep UP || exit 1"
-#      interval: 300s
-#      timeout: 5s
-#      retries: 10
-#      start_period: 180s
-#    container_name: user
-#    depends_on:
-#      userdb:
-#        condition: service_healthy
-#    environment:
-#      SPRING_APPLICATION_NAME: "user-offering"
-#      SPRING_DATASOURCE_URL: "jdbc:mysql://userdb:3306/userdb"
-#      SPRING_DATASOURCE_USERNAME: root
-#      SPRING_DATASOURCE_PASSWORD: root
-#      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: "http://eurekaserver:8070/eureka/"
-#
-#
-#    deploy:
-#      resources:
-#        limits:
-#          memory: 700m
-#    networks:
-#      - angels
-#
-#  booking:
-#    image: "chaitanya3031/booking-service:v1"
-#    ports:
-#      - "5005:5005"
-#    healthcheck:
-#      test: "curl --fail --silent booking:5005/actuator/health/readiness | grep UP || exit 1"
-#      interval: 300s
-#      timeout: 5s
-#      retries: 10
-#      start_period: 180s
-#    container_name: booking
-#    depends_on:
-#      bookingdb:
-#        condition: service_healthy
-#    environment:
-#      SPRING_APPLICATION_NAME: "booking-service"
-#      SPRING_DATASOURCE_URL: "jdbc:mysql://bookingdb:3306/bookingdb"
-#      SPRING_DATASOURCE_USERNAME: root
-#      SPRING_DATASOURCE_PASSWORD: root
-#      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: "http://eurekaserver:8070/eureka/"
-#
-#
-#    deploy:
-#      resources:
-#        limits:
-#          memory: 700m
-#    networks:
-#      - angels
-#
-#  category:
-#    image: "chaitanya3031/category-service:v1"
-#    ports:
-#      - "5003:5003"
-#    healthcheck:
-#      test: "curl --fail --silent category:5003/actuator/health/readiness | grep UP || exit 1"
-#      interval: 300s
-#      timeout: 5s
-#      retries: 10
-#      start_period: 180s
-#    container_name: category
-#    depends_on:
-#      categorydb_yt:
-#        condition: service_healthy
-#    environment:
-#      SPRING_APPLICATION_NAME: "category-service"
-#      SPRING_DATASOURCE_URL: "jdbc:mysql://categorydb_yt:3306/categorydb_yt"
-#      SPRING_DATASOURCE_USERNAME: root
-#      SPRING_DATASOURCE_PASSWORD: root
-#      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: "http://eurekaserver:8070/eureka/"
-#
-#
-#    deploy:
-#      resources:
-#        limits:
-#          memory: 700m
-#    networks:
-#      - angels
-#
-#  salon-service:
-#    image: "chaitanya3031/salon-service:v1"
-#    ports:
-#      - "5002:5002"
-#    healthcheck:
-#      test: "curl --fail --silent salon:5002/actuator/health/readiness | grep UP || exit 1"
-#      interval: 300s
-#      timeout: 5s
-#      retries: 10
-#      start_period: 180s
-#    container_name: salon
-#    depends_on:
-#      salondb_yt:
-#        condition: service_healthy
-#    environment:
-#      SPRING_APPLICATION_NAME: "salon-service"
-#      SPRING_DATASOURCE_URL: "jdbc:mysql://salondb_yt:3306/salondb_yt"
-#      SPRING_DATASOURCE_USERNAME: root
-#      SPRING_DATASOURCE_PASSWORD: root
-#      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: "http://eurekaserver:8070/eureka/"
-#
-#
-#    deploy:
-#      resources:
-#        limits:
-#          memory: 700m
-#    networks:
-#      - angels
-#
-#  salon-service-offering:
-#    image: "chaitanya3031/salon-service-offering:v1"
-#    ports:
-#      - "5004:5004"
-#    healthcheck:
-#      test: "curl --fail --silent salon-service-offering:5004/actuator/health/readiness | grep UP || exit 1"
-#      interval: 300s
-#      timeout: 5s
-#      retries: 10
-#      start_period: 180s
-#    container_name: salon-service-offering
-#    depends_on:
-#      salon-service:
-#        condition: service_healthy
-#    environment:
-#      SPRING_APPLICATION_NAME: "service-offering"
-#      SPRING_DATASOURCE_URL: "jdbc:mysql://servicesdb_yt:3306/servicesdb_yt"
-#      SPRING_DATASOURCE_USERNAME: root
-#      SPRING_DATASOURCE_PASSWORD: root
-#      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: "http://eurekaserver:8070/eureka/"
-#
-#
-#    deploy:
-#      resources:
-#        limits:
-#          memory: 700m
-#    networks:
-#      - angels
-#
-#  payment:
-#    image: "chaitanya3031/payment-service:v1"
-#    ports:
-#      - "5006:5006"
-#    healthcheck:
-#      test: "curl --fail --silent payment:5006/actuator/health/readiness | grep UP || exit 1"
-#      interval: 300s
-#      timeout: 5s
-#      retries: 10
-#      start_period: 180s
-#    container_name: payment
-#    depends_on:
-#      paymentdb:
-#        condition: service_healthy
-#    environment:
-#      SPRING_APPLICATION_NAME: "payment-service"
-#      SPRING_DATASOURCE_URL: "jdbc:mysql://paymentdb:3306/paymentdb"
-#      SPRING_DATASOURCE_USERNAME: root
-#      SPRING_DATASOURCE_PASSWORD: root
-#      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: "http://eurekaserver:8070/eureka/"
-#
-#
-#    deploy:
-#      resources:
-#        limits:
-#          memory: 700m
-#    networks:
-#      - angels
-#
-#  gatewayserver:
-#    image: "chaitanya3031/salon-gateway-server:v1"
-#    ports:
-#      - "5000:5000"
-#    healthcheck:
-#      test: "curl --fail --silent gateway-server:5000/actuator/health/readiness | grep UP || exit 1"
-#      interval: 300s
-#      timeout: 5s
-#      retries: 10
-#      start_period: 180s
-#    container_name: gatewayserver
-#
-#    environment:
-#      SPRING_APPLICATION_NAME: "gateway-server"
-#
-#      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: "http://eurekaserver:8070/eureka/"
-#
-#
-#    deploy:
-#      resources:
-#        limits:
-#          memory: 700m
-#    networks:
-#      - angels
-#
-#networks:
-#  angels:
-#    driver: "bridge"
+    driver: bridge
