@@ -5,6 +5,12 @@ spring:
   application:
     name: gateway-server
 
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: ${CLERK_JWKS_URL:https://api.clerk.com/v1/jwks}
+
   cloud:
     gateway:
       discovery:
