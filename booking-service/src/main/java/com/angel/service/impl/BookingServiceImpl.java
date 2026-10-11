@@ -12,7 +12,6 @@ import com.angel.service.BookingService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.awt.print.Book;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -22,72 +21,59 @@ import java.util.stream.Collectors;
 @Service
 @RequiredArgsConstructor
 public class BookingServiceImpl implements BookingService {
+
     private final BookingRepository bookingRepository;
+
     @Override
-    public Booking createBooking(BookingRequest booking,
-                                 UserDTO userDTO,
-                                 SalonDTO salonDTO,
-                                 Set<ServiceDTO> serviceDTOSet) throws Exception {
+    public Booking createBooking(BookingRequest booking, UserDTO userDTO, SalonDTO salonDTO, Set<ServiceDTO> serviceDTOSet) throws Exception {
         int totalDuration = serviceDTOSet.stream().
                 mapToInt(ServiceDTO::getDuration)
                 .sum();
-        LocalDateTime bookingStartTime=booking.getStartTime();
-        LocalDateTime bookingEndTime=bookingStartTime.plusMinutes(totalDuration);
-        Boolean isSlotAvailable=isTimeSlotAvailable(salonDTO,bookingStartTime,bookingEndTime);
-        int totalPrice=serviceDTOSet.stream().mapToInt(ServiceDTO::getPrice).sum();
+        LocalDateTime bookingStartTime = booking.getStartTime();
+        LocalDateTime bookingEndtime = bookingStartTime.plusMinutes(totalDuration);
+
+        Boolean isSlotAvailable = isTimeSlotAvailable(salonDTO,bookingStartTime,bookingEndtime);
+
+        int totalPrice = serviceDTOSet.stream().mapToInt(ServiceDTO::getPrice).sum(); //5:59:56
+
         Set<Long> idList = serviceDTOSet.stream().map(ServiceDTO::getId).collect(Collectors.toSet());
+
         Booking newBooking = new Booking();
         newBooking.setCustomerId(userDTO.getId());
         newBooking.setSalonId(salonDTO.getId());
         newBooking.setServiceIds(idList);
         newBooking.setStatus(BookingStatus.PENDING);
         newBooking.setStartTime(bookingStartTime);
-        newBooking.setEndTime(bookingEndTime);
-        newBooking.setTotalServices(totalPrice);
+        newBooking.setEndTime(bookingEndtime);
+        newBooking.setTotalPrice(totalPrice);
+
         return bookingRepository.save(newBooking);
     }
 
-    public Boolean isTimeSlotAvailable(SalonDTO salonDTO,
-                                       LocalDateTime bookingStartTime,
-                                       LocalDateTime bookingEndTime) throws Exception {
+    public Boolean isTimeSlotAvailable(SalonDTO salonDTO, LocalDateTime bookingStartTime, LocalDateTime bookingEndtime) throws Exception {
         List<Booking> existingBookings = getBookingsBySalon(salonDTO.getId());
-//        LocalDateTime salonOpenTime = salonDTO.getOpenTime().atDate(bookingStartTime.toLocalDate());
-//        LocalDateTime salonCloseTime = salonDTO.getCloseTime().atDate(bookingStartTime.toLocalDate());
         LocalDateTime salonOpenTime = salonDTO.getOpenTime().atDate(bookingStartTime.toLocalDate());
         LocalDateTime salonCloseTime = salonDTO.getCloseTime().atDate(bookingStartTime.toLocalDate());
-        if (salonDTO.getCloseTime().isBefore(salonDTO.getOpenTime())) {
-            salonCloseTime = salonCloseTime.plusDays(1);
-        }
-        System.out.println("----------------------------------------------------------------");
-        System.out.println("Salon Open Time  : " + salonOpenTime);
-        System.out.println("Salon Close Time : " + salonCloseTime);
-        System.out.println("Booking Start    : " + bookingStartTime);
-        System.out.println("Booking End      : " + bookingEndTime);
-        System.out.println("----------------------------------------------------------------");
-        System.out.println("----------------------------------------------------------------");
-        System.out.println(
-                "isBefore Open: " +
-                        bookingStartTime.isBefore(salonOpenTime)
-        );
 
-        System.out.println(
-                "isAfter Close: " +
-                        bookingEndTime.isAfter(salonCloseTime)
-        );
-        System.out.println("----------------------------------------------------------------");
-        if(bookingStartTime.isBefore(salonOpenTime) || bookingEndTime.isAfter(salonCloseTime)){
-            throw new Exception("Booking time must be between salon's working hours");
+        if(bookingStartTime.isBefore(salonOpenTime) ||
+        bookingEndtime.isAfter(salonCloseTime)){
+            throw new Exception("time slot not available");
         }
-        for(Booking existingBooking:existingBookings){
-            LocalDateTime existingBookingStartTime=existingBooking.getStartTime();
-            LocalDateTime existingBookingEndTime=existingBooking.getEndTime();
-            if(bookingStartTime.isBefore(existingBookingEndTime) && bookingEndTime.isAfter(existingBookingStartTime)){
-            throw new Exception("slot not available , choose different time");
+
+        for(Booking existingBooking : existingBookings){
+            LocalDateTime existingBookingStartTime = existingBooking.getStartTime();
+            LocalDateTime existingBookingEndTime = existingBooking.getEndTime();
+
+            if(bookingStartTime.isBefore(existingBookingEndTime)
+              && bookingEndtime.isAfter(existingBookingStartTime)
+            ){
+                throw new Exception("slot not available");
             }
-            if(bookingStartTime.isEqual(existingBookingStartTime) || bookingEndTime.isEqual(existingBookingEndTime)){
+            if(bookingStartTime.isEqual(existingBookingStartTime) || bookingEndtime.isEqual(existingBookingEndTime)){
                 throw new Exception("slot not available , choose different time");
             }
         }
+
         return true;
     }
 
@@ -111,9 +97,9 @@ public class BookingServiceImpl implements BookingService {
     }
 
     @Override
-    public Booking updateBooking(Long bookingId, BookingStatus bookingStatus) throws Exception {
+    public Booking updateBooking(Long bookingId, BookingStatus status) throws Exception {
         Booking booking = getBookingById(bookingId);
-        booking.setStatus(bookingStatus);
+        booking.setStatus(status);
         return bookingRepository.save(booking);
     }
 
@@ -123,7 +109,8 @@ public class BookingServiceImpl implements BookingService {
         if(date==null){
             return allBookings;
         }
-        return allBookings.stream().filter(booking->isSameDate(booking.getStartTime(),date) || isSameDate(booking.getEndTime(),date)).collect(Collectors.toList());
+
+        return allBookings.stream().filter(booking -> isSameDate(booking.getStartTime(),date)|| isSameDate(booking.getEndTime(),date)).collect(Collectors.toList());
     }
 
     private boolean isSameDate(LocalDateTime dateTime, LocalDate date) {
@@ -133,18 +120,17 @@ public class BookingServiceImpl implements BookingService {
     @Override
     public SalonReport getSalonReport(Long salonId) {
         List<Booking> bookings = getBookingsBySalon(salonId);
-        int totalEarnings = bookings.stream().mapToInt(Booking::getTotalServices).sum();
-        Integer totalBooking = bookings.size();
-        List<Booking> cancelledBookings=bookings.stream()
-                .filter(booking -> booking.getStatus().equals(BookingStatus.CANCELLED)).collect(Collectors.toList());
-        Double totalRefund = cancelledBookings.stream().mapToDouble(Booking::getTotalServices).sum();
+        int totalEarnings = bookings.stream().mapToInt(Booking::getTotalPrice).sum();
+        Integer totalBookings = bookings.size();
+        List<Booking> cancelledBookings = bookings.stream().filter(booking -> booking.getStatus().equals(BookingStatus.CANCELLED)).collect(Collectors.toList());
+        Double totalRefund = cancelledBookings.stream().mapToDouble(Booking::getTotalPrice).sum();
+
         SalonReport report = new SalonReport();
         report.setSalonId(salonId);
         report.setCancelledBookings(cancelledBookings.size());
-        report.setTotalBookings(totalEarnings);
         report.setTotalEarnings(totalEarnings);
+        report.setTotalBookings(totalBookings);
         report.setTotalRefund(totalRefund);
-        report.setTotalBookings(totalBooking);
         return report;
     }
 }

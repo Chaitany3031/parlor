@@ -1,0 +1,15 @@
+$kind: http-request
+url: http://localhost:5005/api/bookings?salonId=1&paymentMethod=RAZORPAY
+method: POST
+queryParams:
+  salonId: "1"
+  paymentMethod: RAZORPAY
+body:
+  type: json
+  content: |-
+    {
+        "startTime":"2026-08-28T20:00:00",
+        "serviceIds":[1]
+    }
+settings: {}
+order: 1000

@@ -12,18 +12,19 @@ spring:
     hibernate:
       ddl-auto: update
   datasource:
-    url: jdbc:mysql://localhost:3306/paymentdb_yt?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/paymentdb?createDatabaseIfNotExist=true
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
 razorpay:
   api:
-   key: ""
-   secret: ""
-  
+    key: ""
+    secret: ""
+
 stripe:
   api:
     key: ""
+    secret: ""
 eureka:
   instance:
     prefer-ip-address: true

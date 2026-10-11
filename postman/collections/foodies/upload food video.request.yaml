@@ -1,0 +1,17 @@
+$kind: http-request
+url: http://localhost:3000/api/food
+method: POST
+body:
+  type: formdata
+  content:
+    - type: file
+      key: Kiyanshi
+      src: /home/chaitanya/Downloads/❤❤❤.jpeg
+    - type: text
+      key: name
+      value: test
+    - type: text
+      key: description
+      value: test description
+settings: {}
+order: 1000

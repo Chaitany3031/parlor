@@ -1,0 +1,12 @@
+$kind: http-request
+url: http://localhost:5003/api/categories/salon/2
+method: GET
+body:
+  type: text
+  content: |-
+    {
+        "name":"haircut",
+        "images":"https://imgs.search.brave.com/G4pfCq8yYVx2upp3iNJNM50T7OCIVVPe7Qy11DfnU-o/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9hbmdl/bHNiZWF1dHlwYXJs/b3VydGhhbWFyYXNz/ZXJ5LmRpYWxuZGlh/bC5jb20vaW1hZ2Vz/L2Jhbm5lci8xNTkz/MjQ5OTkyYmFubmVy/X2ltZw"
+    }
+settings: {}
+order: 2000

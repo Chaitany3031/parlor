@@ -1,0 +1,47 @@
+$kind: http-request
+url: http://localhost:8080/admin/realms/master/users
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"username\":\"kiyansh\",\r
+
+    \    \"enabled\":true,\r
+
+    \    \"firstName\":\"kiyansh\",\r
+
+    \    \"lastName\":\"mhatre\",\r
+
+    \    \"email\":\"kxvx@gmail.com\",\r
+
+    \    \"credentials\":[\r
+
+    \        {\r
+
+    \            \"type\":\"password\",\r
+
+    \            \"value\":\"213031\",\r
+
+    \            \"temporary\":false\r
+
+    \        }\r
+
+    \    ]\r
+
+    \    // ],\r
+
+    \    // \"realmRoles\": [\"CUSTOMER\"],\r
+
+    \    // \"clientRoles\":{\r
+
+    \    //     \"api-service-client\":[\"CUSTOMER\"]\r
+
+    \    // }\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIxR05ia21xcWNLaVhyQmlRRXVUSFo3OEd4MmNON05vUi1IdTU0RW51TDAwIn0.eyJleHAiOjE3OTEzOTAzNDYsImlhdCI6MTc5MTM5MDI4NiwianRpIjoib25ydHJvOjdkNTdhNTUzLTNhM2EtY2RlMC1hY2E5LWYwYmNiZjUxYjIwMiIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9yZWFsbXMvbWFzdGVyIiwiYXVkIjpbIm1hc3Rlci1yZWFsbSIsImFjY291bnQiXSwic3ViIjoiZTg1ZDU5Y2UtMWE5Mi00NmE1LWIzMDYtYWRmZTQxNjExNTM5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic2Fsb24tYm9va2luZy1jbGllbnQiLCJzaWQiOiJOWTJMOHA2ZmdZQTNXU25vb1ZaVWZSV3ciLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIi8qIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJjcmVhdGUtcmVhbG0iLCJkZWZhdWx0LXJvbGVzLW1hc3RlciIsIm9mZmxpbmVfYWNjZXNzIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7Im1hc3Rlci1yZWFsbSI6eyJyb2xlcyI6WyJ2aWV3LWlkZW50aXR5LXByb3ZpZGVycyIsInZpZXctcmVhbG0iLCJtYW5hZ2Utb3JnYW5pemF0aW9ucyIsIm1hbmFnZS1pZGVudGl0eS1wcm92aWRlcnMiLCJpbXBlcnNvbmF0aW9uIiwiY3JlYXRlLWNsaWVudCIsIm1hbmFnZS11c2VycyIsInF1ZXJ5LXJlYWxtcyIsInZpZXctYXV0aG9yaXphdGlvbiIsInF1ZXJ5LWNsaWVudHMiLCJxdWVyeS11c2VycyIsIm1hbmFnZS1ldmVudHMiLCJtYW5hZ2UtcmVhbG0iLCJ2aWV3LW9yZ2FuaXphdGlvbnMiLCJ2aWV3LWV2ZW50cyIsInZpZXctdXNlcnMiLCJ2aWV3LWNsaWVudHMiLCJtYW5hZ2UtYXV0aG9yaXphdGlvbiIsIm1hbmFnZS1jbGllbnRzIiwicXVlcnktZ3JvdXBzIiwicXVlcnktb3JnYW5pemF0aW9ucyJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoia2F2ZXJpIn0.J5G00j9KYXcKwUhD_tV_9Yb4qMX_3XMPpLShlI406mVKtdB919zBdTkuA0yNFrN1d5jdUiYUn-l8rgwoGD1jmT65o_KT9B23ZCK_7NJ880AU4xUsaQ2y-Lk5IrobVx804JslIJW_b9bOAZv7tl_cQjQT-diK_NHF_fmtGfsnGLytMvnXaCnZj_NAnkfHkjSaEVu4mJtYFw1mgZ7bFtfuY2QOig4Ndqrs3HzbDH0Bk0SkVJK2ya03QxAgbovzrIlkABIuOnO1tX_z8FSXAoVWetw6xAX5RQNxJn8IErtjxphjbDOrvJLJBSmrgLorOLzgAbIYs4HEXcHuJ2PGenKpsw
+order: 2000

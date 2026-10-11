@@ -1,0 +1,40 @@
+$kind: collection
+name: Keycloak Admin API
+scripts:
+  - type: 'http:beforeRequest'
+    language: text/javascript
+    code: |-
+      // Auto-refresh Keycloak admin token before every request (55s safety window)
+      const token = pm.environment.get('keycloak_access_token');
+      const tokenExpiry = parseInt(pm.environment.get('keycloak_token_expiry') || '0');
+      const now = Date.now();
+
+      if (!token || now > tokenExpiry) {
+          const keycloakUrl = pm.environment.get('keycloak_url');
+          const realm = pm.environment.get('keycloak_realm') || 'master';
+          const username = pm.environment.get('keycloak_username');
+          const password = pm.environment.get('keycloak_password');
+
+          pm.sendRequest({
+              url: keycloakUrl + '/realms/' + realm + '/protocol/openid-connect/token',
+              method: 'POST',
+              header: { 'Content-Type': 'application/x-www-form-urlencoded' },
+              body: {
+                  mode: 'urlencoded',
+                  urlencoded: [
+                      { key: 'client_id', value: 'admin-cli' },
+                      { key: 'grant_type', value: 'password' },
+                      { key: 'username', value: username },
+                      { key: 'password', value: password }
+                  ]
+              }
+          }, function(err, res) {
+              if (!err && res.code === 200) {
+                  const data = res.json();
+                  pm.environment.set('keycloak_access_token', data.access_token);
+                  pm.environment.set('keycloak_token_expiry', String(Date.now() + 55000));
+              } else {
+                  console.error('Keycloak token fetch failed:', err || res.status);
+              }
+          });
+      }

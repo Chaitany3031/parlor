@@ -4,14 +4,163 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0483e6e2-59bf-4dea-b49d-741a483095a9" name="Changes" comment="docker issue" />
+    <list default="true" id="592cd7fc-4d29-4458-afc7-f5922b14f97e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/parlor.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-offering/src/main/java/com/angel/service/impl/ServiceOfferingImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/angel/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/angel/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/angel/domain/UserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/angel/payload/dto/Credential.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/angel/payload/dto/KeycloakRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/angel/payload/dto/KeycloakUserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/angel/payload/dto/LoginDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/angel/payload/dto/SignupDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/angel/payload/dto/UserRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/angel/payload/response/AuthResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/angel/payload/response/TokenRespone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/angel/service/AuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/angel/service/KeyCloakService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/angel/service/impl/AuthServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/angel/BookingServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/angel/BookingServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/angel/controller/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/angel/controller/BookingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/angel/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/angel/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/angel/dto/BookingDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/angel/dto/BookingDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/angel/dto/BookingRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/angel/dto/BookingRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/angel/dto/BookingSlotDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/angel/dto/BookingSlotDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/angel/dto/CategoryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/angel/dto/CategoryDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/angel/dto/SalonDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/angel/dto/SalonDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/angel/dto/ServiceDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/angel/dto/ServiceDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/angel/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/angel/dto/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/angel/modal/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/angel/modal/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/angel/repository/BookingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/angel/repository/BookingRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/angel/service/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/angel/service/BookingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/angel/service/impl/BookingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/angel/service/impl/BookingServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/test/java/com/angel/BookingServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/test/java/com/angel/BookingServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/src/main/java/com/angel/CategoryServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/main/java/com/angel/CategoryServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/src/main/java/com/angel/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/main/java/com/angel/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/src/main/java/com/angel/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/main/java/com/angel/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/src/main/java/com/angel/controller/SalonCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/main/java/com/angel/controller/SalonCategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/src/main/java/com/angel/dto/SalonDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/main/java/com/angel/dto/SalonDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/src/main/java/com/angel/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/main/java/com/angel/dto/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/src/main/java/com/angel/modal/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/main/java/com/angel/modal/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/src/main/java/com/angel/repository/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/main/java/com/angel/repository/CategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/src/main/java/com/angel/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/main/java/com/angel/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/src/main/java/com/angel/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/main/java/com/angel/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/src/test/java/com/angel/CategoryServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/test/java/com/angel/CategoryServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose/default/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/default/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/java/com/angel/EurekaServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/java/com/angel/EurekaServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/src/test/java/com/angel/EurekaServerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/test/java/com/angel/EurekaServerApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/com/angel/GatewayServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/java/com/angel/GatewayServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server/src/test/java/com/angel/GatewayServerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/test/java/com/angel/GatewayServerApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/PaymentServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/PaymentServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/controller/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/domain/PaymentMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/domain/PaymentMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/domain/PaymentOrderStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/domain/PaymentOrderStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/modal/PaymentOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/modal/PaymentOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/payload/dto/BookingRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/payload/dto/BookingRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/payload/dto/BookingSlotDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/payload/dto/BookingSlotDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/payload/dto/CategoryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/payload/dto/CategoryDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/payload/dto/SalonDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/payload/dto/SalonDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/payload/dto/ServiceDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/payload/dto/ServiceDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/payload/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/payload/dto/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/payload/response/PaymentLinkResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/payload/response/PaymentLinkResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/service/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/service/PaymentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/service/impl/PaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/angel/service/impl/PaymentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/test/java/com/angel/PaymentServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/test/java/com/angel/PaymentServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salon-service/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/salon-service/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salon-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/salon-service/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salon-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/salon-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salon-service/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/salon-service/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salon-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/salon-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salon-service/src/main/java/com/angel/SalonServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/salon-service/src/main/java/com/angel/SalonServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salon-service/src/main/java/com/angel/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/salon-service/src/main/java/com/angel/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salon-service/src/main/java/com/angel/controller/SalonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/salon-service/src/main/java/com/angel/controller/SalonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salon-service/src/main/java/com/angel/mapper/SalonMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/salon-service/src/main/java/com/angel/mapper/SalonMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salon-service/src/main/java/com/angel/modal/Salon.java" beforeDir="false" afterPath="$PROJECT_DIR$/salon-service/src/main/java/com/angel/modal/Salon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salon-service/src/main/java/com/angel/payload/dto/SalonDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/salon-service/src/main/java/com/angel/payload/dto/SalonDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salon-service/src/main/java/com/angel/payload/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/salon-service/src/main/java/com/angel/payload/dto/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salon-service/src/main/java/com/angel/repository/SalonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/salon-service/src/main/java/com/angel/repository/SalonRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salon-service/src/main/java/com/angel/service/SalonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/salon-service/src/main/java/com/angel/service/SalonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salon-service/src/main/java/com/angel/service/impl/SalonServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/salon-service/src/main/java/com/angel/service/impl/SalonServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salon-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/salon-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salon-service/src/test/java/com/angel/SalonServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/salon-service/src/test/java/com/angel/SalonServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-offering/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/service-offering/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-offering/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/service-offering/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-offering/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service-offering/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-offering/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/service-offering/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-offering/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service-offering/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-offering/src/main/java/com/angel/ServiceOfferingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-offering/src/main/java/com/angel/ServiceOfferingApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-offering/src/main/java/com/angel/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-offering/src/main/java/com/angel/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-offering/src/main/java/com/angel/controller/SalonServiceOfferingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-offering/src/main/java/com/angel/controller/SalonServiceOfferingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-offering/src/main/java/com/angel/controller/ServiceOfferingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-offering/src/main/java/com/angel/controller/ServiceOfferingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-offering/src/main/java/com/angel/dto/CategoryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-offering/src/main/java/com/angel/dto/CategoryDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-offering/src/main/java/com/angel/dto/SalonDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-offering/src/main/java/com/angel/dto/SalonDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-offering/src/main/java/com/angel/dto/ServiceDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-offering/src/main/java/com/angel/dto/ServiceDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-offering/src/main/java/com/angel/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-offering/src/main/java/com/angel/dto/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-offering/src/main/java/com/angel/repository/ServiceOfferingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-offering/src/main/java/com/angel/repository/ServiceOfferingRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-offering/src/main/java/com/angel/service/ServiceOfferingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-offering/src/main/java/com/angel/service/ServiceOfferingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-offering/src/main/java/com/angel/service/impl/ServiceOfferingServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-offering/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service-offering/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-offering/src/test/java/com/angel/service/offering/ServiceOfferingApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/angel/UserServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/angel/UserServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/angel/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/angel/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/angel/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/angel/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/angel/exception/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/angel/modal/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/angel/modal/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/angel/payload/response/ExceptionResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/angel/payload/response/ExceptionResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/angel/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/angel/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/angel/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/angel/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/test/java/com/angel/UserServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/test/java/com/angel/UserServiceApplicationTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="150" />
+    <option name="cachedIndexableFilesCount" value="177" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -34,7 +183,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Chaitany3031/parlor.git&quot;,
-    &quot;accountId&quot;: &quot;64cb3dc9-e88e-4d15-bd13-a5b7c7a3ebaa&quot;
+    &quot;accountId&quot;: &quot;fe193e8c-37bc-42dd-9a06-a1dad75890c5&quot;
   }
 }</component>
   <component name="MavenImportPreferences">
@@ -50,84 +199,82 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000001724481977" />
-      <entry key="MS500" value="1.075843778399335" />
-      <entry key="S2" value="1.8817546064970463" />
-      <entry key="S5" value="2.4412013060748086" />
-      <entry key="S10" value="2.697742861577662" />
-      <entry key="S30" value="2.8937088333567544" />
-      <entry key="S60" value="2.9604681105724966" />
-      <entry key="M2" value="3.521697338845884" />
-      <entry key="M5" value="11.522761898924069" />
-      <entry key="M10" value="30.76241641857774" />
-      <entry key="M15" value="48.95802771858337" />
-      <entry key="M30" value="93.5382353873639" />
-      <entry key="H1" value="152.11935946905157" />
-      <entry key="H2" value="239.91205235485805" />
-      <entry key="H4" value="393.3540253195743" />
-      <entry key="D1" value="1099.3619703102254" />
-      <entry key="W1" value="1508.6039351039158" />
-    </decayedCancelled>
-    <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
-      <entry key="S2" value="6.33612345221108E-89" />
-      <entry key="S5" value="5.2568968102528617E-36" />
-      <entry key="S10" value="2.2927923609112226E-18" />
-      <entry key="S30" value="1.3186258198570486E-6" />
-      <entry key="S60" value="0.0011483143387475128" />
-      <entry key="M2" value="0.03388792442455377" />
-      <entry key="M5" value="0.2716291581448042" />
-      <entry key="M10" value="0.9777824832909012" />
-      <entry key="M15" value="2.360208887725579" />
-      <entry key="M30" value="7.60308181077608" />
-      <entry key="H1" value="15.344671306145406" />
-      <entry key="H2" value="27.53290080641551" />
-      <entry key="H4" value="70.55921151658501" />
-      <entry key="D1" value="593.7892997596063" />
-      <entry key="W1" value="980.4425033238468" />
+      <entry key="S2" value="6.714299913170397E-127" />
+      <entry key="S5" value="7.438738946061267E-51" />
+      <entry key="S10" value="1.859114633358534E-25" />
+      <entry key="S30" value="1.6551500356552124E-8" />
+      <entry key="S60" value="2.8738371507725267E-4" />
+      <entry key="M2" value="0.03795355759784803" />
+      <entry key="M5" value="0.8500079010692235" />
+      <entry key="M10" value="4.068926914990623" />
+      <entry key="M15" value="8.363555447569226" />
+      <entry key="M30" value="21.717903521411465" />
+      <entry key="H1" value="48.3597906646591" />
+      <entry key="H2" value="106.35505747466135" />
+      <entry key="H4" value="216.35370924781006" />
+      <entry key="D1" value="567.9661319639409" />
+      <entry key="W1" value="704.9516774644131" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.0000000008164027" />
+      <entry key="MS500" value="1.0154401248844767" />
+      <entry key="S2" value="1.4883555282777148" />
+      <entry key="S5" value="2.276224110036504" />
+      <entry key="S10" value="2.9012389515168016" />
+      <entry key="S30" value="3.7100517610062167" />
+      <entry key="S60" value="4.340379888451105" />
+      <entry key="M2" value="5.080235452056952" />
+      <entry key="M5" value="6.08374097428679" />
+      <entry key="M10" value="8.13975511549857" />
+      <entry key="M15" value="11.252718111103453" />
+      <entry key="M30" value="22.71898825941998" />
+      <entry key="H1" value="46.98621670000942" />
+      <entry key="H2" value="94.05495309378264" />
+      <entry key="H4" value="175.50176127897254" />
+      <entry key="D1" value="444.72357954106997" />
+      <entry key="W1" value="554.1759546293744" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.8705506477228189" />
-      <entry key="MS500" value="1.039607898122411" />
-      <entry key="S2" value="1.8485500723135513" />
-      <entry key="S5" value="2.4211856195493806" />
-      <entry key="S10" value="2.686188622873722" />
-      <entry key="S30" value="2.8894647123218444" />
-      <entry key="S60" value="2.959426293552735" />
-      <entry key="M2" value="3.554254871442459" />
-      <entry key="M5" value="11.79300284647273" />
-      <entry key="M10" value="31.73737880430046" />
-      <entry key="M15" value="51.313226311863545" />
-      <entry key="M30" value="101.13261626126379" />
-      <entry key="H1" value="167.45498115805876" />
-      <entry key="H2" value="267.4365243503573" />
-      <entry key="H4" value="463.9018504509451" />
-      <entry key="D1" value="1693.1360257953786" />
-      <entry key="W1" value="2489.0428942066783" />
+      <entry key="MS100" value="0.002743056398669653" />
+      <entry key="MS500" value="0.3111249755868053" />
+      <entry key="S2" value="1.0630601610192865" />
+      <entry key="S5" value="1.9500005656752557" />
+      <entry key="S10" value="2.675316419159914" />
+      <entry key="S30" value="3.602412436616489" />
+      <entry key="S60" value="4.26888506261039" />
+      <entry key="M2" value="5.071693721214126" />
+      <entry key="M5" value="6.909306685836876" />
+      <entry key="M10" value="12.187401378252535" />
+      <entry key="M15" value="19.592790131455782" />
+      <entry key="M30" value="44.4093020748486" />
+      <entry key="H1" value="95.31694188707446" />
+      <entry key="H2" value="200.38146080263442" />
+      <entry key="H4" value="391.8292795566099" />
+      <entry key="D1" value="1012.6788592018443" />
+      <entry key="W1" value="1259.1257059263464" />
     </decayedShown>
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 2
 }</component>
-  <component name="ProjectId" id="3FJa9jCoSjg1ThWE5oW5JV4zHJB" />
+  <component name="ProjectId" id="3IRXZWbnJZ9EYOoLR50brge4AHG" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;Application.BookingServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.category-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.category-service [compile].executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Spring Boot.BookingServiceApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.CategoryServiceApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.EurekaServerApplication.executor&quot;: &quot;Run&quot;,
@@ -139,16 +286,18 @@
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/chaitanya/Downloads/CB&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/chaitanya/OneDrive/Desktop/parlor/booking-service/src/main/java/com/angel&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -156,21 +305,10 @@
       <recent name="com.angel.dto" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/booking-service/src/main/java/com/angel" />
-      <recent name="$PROJECT_DIR$/service-offering/src/main/java/com/angel" />
-      <recent name="$PROJECT_DIR$/service-offering/src/main/java/com/angel/" />
-      <recent name="$PROJECT_DIR$/category-service/src/main/java/com/angel" />
-      <recent name="$PROJECT_DIR$/salon-service/src/main/java/com/angel" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/booking-service/src/main/java/com/angel" />
-      <recent name="$PROJECT_DIR$/booking-service/src/main/java/com" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.angel" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.angel.dto" />
+      <recent name="C:\Users\chaitanya\OneDrive\Desktop\parlor\booking-service\src\main\java\com\angel" />
+      <recent name="C:\Users\chaitanya\OneDrive\Desktop\parlor\service-offering\src\main\java\com\angel" />
+      <recent name="C:\Users\chaitanya\OneDrive\Desktop\parlor\category-service\src\main\java\com\angel" />
+      <recent name="C:\Users\chaitanya\OneDrive\Desktop\parlor\salon-service\src\main\java\com\angel" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -184,6 +322,8 @@
         <entry key="SpringBootApplicationConfigurationType">
           <value>
             <map>
+              <entry key="BookingServiceApplication" value="STOPPED" />
+              <entry key="CategoryServiceApplication" value="STOPPED" />
               <entry key="EurekaServerApplication" value="STOPPED" />
               <entry key="GatewayServerApplication" value="STOPPED" />
               <entry key="SalonServiceApplication" value="STOPPED" />
@@ -195,11 +335,11 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.GatewayServerApplication">
-    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
+    <configuration name="BookingServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
-      <module name="eureka-server" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.angel.EurekaServerApplication" />
+      <module name="booking-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.angel.BookingServiceApplication" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.angel.*" />
@@ -210,10 +350,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GatewayServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="CategoryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
-      <module name="gateway-server" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.angel.GatewayServerApplication" />
+      <module name="category-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.angel.CategoryServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.angel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <module name="eureka-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.angel.EurekaServerApplication" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.angel.*" />
@@ -238,20 +392,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServiceOfferingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
-      <module name="service-offering" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.angel.ServiceOfferingApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.angel.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
       <module name="user-service" />
@@ -266,96 +406,60 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.BookingServiceApplication" />
+      <item itemvalue="Spring Boot.CategoryServiceApplication" />
+      <item itemvalue="Spring Boot.EurekaServerApplication" />
+      <item itemvalue="Spring Boot.SalonServiceApplication" />
+      <item itemvalue="Spring Boot.UserServiceApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.UserServiceApplication" />
-        <item itemvalue="Spring Boot.ServiceOfferingApplication" />
         <item itemvalue="Spring Boot.SalonServiceApplication" />
-        <item itemvalue="Spring Boot.GatewayServerApplication" />
+        <item itemvalue="Spring Boot.CategoryServiceApplication" />
         <item itemvalue="Spring Boot.EurekaServerApplication" />
+        <item itemvalue="Spring Boot.BookingServiceApplication" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-63390994e64e-intellij.indexing.shared.core-IU-262.8665.258" />
-        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.8665.258" />
+        <option value="bundled-jdk-30f59d01ecdd-34e2839f716b-intellij.indexing.shared.core-IU-262.9437.185" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.9437.185" />
       </set>
     </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0483e6e2-59bf-4dea-b49d-741a483095a9" name="Changes" comment="" />
-      <created>1781795477771</created>
+      <changelist id="592cd7fc-4d29-4458-afc7-f5922b14f97e" name="Changes" comment="" />
+      <created>1787728410818</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1781795477771</updated>
+      <updated>1787728410818</updated>
     </task>
-    <task id="LOCAL-00001" summary="first commit">
-      <option name="closed" value="true" />
-      <created>1782554796275</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1782554796275</updated>
-    </task>
-    <task id="LOCAL-00002" summary="9:10:31 microservices up">
-      <option name="closed" value="true" />
-      <created>1782823586786</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1782823586787</updated>
-    </task>
-    <task id="LOCAL-00003" summary="9:10:31 microservices up">
-      <option name="closed" value="true" />
-      <created>1782823651451</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1782823651451</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnknownFeatures">
-    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
-    <option featureType="dependencySupport" implementationName="executable:docker" />
-    <option featureType="dependencySupport" implementationName="java:jakarta.validation:jakarta.validation-api" />
-    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
-    <option featureType="dependencySupport" implementationName="java:io.projectreactor:reactor-core" />
-    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-commons" />
-    <option featureType="dependencySupport" implementationName="java:org.springframework.cloud:spring-cloud-context" />
-    <option featureType="dependencySupport" implementationName="java:org.hibernate.validator:hibernate-validator" />
-    <option featureType="dependencySupport" implementationName="java:jakarta.ws.rs:jakarta.ws.rs-api" />
-    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
-    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
-    <option featureType="dependencySupport" implementationName="java:org.projectlombok:lombok" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="first commit" />
-    <MESSAGE value="9:10:31 microservices up" />
-    <MESSAGE value="9:48:03" />
-    <MESSAGE value="docker issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="docker issue" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <properties class="java.sql.SQLIntegrityConstraintViolationException" package="java.sql" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/category-service/src/main/java/com/angel/CategoryServiceApplication.java</url>
-          <line>6</line>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.springframework.beans.factory.UnsatisfiedDependencyException" package="org.springframework.beans.factory" />
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -1,0 +1,15 @@
+$kind: http-request
+url: http://localhost:5001/api/user/152
+method: PUT
+body:
+  type: json
+  content: |-
+    {
+            "fullName": "Kiyansh",
+            "username": "kxvx",
+            "email": "ck@gmail.com",
+            "phone": "+91 738618234",
+            "role": "LOVER"
+        }
+settings: {}
+order: 5000

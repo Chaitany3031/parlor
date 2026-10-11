@@ -7,40 +7,43 @@ spring:
 
   cloud:
     gateway:
-      discovery:
-        locator:
-          enabled: true
+      server:
+        webflux:
+          discovery:
+            locator:
+              enabled: true
 
-      routes:
-        - id: USER-SERVICE
-          uri: lb://USER-SERVICE
-          predicates:
-            - Path=/auth/**,/api/admin/users/**,/api/users/**,/users/**
+          routes:
 
-        - id: BOOKING-SERVICE
-          uri: lb://BOOKING-SERVICE
-          predicates:
-            - Path=/api/bookings/**
+            - id: USER-SERVICE
+              uri: lb://USER-SERVICE
+              predicates:
+                - Path=/auth/**,/api/admin/users/**,/api/users/**,/users/**
 
-        - id: SALON-SERVICE
-          uri: lb://SALON-SERVICE
-          predicates:
-            - Path=/salons/**,/api/salons/**,/api/admin/salons/**
+            - id: BOOKING-SERVICE
+              uri: lb://BOOKING-SERVICE
+              predicates:
+                - Path=/api/bookings/**
 
-        - id: SERVICE-OFFERING
-          uri: lb://SERVICE-OFFERING
-          predicates:
-            - Path=/api/service-offering/**
+            - id: SALON-SERVICE
+              uri: lb://SALON-SERVICE
+              predicates:
+                - Path=/salons/**,/api/salons/**,/api/admin/salons/**
 
-        - id: CATEGORY-SERVICE
-          uri: lb://CATEGORY-SERVICE
-          predicates:
-            - Path=/api/categories/**
+            - id: SERVICE-OFFERING
+              uri: lb://SERVICE-OFFERING
+              predicates:
+                - Path=/api/service-offering/**
 
-        - id: PAYMENT-SERVICE
-          uri: lb://PAYMENT-SERVICE
-          predicates:
-            - Path=/api/payments/**
+            - id: CATEGORY-SERVICE
+              uri: lb://CATEGORY-SERVICE
+              predicates:
+                - Path=/api/categories/**
+
+            - id: PAYMENT-SERVICE
+              uri: lb://PAYMENT-SERVICE
+              predicates:
+                - Path=/api/payments/**
 
 eureka:
   instance:
@@ -49,7 +52,6 @@ eureka:
   client:
     fetch-registry: true
     register-with-eureka: true
-
     service-url:
       defaultZone: http://localhost:8070/eureka/
 

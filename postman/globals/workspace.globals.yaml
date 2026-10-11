@@ -1,0 +1,5 @@
+name: Globals
+values:
+  - key: 'http://localhost:8080/'
+    value: ''
+    enabled: true

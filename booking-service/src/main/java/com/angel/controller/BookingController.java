@@ -71,7 +71,7 @@ public class BookingController {
 
     @GetMapping("/{bookingId}")
     public ResponseEntity<BookingDTO> getBookingsById(
-    @PathVariable Long bookingId
+            @PathVariable Long bookingId
     ) throws Exception {
         Booking booking = bookingService.getBookingById(bookingId);
         return ResponseEntity.ok(BookingMapper.toDTO(booking));
@@ -81,7 +81,7 @@ public class BookingController {
     public ResponseEntity<BookingDTO> updateBookingStatus(
             @PathVariable Long bookingId,
             @RequestParam BookingStatus status
-            ) throws Exception {
+    ) throws Exception {
         Booking booking = bookingService.updateBooking(bookingId,status);
         return ResponseEntity.ok(BookingMapper.toDTO(booking));
     }
@@ -90,7 +90,7 @@ public class BookingController {
     public ResponseEntity<List<BookingSlotDTO>> getBookedSlot(
             @PathVariable Long salonId,
             @RequestParam(required = false) LocalDate date
-            ) throws Exception {
+    ) throws Exception {
         List<Booking> bookings = bookingService.getBookingsByDate(date,salonId);
         List<BookingSlotDTO> slotDTOs = bookings.stream().map(booking -> {
             BookingSlotDTO slotDTO = new BookingSlotDTO();
@@ -104,7 +104,7 @@ public class BookingController {
     @GetMapping("/report")
     public ResponseEntity<SalonReport> getSalonReport(
     ) throws Exception {
-       SalonReport salonReport = bookingService.getSalonReport(1L);
+        SalonReport salonReport = bookingService.getSalonReport(1L);
         return ResponseEntity.ok(salonReport);
     }
 }

@@ -1,0 +1,14 @@
+name: Keycloak Local
+values:
+  - key: keycloak_url
+    value: 'http://localhost:8080'
+  - key: keycloak_realm
+    value: master
+  - key: keycloak_username
+    value: admin
+  - key: keycloak_password
+    value: admin
+  - key: keycloak_access_token
+    value: ''
+  - key: keycloak_token_expiry
+    value: '0'

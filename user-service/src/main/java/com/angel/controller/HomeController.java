@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class HomeController {
     @GetMapping
     public String HomeControllerHandler(){
-        return "user ms for hc";
+        return "user ms";
     }
 }

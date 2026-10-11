@@ -9,7 +9,7 @@ spring:
     hibernate:
       ddl-auto: update
   datasource:
-    url: jdbc:mysql://localhost:3306/categorydb_yt
+    url: jdbc:mysql://localhost:3306/categorydb
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver

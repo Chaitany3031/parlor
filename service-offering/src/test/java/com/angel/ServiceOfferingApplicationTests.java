@@ -1,4 +1,4 @@
-package com.angel.service.offering;
+package com.angel;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

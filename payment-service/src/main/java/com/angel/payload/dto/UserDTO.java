@@ -1,10 +1,8 @@
-package com.angel.payload.dto;
+package com.angel.dto;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter
-@Setter
+@Data
 public class UserDTO {
     private Long id;
     private String fullName;

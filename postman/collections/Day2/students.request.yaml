@@ -1,0 +1,15 @@
+$kind: http-request
+url: http://localhost:8080/students
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"name\":\"Kiyansh\",\r
+
+    \    \"age\":21,\r
+
+    \    \"id\":2130\r
+
+    }"
+order: 4337788866251295

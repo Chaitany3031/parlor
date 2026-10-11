@@ -102,7 +102,7 @@ services:
       - angels
 
   eurekaserver:
-    image: "chaitanya3031/salon-eureka-server:v1"
+    image: "chaitanya3031/salon-eurekaserver:v1"
     ports:
       - "8070:8070"
     healthcheck:
@@ -283,7 +283,7 @@ services:
       - angels
 
   gatewayserver:
-    image: "chaitanya3031/salon-gateway-server:v1"
+    image: "chaitanya3031/gateway-server:v1"
     ports:
       - "5000:5000"
     healthcheck:
@@ -293,14 +293,14 @@ services:
       retries: 10
       start_period: 300s
     container_name: gatewayserver
-#    depends_on:
-#      userdb:
-#        condition: service_healthy
+    #    depends_on:
+    #      userdb:
+    #        condition: service_healthy
     environment:
       SPRING_APPLICATION_NAME: "gateway-server"
-#      SPRING_DATASOURCE_URL: "jdbc:mysql://service-offeringdb:3306/service-offeringdb"
-#      SPRING_DATASOURCE_USERNAME: root
-#      SPRING_DATASOURCE_PASSWORD: root
+      #      SPRING_DATASOURCE_URL: "jdbc:mysql://service-offeringdb:3306/service-offeringdb"
+      #      SPRING_DATASOURCE_USERNAME: root
+      #      SPRING_DATASOURCE_PASSWORD: root
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eurekaserver:8070/eureka/
     deploy:
       resources:

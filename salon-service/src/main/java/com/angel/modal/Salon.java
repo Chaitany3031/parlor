@@ -3,7 +3,6 @@ package com.angel.modal;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.List;
 
@@ -20,7 +19,7 @@ public class Salon {
     @Column(nullable = false)
     private String address;
     @Column(nullable = false)
-    private String phoneNumber;
+    private String phoneNo;
     @Column(nullable = false)
     private String email;
     @Column(nullable = false)
@@ -31,5 +30,4 @@ public class Salon {
     private LocalTime openTime;
     @Column(nullable = false)
     private LocalTime closeTime;
-
 }

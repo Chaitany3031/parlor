@@ -19,24 +19,24 @@ public class ServiceOfferingController {
             @PathVariable Long salonId,
             @RequestParam(required = false) Long categoryId
     ){
-            Set<ServiceOffering> serviceOfferings = serviceOfferingService.getAllServiceBySalon(salonId, categoryId);
-            return ResponseEntity.ok(serviceOfferings);
+        Set<ServiceOffering> serviceOfferings = serviceOfferingService.getAllServiceBySalonId(salonId,categoryId);
+        return ResponseEntity.ok(serviceOfferings);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ServiceOffering> getServicesById(
-            @PathVariable Long id,
-            @RequestParam(required = false) Long categoryId
+    public ResponseEntity<ServiceOffering> getServiceById(
+            @PathVariable Long id
     ) throws Exception {
         ServiceOffering serviceOffering = serviceOfferingService.getServiceById(id);
         return ResponseEntity.ok(serviceOffering);
     }
 
     @GetMapping("/list/{ids}")
-    public ResponseEntity<Set<ServiceOffering>> getServicesByIds(
+    public ResponseEntity<Set<ServiceOffering>> getServicesById(
             @PathVariable Set<Long> ids
     ){
-        Set<ServiceOffering> serviceOfferings = serviceOfferingService.getServicesByIds(    ids);
+        Set<ServiceOffering> serviceOfferings = serviceOfferingService.getServicesByIds(ids);
         return ResponseEntity.ok(serviceOfferings);
     }
+
 }

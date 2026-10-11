@@ -10,11 +10,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Set;
-
-@RequiredArgsConstructor
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/api/service-offering/salon-owner")
-public class SalonServiceOfferingController {//4:57:42
+public class SalonServiceOfferingController {
     private final ServiceOfferingService serviceOfferingService;
 
     @PostMapping
@@ -23,10 +22,11 @@ public class SalonServiceOfferingController {//4:57:42
     ){
         SalonDTO salonDTO = new SalonDTO();
         salonDTO.setId(1L);
+
         CategoryDTO categoryDTO = new CategoryDTO();
         categoryDTO.setId(serviceDTO.getCategoryId());
-        ServiceOffering serviceOfferings = serviceOfferingService.
-        createService(salonDTO,serviceDTO,categoryDTO);
+
+        ServiceOffering serviceOfferings = serviceOfferingService.createService(salonDTO,serviceDTO,categoryDTO);
         return ResponseEntity.ok(serviceOfferings);
     }
 
@@ -35,8 +35,9 @@ public class SalonServiceOfferingController {//4:57:42
             @PathVariable Long id,
             @RequestBody ServiceOffering serviceOffering
     ) throws Exception {
-        ServiceOffering serviceOfferings = serviceOfferingService.
-                updateService(id,serviceOffering);
+
+        ServiceOffering serviceOfferings = serviceOfferingService.updateService(id,serviceOffering);
         return ResponseEntity.ok(serviceOfferings);
     }
+
 }

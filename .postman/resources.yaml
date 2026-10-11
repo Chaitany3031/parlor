@@ -1,0 +1,17 @@
+workspace:
+  id: 4642fd7e-ceda-4b74-bfa3-9fad3cd8a87d
+
+# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+
+cloudResources:
+  collections:
+    ../postman/collections/parlour: 37596165-6a33ab9c-692b-4ae1-8cb8-aaf54d1f6e0b
+    ../postman/collections/REST API basics- CRUD, test & variable: 37596165-a45fbf6a-173c-4570-8b2b-283fbcd19843
+    ../postman/collections/spotify-fullstack: 37596165-5c0f2484-46e3-42e8-9379-fcf0f6568eba
+    ../postman/collections/foodies: 37596165-500cb77d-2251-4154-b361-e0fd64cfbb37
+    ../postman/collections/products: 37596165-cfe49e47-c6ab-47d3-aff5-8013b7fec776
+  environments:
+    ../postman/environments/env.environment.yaml: 37596165-52bb19e0-2328-468d-b638-39ccfee44774
+    ../postman/environments/env-1.environment.yaml: 37596165-a6847e9c-0a34-4e2d-8a6e-4f10daf2d13f
+  globals:
+    ../postman/globals/workspace.globals.yaml: 41245475-6097-4d9b-86e2-41c22ab45c70

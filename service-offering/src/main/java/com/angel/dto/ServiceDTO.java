@@ -14,4 +14,3 @@ public class ServiceDTO {
     private Long categoryId;
     private String image;
 }
-

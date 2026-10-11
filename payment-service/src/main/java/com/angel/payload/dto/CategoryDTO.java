@@ -1,4 +1,4 @@
-package com.angel.payload.dto;
+package com.angel.dto;
 
 import lombok.Data;
 
@@ -7,4 +7,5 @@ public class CategoryDTO {
     private Long id;
     private String name;
     private String image;
+
 }

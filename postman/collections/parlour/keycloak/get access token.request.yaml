@@ -1,0 +1,13 @@
+$kind: http-request
+url: http://localhost:8080/realms/master/protocol/openid-connect/token
+method: POST
+body:
+  type: urlencoded
+  content:
+    grant_type: password
+    client_id: salon-booking-client
+    client_secret: 1LTb67KCYHHHcPKMhs5o2DrZgTTZ16QtZVB6MpDfMtRSlZzjGvWeUpMpVl07Tdxj86BDTfPgX0lLzM6eFtaBzX
+    scope: openid email profile
+    password: kiyo
+    username: kaveri
+order: 1000

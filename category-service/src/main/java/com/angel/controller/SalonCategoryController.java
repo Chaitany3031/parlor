@@ -9,17 +9,19 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Set;
 
-@RestController
 @RequiredArgsConstructor
+@RestController
 @RequestMapping("/api/categories/salon-owner")
 public class SalonCategoryController {
     private final CategoryService categoryService;
+
     @PostMapping()
     public ResponseEntity<Category> createCategory(
             @RequestBody Category category
     ){
         SalonDTO salonDTO = new SalonDTO();
-        salonDTO.setId(1L);
+        salonDTO.setId(2L);
+
         Category savedCategory = categoryService.saveCategory(category,salonDTO);
         return ResponseEntity.ok(savedCategory);
     }
@@ -30,7 +32,10 @@ public class SalonCategoryController {
     ) throws Exception {
         SalonDTO salonDTO = new SalonDTO();
         salonDTO.setId(1L);
+
         categoryService.deleteCategoryById(id,salonDTO.getId());
-        return ResponseEntity.ok("Category deleted ");
+        return ResponseEntity.ok("Category deleted");
     }
+
 }
+

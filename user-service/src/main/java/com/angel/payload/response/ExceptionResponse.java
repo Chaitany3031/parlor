@@ -7,12 +7,12 @@ import lombok.Setter;
 
 import java.time.LocalDateTime;
 
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 public class ExceptionResponse {
     private String message;
     private String error;
-    private LocalDateTime timeStamp;
+    private LocalDateTime timestamp;
 }

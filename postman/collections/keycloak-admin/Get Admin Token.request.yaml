@@ -1,0 +1,29 @@
+$kind: http-request
+name: 'Get Admin Token'
+order: 1000
+method: POST
+url: '{{keycloak_url}}/realms/{{keycloak_realm}}/protocol/openid-connect/token'
+headers:
+  - key: Content-Type
+    value: application/x-www-form-urlencoded
+body:
+  type: urlencoded
+  content:
+    - key: client_id
+      value: admin-cli
+    - key: grant_type
+      value: password
+    - key: username
+      value: '{{keycloak_username}}'
+    - key: password
+      value: '{{keycloak_password}}'
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      if (pm.response.code === 200) {
+          const data = pm.response.json();
+          pm.environment.set('keycloak_access_token', data.access_token);
+          pm.environment.set('keycloak_token_expiry', String(Date.now() + 55000));
+          console.log('Keycloak admin token saved. Expires in ~60s.');
+      }

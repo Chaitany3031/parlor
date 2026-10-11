@@ -14,6 +14,6 @@ public class BookingDTO {
     private Long customerId;
     private LocalDateTime startTime;
     private LocalDateTime endTime;
-     private Set<Long> serviceIds;
-    private BookingStatus status= BookingStatus.PENDING;
+    private Set<Long> serviceIds;
+    private BookingStatus status=BookingStatus.PENDING;
 }

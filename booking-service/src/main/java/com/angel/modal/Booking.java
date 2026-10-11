@@ -19,6 +19,6 @@ public class Booking {
     private LocalDateTime endTime;
     @ElementCollection
     private Set<Long> serviceIds;
-    private BookingStatus status= BookingStatus.PENDING;
-    private int totalServices;
+    private BookingStatus status=BookingStatus.PENDING;
+    private int totalPrice;
 }

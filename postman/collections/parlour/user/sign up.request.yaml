@@ -1,0 +1,19 @@
+$kind: http-request
+url: http://localhost:5000/auth/signup
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"fullName\":\"kxvx21\",\r
+
+    \    \"email\":\"kxvx21@gmail.com\",\r
+
+    \    \"password\":\"213031\",\r
+
+    \    \"username\":\"kxvx21\",\r
+
+    \    \"role\":\"CUSTOMER\"\r
+
+    }"
+order: 6000

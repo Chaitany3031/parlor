@@ -1,0 +1,6 @@
+name: env
+values:
+  - key: MONGODB_URL
+    value: mongodb+srv://kxvx:213031@cluster0.7pndubm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+  - key: JWT_SECRET
+    value: 58d7f929cd4bf4fba52bef71491a4761

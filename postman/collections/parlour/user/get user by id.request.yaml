@@ -1,0 +1,5 @@
+$kind: http-request
+url: http://localhost:5001/api/user/2
+method: GET
+settings: {}
+order: 4000

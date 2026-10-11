@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{base_url}}/delete-soft/1"
+method: PATCH
+settings: {}
+order: 5000

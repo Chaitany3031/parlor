@@ -1,0 +1,7 @@
+$kind: http-request
+url: http://localhost:5002/api/salons/search?city=uran
+method: GET
+queryParams:
+  city: uran
+settings: {}
+order: 4000

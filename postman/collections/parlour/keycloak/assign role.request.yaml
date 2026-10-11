@@ -1,0 +1,4 @@
+$kind: http-request
+url: http://localhost:8080/student
+method: POST
+order: 4499754691925726

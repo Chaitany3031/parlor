@@ -16,14 +16,12 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
-public class ServiceOfferingServiceImpl implements ServiceOfferingService {
+public class ServiceOfferingImpl implements ServiceOfferingService {
 
     private final ServiceOfferingRepository serviceOfferingRepository;
 
     @Override
-    public ServiceOffering createService(SalonDTO salonDTO,
-                                         ServiceDTO serviceDTO,
-                                         CategoryDTO categoryDTO) {
+    public ServiceOffering createService(SalonDTO salonDTO, ServiceDTO serviceDTO, CategoryDTO categoryDTO) {
         ServiceOffering serviceOffering = new ServiceOffering();
         serviceOffering.setImage(serviceDTO.getImage());
         serviceOffering.setSalonId(salonDTO.getId());
@@ -32,14 +30,14 @@ public class ServiceOfferingServiceImpl implements ServiceOfferingService {
         serviceOffering.setCategoryId(categoryDTO.getId());
         serviceOffering.setPrice(serviceDTO.getPrice());
         serviceOffering.setDuration(serviceDTO.getDuration());
-        return serviceOfferingRepository.save(serviceOffering) ;
+        return serviceOfferingRepository.save(serviceOffering);
     }
 
     @Override
     public ServiceOffering updateService(Long serviceId, ServiceOffering service) throws Exception {
         ServiceOffering serviceOffering = serviceOfferingRepository.findById(serviceId).orElse(null);
-        if(serviceOffering==null){
-            throw new Exception("service not exist with id "+serviceId);
+        if(serviceOffering == null){
+            throw new Exception("Service not exist with id : "+serviceId);
         }
         serviceOffering.setImage(service.getImage());
         serviceOffering.setName(service.getName());
@@ -50,25 +48,26 @@ public class ServiceOfferingServiceImpl implements ServiceOfferingService {
     }
 
     @Override
-    public Set<ServiceOffering> getAllServiceBySalon(Long salonId, Long categoryId) {
-        Set<ServiceOffering> services= serviceOfferingRepository.findBySalonId(salonId);
-        if(categoryId!=null){
-            services=services.stream().filter((service)->service.getCategoryId() != null && service.getCategoryId()==categoryId).collect(Collectors.toSet());
-        }
-        return services;
+    public Set<ServiceOffering> getAllServiceBySalonId(Long salonId, Long categoryId) {
+      Set<ServiceOffering> services = serviceOfferingRepository.findBySalonId(salonId);
+      if(categoryId!=null){
+          services = services.stream().filter((service)->service.getCategoryId() != null &&
+                  service.getCategoryId() == categoryId).collect(Collectors.toSet());
+      }
+      return services;
     }
 
     @Override
     public Set<ServiceOffering> getServicesByIds(Set<Long> ids) {
-    List<ServiceOffering> services = serviceOfferingRepository.findAllById(ids);
-    return new HashSet<>(services);
+        List<ServiceOffering> serviceOfferings = serviceOfferingRepository.findAllById(ids);
+        return new HashSet<>(serviceOfferings);
     }
 
     @Override
     public ServiceOffering getServiceById(Long id) throws Exception {
         ServiceOffering serviceOffering = serviceOfferingRepository.findById(id).orElse(null);
-        if(serviceOffering==null){
-            throw new Exception("service not exist with id "+id);
+        if(serviceOffering == null){
+            throw new Exception("Service not exist with id : "+id);
         }
         return serviceOffering;
     }

@@ -1,0 +1,14 @@
+$kind: http-request
+url: http://localhost:5001/api/users
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "fullName":"Kxvx",
+        "email":"kxvx@gmail.com",
+        "phone":"+91 8169324583",
+        "role":"ANGEL"
+    }
+settings: {}
+order: 3000
