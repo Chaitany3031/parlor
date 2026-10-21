@@ -31,10 +31,8 @@ public class BookingController {
         user.setId(1L);
         SalonDTO salonDTO = new SalonDTO();
         salonDTO.setId(salonId);
-        salonDTO.setOpenTime(LocalTime.now());
-        salonDTO.setCloseTime(LocalTime.now().plusHours(12));
-//        salonDTO.setOpenTime(LocalTime.now());
-//        salonDTO.setCloseTime(LocalTime.now().plusHours(12));
+        salonDTO.setOpenTime(LocalTime.of(0, 0));
+        salonDTO.setCloseTime(LocalTime.of(23, 59));
         Set<ServiceDTO> serviceDTOSet = new HashSet<>();
         ServiceDTO serviceDTO = new ServiceDTO();
         serviceDTO.setId(1L);
@@ -51,7 +49,7 @@ public class BookingController {
     public ResponseEntity<Set<BookingDTO>> getBookingsByCustomer(
 
     ){
-        List<Booking> bookings = bookingService.getBookingsBySalon(1L);
+        List<Booking> bookings = bookingService.getBookingsByCustomer(1L);
         return ResponseEntity.ok(getBookingDTOs(bookings));
     }
 
@@ -59,7 +57,7 @@ public class BookingController {
     public ResponseEntity<Set<BookingDTO>> getBookingsBySalon(
 
     ){
-        List<Booking> bookings = bookingService.getBookingsByCustomer(1L);
+        List<Booking> bookings = bookingService.getBookingsBySalon(1L);
         return ResponseEntity.ok(getBookingDTOs(bookings));
     }
 

@@ -8,6 +8,7 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface SalonRepository extends JpaRepository<Salon,Long> {
+    Salon findFirstByOwnerId(Long id);
     Salon findByOwnerId(Long id);
     @Query(
             "select s from Salon s where"+

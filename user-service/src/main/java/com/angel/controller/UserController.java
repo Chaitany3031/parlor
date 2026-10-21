@@ -22,14 +22,21 @@ public class UserController {
         return new ResponseEntity<>(createdUser, HttpStatus.CREATED);
     }
 
+
+    @GetMapping("/api/users/profile")
+    public ResponseEntity<User> getUserProfile(@RequestHeader("Authorization") String jwt) throws Exception {
+        User user =  userService.getUserFromJwt(jwt);
+        return new ResponseEntity<>(user, HttpStatus.OK);
+    }
+
     @GetMapping("/api/users")
     public ResponseEntity<List<User>> getUsers(){
         List<User> users = userService.getAllUsers();
         return new ResponseEntity<>(users,HttpStatus.OK);
     }
 
-    @GetMapping("/api/user/{id}")
-    public ResponseEntity<User> getUserById(@PathVariable Long id) throws Exception {
+    @GetMapping("/api/user/{userId}")
+    public ResponseEntity<User> getUserById(@PathVariable("userId") Long id) throws Exception {
         User user = userService.getUserById(id);
         return new ResponseEntity<>(user,HttpStatus.OK);
     }

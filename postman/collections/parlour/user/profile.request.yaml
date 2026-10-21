@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:5000/api/users/profile
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: "{{salon_jwt}}"
+order: 9000

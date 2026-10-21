@@ -1,0 +1,107 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-12T02:35:06.645+05:30  INFO 18300 --- [booking-service] [           main] com.angel.BookingServiceApplication      : Starting BookingServiceApplication v0.0.1-SNAPSHOT using Java 17.0.20.1 with PID 18300 (C:\Users\chaitanya\OneDrive\Desktop\parlor\booking-service\target\booking-service-0.0.1-SNAPSHOT.jar started by chaitanya in C:\Windows\System32)
+2026-10-12T02:35:06.648+05:30  INFO 18300 --- [booking-service] [           main] com.angel.BookingServiceApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-10-12T02:35:07.600+05:30  INFO 18300 --- [booking-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-12T02:35:07.720+05:30  INFO 18300 --- [booking-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 109 ms. Found 1 JPA repository interface.
+2026-10-12T02:35:07.987+05:30  INFO 18300 --- [booking-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3a99dd04-f58e-3ffc-bd40-181ad6461e7e
+2026-10-12T02:35:08.522+05:30  INFO 18300 --- [booking-service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 5005 (http)
+2026-10-12T02:35:08.538+05:30  INFO 18300 --- [booking-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-12T02:35:08.539+05:30  INFO 18300 --- [booking-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-12T02:35:08.568+05:30  INFO 18300 --- [booking-service] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1870 ms
+2026-10-12T02:35:09.085+05:30  INFO 18300 --- [booking-service] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-12T02:35:09.205+05:30  INFO 18300 --- [booking-service] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-12T02:35:09.827+05:30  INFO 18300 --- [booking-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-12T02:35:09.885+05:30  INFO 18300 --- [booking-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-12T02:35:10.454+05:30  INFO 18300 --- [booking-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@55cc4c61
+2026-10-12T02:35:10.455+05:30  INFO 18300 --- [booking-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-12T02:35:10.571+05:30  INFO 18300 --- [booking-service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/bookingdb]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: bookingdb/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-12T02:35:12.223+05:30  INFO 18300 --- [booking-service] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-12T02:35:12.344+05:30  INFO 18300 --- [booking-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-12T02:35:12.433+05:30  INFO 18300 --- [booking-service] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-12T02:35:12.736+05:30  WARN 18300 --- [booking-service] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-12T02:35:13.951+05:30  INFO 18300 --- [booking-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-10-12T02:35:13.998+05:30  WARN 18300 --- [booking-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-10-12T02:35:14.005+05:30  INFO 18300 --- [booking-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-12T02:35:14.098+05:30  INFO 18300 --- [booking-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-10-12T02:35:14.126+05:30  INFO 18300 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-10-12T02:35:14.130+05:30  INFO 18300 --- [booking-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-12T02:35:14.140+05:30  INFO 18300 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-10-12T02:35:14.141+05:30  INFO 18300 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-10-12T02:35:14.141+05:30  INFO 18300 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-10-12T02:35:14.141+05:30  INFO 18300 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-10-12T02:35:14.141+05:30  INFO 18300 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-10-12T02:35:14.141+05:30  INFO 18300 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-10-12T02:35:14.141+05:30  INFO 18300 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-10-12T02:35:14.592+05:30  INFO 18300 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-10-12T02:35:14.594+05:30  INFO 18300 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-10-12T02:35:14.598+05:30  INFO 18300 --- [booking-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-10-12T02:35:14.599+05:30  INFO 18300 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1791752714599 with initial instances count: 7
+2026-10-12T02:35:14.602+05:30  INFO 18300 --- [booking-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application BOOKING-SERVICE with eureka with status UP
+2026-10-12T02:35:14.602+05:30  INFO 18300 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1791752714602, current=UP, previous=STARTING]
+2026-10-12T02:35:14.604+05:30  INFO 18300 --- [booking-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING-SERVICE/LAPTOP-D5R0UOU6:booking-service:5005: registering service...
+2026-10-12T02:35:14.635+05:30  INFO 18300 --- [booking-service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 5005 (http) with context path '/'
+2026-10-12T02:35:14.636+05:30  INFO 18300 --- [booking-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 5005
+2026-10-12T02:35:14.653+05:30  INFO 18300 --- [booking-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING-SERVICE/LAPTOP-D5R0UOU6:booking-service:5005 - registration status: 204
+2026-10-12T02:35:14.838+05:30  INFO 18300 --- [booking-service] [           main] com.angel.BookingServiceApplication      : Started BookingServiceApplication in 8.905 seconds (process running for 9.574)
+2026-10-12T02:35:48.453+05:30  INFO 18300 --- [booking-service] [nio-5005-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-12T02:35:48.453+05:30  INFO 18300 --- [booking-service] [nio-5005-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-12T02:35:48.456+05:30  INFO 18300 --- [booking-service] [nio-5005-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+Hibernate: select b1_0.id,b1_0.customer_id,b1_0.end_time,b1_0.salon_id,b1_0.start_time,b1_0.status,b1_0.total_price from booking b1_0 where b1_0.salon_id=?
+Hibernate: select next_val as id_val from booking_seq for update
+Hibernate: update booking_seq set next_val= ? where next_val=?
+Hibernate: insert into booking (customer_id,end_time,salon_id,start_time,status,total_price,id) values (?,?,?,?,?,?,?)
+Hibernate: insert into booking_service_ids (booking_id,service_ids) values (?,?)
+Hibernate: select b1_0.id,b1_0.customer_id,b1_0.end_time,b1_0.salon_id,b1_0.start_time,b1_0.status,b1_0.total_price from booking b1_0 where b1_0.id=?
+Hibernate: select si1_0.booking_id,si1_0.service_ids from booking_service_ids si1_0 where si1_0.booking_id=?
+Hibernate: select b1_0.id,b1_0.customer_id,b1_0.end_time,b1_0.salon_id,b1_0.start_time,b1_0.status,b1_0.total_price from booking b1_0 where b1_0.customer_id=?
+Hibernate: select si1_0.booking_id,si1_0.service_ids from booking_service_ids si1_0 where si1_0.booking_id=?
+Hibernate: select si1_0.booking_id,si1_0.service_ids from booking_service_ids si1_0 where si1_0.booking_id=?
+Hibernate: select b1_0.id,b1_0.customer_id,b1_0.end_time,b1_0.salon_id,b1_0.start_time,b1_0.status,b1_0.total_price from booking b1_0 where b1_0.salon_id=?
+Hibernate: select si1_0.booking_id,si1_0.service_ids from booking_service_ids si1_0 where si1_0.booking_id=?
+Hibernate: select si1_0.booking_id,si1_0.service_ids from booking_service_ids si1_0 where si1_0.booking_id=?
+Hibernate: select b1_0.id,b1_0.customer_id,b1_0.end_time,b1_0.salon_id,b1_0.start_time,b1_0.status,b1_0.total_price from booking b1_0 where b1_0.id=?
+Hibernate: update booking set customer_id=?,end_time=?,salon_id=?,start_time=?,status=?,total_price=? where id=?
+Hibernate: select si1_0.booking_id,si1_0.service_ids from booking_service_ids si1_0 where si1_0.booking_id=?
+Hibernate: select b1_0.id,b1_0.customer_id,b1_0.end_time,b1_0.salon_id,b1_0.start_time,b1_0.status,b1_0.total_price from booking b1_0 where b1_0.salon_id=?
+Hibernate: select b1_0.id,b1_0.customer_id,b1_0.end_time,b1_0.salon_id,b1_0.start_time,b1_0.status,b1_0.total_price from booking b1_0 where b1_0.salon_id=?
+2026-10-12T02:40:14.149+05:30  INFO 18300 --- [booking-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-12T02:45:14.167+05:30  INFO 18300 --- [booking-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: select b1_0.id,b1_0.customer_id,b1_0.end_time,b1_0.salon_id,b1_0.start_time,b1_0.status,b1_0.total_price from booking b1_0 where b1_0.salon_id=?
+Hibernate: insert into booking (customer_id,end_time,salon_id,start_time,status,total_price,id) values (?,?,?,?,?,?,?)
+Hibernate: insert into booking_service_ids (booking_id,service_ids) values (?,?)
+Hibernate: select b1_0.id,b1_0.customer_id,b1_0.end_time,b1_0.salon_id,b1_0.start_time,b1_0.status,b1_0.total_price from booking b1_0 where b1_0.id=?
+Hibernate: select si1_0.booking_id,si1_0.service_ids from booking_service_ids si1_0 where si1_0.booking_id=?
+Hibernate: select b1_0.id,b1_0.customer_id,b1_0.end_time,b1_0.salon_id,b1_0.start_time,b1_0.status,b1_0.total_price from booking b1_0 where b1_0.customer_id=?
+Hibernate: select si1_0.booking_id,si1_0.service_ids from booking_service_ids si1_0 where si1_0.booking_id=?
+Hibernate: select si1_0.booking_id,si1_0.service_ids from booking_service_ids si1_0 where si1_0.booking_id=?
+Hibernate: select si1_0.booking_id,si1_0.service_ids from booking_service_ids si1_0 where si1_0.booking_id=?
+Hibernate: select b1_0.id,b1_0.customer_id,b1_0.end_time,b1_0.salon_id,b1_0.start_time,b1_0.status,b1_0.total_price from booking b1_0 where b1_0.salon_id=?
+Hibernate: select si1_0.booking_id,si1_0.service_ids from booking_service_ids si1_0 where si1_0.booking_id=?
+Hibernate: select si1_0.booking_id,si1_0.service_ids from booking_service_ids si1_0 where si1_0.booking_id=?
+Hibernate: select si1_0.booking_id,si1_0.service_ids from booking_service_ids si1_0 where si1_0.booking_id=?
+Hibernate: select b1_0.id,b1_0.customer_id,b1_0.end_time,b1_0.salon_id,b1_0.start_time,b1_0.status,b1_0.total_price from booking b1_0 where b1_0.id=?
+Hibernate: update booking set customer_id=?,end_time=?,salon_id=?,start_time=?,status=?,total_price=? where id=?
+Hibernate: select si1_0.booking_id,si1_0.service_ids from booking_service_ids si1_0 where si1_0.booking_id=?
+Hibernate: select b1_0.id,b1_0.customer_id,b1_0.end_time,b1_0.salon_id,b1_0.start_time,b1_0.status,b1_0.total_price from booking b1_0 where b1_0.salon_id=?
+Hibernate: select b1_0.id,b1_0.customer_id,b1_0.end_time,b1_0.salon_id,b1_0.start_time,b1_0.status,b1_0.total_price from booking b1_0 where b1_0.salon_id=?
+2026-10-12T02:50:14.178+05:30  INFO 18300 --- [booking-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

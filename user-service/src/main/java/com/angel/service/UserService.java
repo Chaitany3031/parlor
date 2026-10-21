@@ -11,4 +11,5 @@ public interface UserService {
     List<User> getAllUsers();
     void deleteUser(Long id) throws UserException;
     User updateUser(User user, Long id) throws UserException;
+    User getUserFromJwt(String jwt) throws Exception;
 }

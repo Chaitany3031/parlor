@@ -34,22 +34,22 @@ public class SalonServiceImpl implements SalonService {
     @Override
     public Salon updateSalon(SalonDTO salon, UserDTO user, Long salonId) throws Exception {
         Salon existingSalon = salonRepository.findById(salonId).orElse(null);
-        if(!salon.getOwnerId().equals(user.getId())){
+        if(existingSalon == null){
+            throw new Exception("salon does not exist");
+        }
+        if(existingSalon.getOwnerId() != null && !existingSalon.getOwnerId().equals(user.getId())){
             throw new Exception("no permission");
         }
-        if(existingSalon != null){
-            existingSalon.setCity(salon.getCity());
-            existingSalon.setName(salon.getName());
-            existingSalon.setAddress(salon.getAddress());
-            existingSalon.setEmail(salon.getEmail());
-            existingSalon.setImages(salon.getImages());
-            existingSalon.setOpenTime(salon.getOpenTime());
-            existingSalon.setCloseTime(salon.getCloseTime());
-            existingSalon.setOwnerId(user.getId());
-            existingSalon.setPhoneNo(salon.getPhoneNo());
-            return salonRepository.save(existingSalon);
-        }
-        throw new Exception("salon does not exist");
+        existingSalon.setCity(salon.getCity());
+        existingSalon.setName(salon.getName());
+        existingSalon.setAddress(salon.getAddress());
+        existingSalon.setEmail(salon.getEmail());
+        existingSalon.setImages(salon.getImages());
+        existingSalon.setOpenTime(salon.getOpenTime());
+        existingSalon.setCloseTime(salon.getCloseTime());
+        existingSalon.setOwnerId(user.getId());
+        existingSalon.setPhoneNo(salon.getPhoneNo());
+        return salonRepository.save(existingSalon);
     }
 
     @Override
@@ -68,7 +68,7 @@ public class SalonServiceImpl implements SalonService {
 
     @Override
     public Salon getSalonByOwnerId(Long ownerId) {
-        return salonRepository.findByOwnerId(ownerId);
+        return salonRepository.findFirstByOwnerId(ownerId);
     }
 
     @Override

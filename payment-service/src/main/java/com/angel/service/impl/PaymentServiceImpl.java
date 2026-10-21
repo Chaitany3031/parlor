@@ -48,25 +48,36 @@ public class PaymentServiceImpl implements PaymentService {
         order.setBookingId(bookingDTO.getId());
         order.setPaymentMethod(paymentMethod);
         order.setSalonId(bookingDTO.getSalonId());
+        order.setUserId(userDTO.getId());
         PaymentOrder savedOrder = paymentOrderRepository.save(order);
 
         PaymentLinkResponse paymentLinkResponse = new PaymentLinkResponse();
 
         if(paymentMethod.equals(PaymentMethod.RAZORPAY)){
-            PaymentLink paymentLink = createRazorpayPaymentLink(userDTO,savedOrder.getAmount(),savedOrder.getId());
+            if (razorpayApiKey != null && !razorpayApiKey.isBlank()) {
+                PaymentLink paymentLink = createRazorpayPaymentLink(userDTO,savedOrder.getAmount(),savedOrder.getId());
 
-            String paymentUrl = paymentLink.get("short_url");
-            String paymentUrlId = paymentLink.get("id");
-            paymentLinkResponse.setPayment_link_url(paymentUrl);
-            paymentLinkResponse.setGetPayment_link_id(paymentUrlId);
+                String paymentUrl = paymentLink.get("short_url");
+                String paymentUrlId = paymentLink.get("id");
+                paymentLinkResponse.setPayment_link_url(paymentUrl);
+                paymentLinkResponse.setGetPayment_link_id(paymentUrlId);
 
-            savedOrder.setPaymentLinkId(paymentUrlId);
-
-            paymentOrderRepository.save(savedOrder);
-
+                savedOrder.setPaymentLinkId(paymentUrlId);
+                paymentOrderRepository.save(savedOrder);
+            } else {
+                String testPaymentId = "plink_test_" + savedOrder.getId();
+                paymentLinkResponse.setPayment_link_url("http://localhost:3000/payment-success/" + savedOrder.getId());
+                paymentLinkResponse.setGetPayment_link_id(testPaymentId);
+                savedOrder.setPaymentLinkId(testPaymentId);
+                paymentOrderRepository.save(savedOrder);
+            }
         }else{
-            String paymentUrl = createStripePaymentLink(userDTO,savedOrder.getAmount(),savedOrder.getId());
-            paymentLinkResponse.setPayment_link_url(paymentUrl);
+            if (stripeSecretKey != null && !stripeSecretKey.isBlank()) {
+                String paymentUrl = createStripePaymentLink(userDTO,savedOrder.getAmount(),savedOrder.getId());
+                paymentLinkResponse.setPayment_link_url(paymentUrl);
+            } else {
+                paymentLinkResponse.setPayment_link_url("http://localhost:3000/payment-success/" + savedOrder.getId());
+            }
         }
         return paymentLinkResponse;
     }
@@ -127,19 +138,28 @@ public class PaymentServiceImpl implements PaymentService {
 
     @Override
     public Boolean proceedPayment(PaymentOrder paymentOrder, String paymentId, String paymentLinkId) throws RazorpayException {
+        if(paymentOrder == null){
+            return false;
+        }
         if(paymentOrder.getStatus().equals(PaymentOrderStatus.PENDING)){
             if(paymentOrder.getPaymentMethod().equals(PaymentMethod.RAZORPAY)){
-                RazorpayClient razorpayClient = new RazorpayClient(razorpayApiKey,razorpayApiSecret);
-                Payment payment = razorpayClient.payments.fetch(paymentId);
-                Integer amount = payment.get("amount");
-                String status = payment.get("status");
-                if(status.equals("captured")){
-//                    produce kafka event
+                if(razorpayApiKey != null && !razorpayApiKey.isBlank()){
+                    RazorpayClient razorpayClient = new RazorpayClient(razorpayApiKey,razorpayApiSecret);
+                    Payment payment = razorpayClient.payments.fetch(paymentId);
+                    Integer amount = payment.get("amount");
+                    String status = payment.get("status");
+                    if(status.equals("captured")){
+    //                    produce kafka event
+                        paymentOrder.setStatus(PaymentOrderStatus.SUCCESS);
+                        paymentOrderRepository.save(paymentOrder);
+                        return true;
+                    }
+                    return false;
+                }else{
                     paymentOrder.setStatus(PaymentOrderStatus.SUCCESS);
                     paymentOrderRepository.save(paymentOrder);
                     return true;
                 }
-                return false;
             }else{
                 paymentOrder.setStatus(PaymentOrderStatus.SUCCESS);
                 paymentOrderRepository.save(paymentOrder);

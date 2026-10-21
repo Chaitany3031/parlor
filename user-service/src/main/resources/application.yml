@@ -4,7 +4,7 @@ server:
   port: 5001
 spring:
   application:
-    name: user-offering
+    name: user-service
   jpa:
     hibernate:
       ddl-auto: update

@@ -1,0 +1,6 @@
+name: Globals
+values:
+  - key: jwt
+    value: ''
+  - key: salon_jwt
+    value: ''

@@ -2,7 +2,9 @@ package com.angel.service.impl;
 
 import com.angel.exception.UserException;
 import com.angel.modal.User;
+import com.angel.payload.dto.KeycloakUserDTO;
 import com.angel.repository.UserRepository;
+import com.angel.service.KeyCloakService;
 import com.angel.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -14,6 +16,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
+    private final KeyCloakService keyCloakService;
     @Override
     public User createUser(User user) {
         return userRepository.save(user);
@@ -58,5 +61,21 @@ public class UserServiceImpl implements UserService {
         existingUser.setUsername(user.getUsername());
 
         return userRepository.save(existingUser);
+    }
+
+    @Override
+    public User getUserFromJwt(String jwt) throws Exception {
+        KeycloakUserDTO keycloakUserDTO = keyCloakService.fetchUserProfileByJwt(jwt);
+        User user = null;
+        if (keycloakUserDTO.getEmail() != null && !keycloakUserDTO.getEmail().isBlank()) {
+            user = userRepository.findByEmail(keycloakUserDTO.getEmail());
+        }
+        if (user == null && keycloakUserDTO.getUsername() != null && !keycloakUserDTO.getUsername().isBlank()) {
+            user = userRepository.findByUsername(keycloakUserDTO.getUsername());
+        }
+        if (user == null) {
+            throw new UserException("user not found for email: " + keycloakUserDTO.getEmail() + " or username: " + keycloakUserDTO.getUsername());
+        }
+        return user;
     }
 }

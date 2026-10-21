@@ -1,0 +1,101 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-12T02:15:02.861+05:30  INFO 13156 --- [salon-service] [           main] com.angel.SalonServiceApplication        : Starting SalonServiceApplication v0.0.1-SNAPSHOT using Java 17.0.20.1 with PID 13156 (C:\Users\chaitanya\OneDrive\Desktop\parlor\salon-service\target\salon-service-0.0.1-SNAPSHOT.jar started by chaitanya in C:\Windows\System32)
+2026-10-12T02:15:02.867+05:30  INFO 13156 --- [salon-service] [           main] com.angel.SalonServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-10-12T02:15:03.774+05:30  INFO 13156 --- [salon-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-12T02:15:03.922+05:30  INFO 13156 --- [salon-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 138 ms. Found 1 JPA repository interface.
+2026-10-12T02:15:04.154+05:30  INFO 13156 --- [salon-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f813db1d-0064-30fd-b1c9-93731f3302ce
+2026-10-12T02:15:04.619+05:30  INFO 13156 --- [salon-service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 5002 (http)
+2026-10-12T02:15:04.636+05:30  INFO 13156 --- [salon-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-12T02:15:04.637+05:30  INFO 13156 --- [salon-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-12T02:15:04.666+05:30  INFO 13156 --- [salon-service] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1729 ms
+2026-10-12T02:15:04.854+05:30  INFO 13156 --- [salon-service] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-12T02:15:04.909+05:30  INFO 13156 --- [salon-service] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-12T02:15:05.384+05:30  INFO 13156 --- [salon-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-12T02:15:05.413+05:30  INFO 13156 --- [salon-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-12T02:15:05.901+05:30  INFO 13156 --- [salon-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@13047d3d
+2026-10-12T02:15:05.902+05:30  INFO 13156 --- [salon-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-12T02:15:05.995+05:30  INFO 13156 --- [salon-service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/salondb?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: salondb/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-12T02:15:07.105+05:30  INFO 13156 --- [salon-service] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-12T02:15:07.172+05:30  INFO 13156 --- [salon-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-12T02:15:07.268+05:30  INFO 13156 --- [salon-service] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-12T02:15:08.354+05:30  WARN 13156 --- [salon-service] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-12T02:15:09.190+05:30  INFO 13156 --- [salon-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-10-12T02:15:09.231+05:30  WARN 13156 --- [salon-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-10-12T02:15:09.250+05:30  INFO 13156 --- [salon-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-10-12T02:15:09.285+05:30  INFO 13156 --- [salon-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-10-12T02:15:09.289+05:30  INFO 13156 --- [salon-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-12T02:15:09.300+05:30  INFO 13156 --- [salon-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-10-12T02:15:09.300+05:30  INFO 13156 --- [salon-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-10-12T02:15:09.300+05:30  INFO 13156 --- [salon-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-10-12T02:15:09.300+05:30  INFO 13156 --- [salon-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-10-12T02:15:09.300+05:30  INFO 13156 --- [salon-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-10-12T02:15:09.300+05:30  INFO 13156 --- [salon-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-10-12T02:15:09.300+05:30  INFO 13156 --- [salon-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-10-12T02:15:09.708+05:30  INFO 13156 --- [salon-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-10-12T02:15:09.711+05:30  INFO 13156 --- [salon-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-10-12T02:15:09.713+05:30  INFO 13156 --- [salon-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-10-12T02:15:09.715+05:30  INFO 13156 --- [salon-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1791751509714 with initial instances count: 7
+2026-10-12T02:15:09.719+05:30  INFO 13156 --- [salon-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SALON-SERVICE with eureka with status UP
+2026-10-12T02:15:09.720+05:30  INFO 13156 --- [salon-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1791751509720, current=UP, previous=STARTING]
+2026-10-12T02:15:09.722+05:30  INFO 13156 --- [salon-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SALON-SERVICE/LAPTOP-D5R0UOU6:salon-service:5002: registering service...
+2026-10-12T02:15:09.769+05:30  INFO 13156 --- [salon-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SALON-SERVICE/LAPTOP-D5R0UOU6:salon-service:5002 - registration status: 204
+2026-10-12T02:15:09.779+05:30  INFO 13156 --- [salon-service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 5002 (http) with context path '/'
+2026-10-12T02:15:09.780+05:30  INFO 13156 --- [salon-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 5002
+2026-10-12T02:15:09.942+05:30  INFO 13156 --- [salon-service] [           main] com.angel.SalonServiceApplication        : Started SalonServiceApplication in 7.706 seconds (process running for 8.408)
+2026-10-12T02:15:30.389+05:30  INFO 13156 --- [salon-service] [nio-5002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-12T02:15:30.390+05:30  INFO 13156 --- [salon-service] [nio-5002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-12T02:15:30.393+05:30  INFO 13156 --- [salon-service] [nio-5002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+--------------102
+Hibernate: select s1_0.id,s1_0.address,s1_0.city,s1_0.close_time,s1_0.email,s1_0.name,s1_0.open_time,s1_0.owner_id,s1_0.phone_no from salon s1_0 where s1_0.id=?
+Hibernate: update salon set address=?,city=?,close_time=?,email=?,name=?,open_time=?,owner_id=?,phone_no=? where id=?
+Hibernate: delete from salon_images where salon_id=?
+Hibernate: insert into salon_images (salon_id,images) values (?,?)
+Hibernate: select s1_0.id,s1_0.address,s1_0.city,s1_0.close_time,s1_0.email,s1_0.name,s1_0.open_time,s1_0.owner_id,s1_0.phone_no from salon s1_0 where s1_0.owner_id=? limit ?
+Hibernate: select i1_0.salon_id,i1_0.images from salon_images i1_0 where i1_0.salon_id=?
+2026-10-12T02:20:09.312+05:30  INFO 13156 --- [salon-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-12T02:25:09.318+05:30  INFO 13156 --- [salon-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-12T02:30:09.332+05:30  INFO 13156 --- [salon-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-12T02:35:09.338+05:30  INFO 13156 --- [salon-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-12T02:40:09.353+05:30  INFO 13156 --- [salon-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-12T02:45:09.367+05:30  INFO 13156 --- [salon-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: select next_val as id_val from salon_seq for update
+Hibernate: update salon_seq set next_val= ? where next_val=?
+Hibernate: insert into salon (address,city,close_time,email,name,open_time,owner_id,phone_no,id) values (?,?,?,?,?,?,?,?,?)
+Hibernate: insert into salon_images (salon_id,images) values (?,?)
+Hibernate: select s1_0.id,s1_0.address,s1_0.city,s1_0.close_time,s1_0.email,s1_0.name,s1_0.open_time,s1_0.owner_id,s1_0.phone_no from salon s1_0
+Hibernate: select i1_0.salon_id,i1_0.images from salon_images i1_0 where i1_0.salon_id=?
+Hibernate: select i1_0.salon_id,i1_0.images from salon_images i1_0 where i1_0.salon_id=?
+Hibernate: select i1_0.salon_id,i1_0.images from salon_images i1_0 where i1_0.salon_id=?
+Hibernate: select s1_0.id,s1_0.address,s1_0.city,s1_0.close_time,s1_0.email,s1_0.name,s1_0.open_time,s1_0.owner_id,s1_0.phone_no from salon s1_0 where s1_0.id=?
+Hibernate: select i1_0.salon_id,i1_0.images from salon_images i1_0 where i1_0.salon_id=?
+--------------152
+Hibernate: select s1_0.id,s1_0.address,s1_0.city,s1_0.close_time,s1_0.email,s1_0.name,s1_0.open_time,s1_0.owner_id,s1_0.phone_no from salon s1_0 where s1_0.id=?
+Hibernate: update salon set address=?,city=?,close_time=?,email=?,name=?,open_time=?,owner_id=?,phone_no=? where id=?
+Hibernate: delete from salon_images where salon_id=?
+Hibernate: insert into salon_images (salon_id,images) values (?,?)
+Hibernate: select s1_0.id,s1_0.address,s1_0.city,s1_0.close_time,s1_0.email,s1_0.name,s1_0.open_time,s1_0.owner_id,s1_0.phone_no from salon s1_0 where (lower(s1_0.city) like lower(concat('%',?,'%')) escape '' or lower(s1_0.name) like lower(concat('%',?,'%')) escape '' or lower(s1_0.address) like lower(concat('%',?,'%')) escape '')
+Hibernate: select i1_0.salon_id,i1_0.images from salon_images i1_0 where i1_0.salon_id=?
+Hibernate: select i1_0.salon_id,i1_0.images from salon_images i1_0 where i1_0.salon_id=?
+Hibernate: select s1_0.id,s1_0.address,s1_0.city,s1_0.close_time,s1_0.email,s1_0.name,s1_0.open_time,s1_0.owner_id,s1_0.phone_no from salon s1_0 where s1_0.owner_id=? limit ?
+Hibernate: select i1_0.salon_id,i1_0.images from salon_images i1_0 where i1_0.salon_id=?
+2026-10-12T02:50:09.381+05:30  INFO 13156 --- [salon-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
