@@ -5,7 +5,7 @@ import React from 'react'
 const SelectedServiceList = () => {
   return (
     <div className='my-5 space-y-2 '>
-       {[1,1,1,1].map((item)=>( <div className="py-2 px-4 rounded-md bg-slate-900 flex justify-between items-center">
+       {[1,1,1,1].map((_, index)=>( <div key={index} className="py-2 px-4 rounded-md bg-slate-900 flex justify-between items-center">
         <h1 className='font-thin '>Kaveri</h1>
         <p>₹2130</p>
         <IconButton>

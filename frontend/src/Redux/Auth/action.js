@@ -1,5 +1,20 @@
 import axios from "axios";
-import { GET_USER_FAILURE, GET_USER_REQUEST, GET_USER_SUCCESS, LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS, REGISTER_FAILURE, REGISTER_REQUEST, REGISTER_SUCCESS } from "./actionTypes"
+import api, { API_BASE_URL } from "../../config/api";
+import {
+    GET_ALL_CUSTOMERS_FAILURE,
+    GET_ALL_CUSTOMERS_REQUEST,
+    GET_ALL_CUSTOMERS_SUCCESS,
+    GET_USER_FAILURE,
+    GET_USER_REQUEST,
+    GET_USER_SUCCESS,
+    LOGIN_FAILURE,
+    LOGIN_REQUEST,
+    LOGIN_SUCCESS,
+    LOGOUT,
+    REGISTER_FAILURE,
+    REGISTER_REQUEST,
+    REGISTER_SUCCESS
+} from "./actionTypes";
 
 export const registerUser = (userData) => async (dispatch) => {
     dispatch({type:REGISTER_REQUEST})

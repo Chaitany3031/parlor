@@ -14,7 +14,9 @@ export const ThemeContextProvider = ({ children }) => {
     try {
       const saved = localStorage.getItem("parlor_theme");
       if (saved === "light" || saved === "dark") return saved;
-    } catch {}
+    } catch {
+      // ignore storage access issues
+    }
     return "dark"; // Default to dark for sleek high-end aesthetics
   });
 
@@ -23,7 +25,9 @@ export const ThemeContextProvider = ({ children }) => {
   useEffect(() => {
     try {
       localStorage.setItem("parlor_theme", themeMode);
-    } catch {}
+    } catch {
+      // ignore storage access issues
+    }
 
     const root = document.documentElement;
     if (isDark) {

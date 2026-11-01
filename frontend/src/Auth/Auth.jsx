@@ -8,7 +8,7 @@ const Auth = () => {
   return (
     <div className='flex justify-center items-center h-[95vh]'>
         <div className="shadow-lg p-5">
-        {location.pathname==='/register'?<div>signup</div>:<LoginForm/>}
+        {location.pathname==='/register'?(<div>signup</div>):(<LoginForm/>)}
         </div>
     </div>
   )

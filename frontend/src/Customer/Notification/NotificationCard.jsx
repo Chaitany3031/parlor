@@ -12,7 +12,7 @@ const NotificationCard = () => {
         <div>
             <p>your booking got confirmed</p>
             <h1 className='space-x-3'>
-                {[1,1,1,1].map((item)=><span>kxvx</span>)}
+                {[1,1,1,1].map((_, idx)=><span key={idx}>kxvx</span>)}
             </h1>
         </div>
 

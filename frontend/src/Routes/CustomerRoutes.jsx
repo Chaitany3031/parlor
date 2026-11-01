@@ -9,6 +9,7 @@ import Navbar from '../Customer/Navbar/Navbar'
 import Home from '../Customer/Home/Home'
 import Notifications from '../Customer/Notification/Notifications'
 import NotFound from '../NotFound/NotFound'
+import Auth from '../Auth/Auth'
 
 const CustomerRoutes = () => {
   return (
@@ -20,6 +21,8 @@ const CustomerRoutes = () => {
         <Route path='/notifications' element={<Notifications/>} />
         <Route path='/bookings' element={<Booking/>} />
         <Route path='/salon/:id' element={<SalonDetails/>}/>
+        <Route path='/login' element={<Auth/>}/>
+        <Route path='/register' element={<Auth/>}/>
         <Route path='*' element={<NotFound/>}/>
       </Routes>
         

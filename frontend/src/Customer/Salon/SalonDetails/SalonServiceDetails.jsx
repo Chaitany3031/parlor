@@ -11,7 +11,8 @@ const SalonServiceDetails = () => {
   return (
     <div className='lg:flex gap-5 h-[90vh] mt-10'>
         <section className='space-y-5 border-r lg:w-[25%] pr-5'>
-            {[1,1,1,1,1].map((item,index)=><Categorycard
+            {[1,1,1,1,1].map((_, index)=><Categorycard
+            key={index}
             selectedCategory={selectedCategory}
             item={index}
             handleCategoryClick={handleCategoryClick(index)}
@@ -19,7 +20,7 @@ const SalonServiceDetails = () => {
         </section>
         <section className="space-y-2 lg:w-[50%] px-5 lg:px-20 overflow-y-auto">
           
-        {[1,1,1,1,1].map((item)=><div className='space-y-4'>
+        {[1,1,1,1,1].map((_, index)=><div key={index} className='space-y-4'>
               <ServiceCard/>
               <Divider/>
           </div>)}

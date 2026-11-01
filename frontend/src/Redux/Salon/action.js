@@ -1,166 +1,171 @@
-import axios from "axios"
-import { CREATE_SALON_REQUEST, CREATE_SALON_SUCCESS, FETCH_SALON_BY_ID_FAILURE, FETCH_SALON_BY_ID_REQUEST, FETCH_SALON_BY_ID_SUCCESS, FETCH_SALON_BY_OWNER_FAILURE, FETCH_SALON_BY_OWNER_REQUEST, FETCH_SALON_BY_OWNER_SUCCESS, FETCH_SALONS_FAILURE, FETCH_SALONS_REQUEST, FETCH_SALONS_SUCCESS, SEARCH_SALONS_FAILURE, SEARCH_SALONS_REQUEST, UPDATE_SALON_FAILURE, UPDATE_SALON_REQUEST, UPDATE_SALON_SUCCESS } from "./actionTypes"
-import api from "../../config/api"
+import {
+    CREATE_SALON_FAILURE,
+    CREATE_SALON_REQUEST,
+    CREATE_SALON_SUCCESS,
+    FETCH_SALON_BY_ID_FAILURE,
+    FETCH_SALON_BY_ID_REQUEST,
+    FETCH_SALON_BY_ID_SUCCESS,
+    FETCH_SALON_BY_OWNER_FAILURE,
+    FETCH_SALON_BY_OWNER_REQUEST,
+    FETCH_SALON_BY_OWNER_SUCCESS,
+    FETCH_SALONS_FAILURE,
+    FETCH_SALONS_REQUEST,
+    FETCH_SALONS_SUCCESS,
+    SEARCH_SALONS_FAILURE,
+    SEARCH_SALONS_REQUEST,
+    SEARCH_SALONS_SUCCESS,
+    UPDATE_SALON_FAILURE,
+    UPDATE_SALON_REQUEST,
+    UPDATE_SALON_SUCCESS
+} from "./actionTypes";
+import api from "../../config/api";
 
-const API_BASE_URL = '/api/salons'
+const API_BASE_URL = '/api/salons';
 
-export const createSalon = (reqData) => async(dispatch) => {
+export const createSalon = (reqData) => async (dispatch) => {
     dispatch({
-        type:CREATE_SALON_REQUEST
-    })
+        type: CREATE_SALON_REQUEST
+    });
 
     try {
-        const jwt = ''
-        const response = await api.post(API_BASE_URL,reqData.salonDetails,{
-            headers:{
-                Authorization:`Bearer ${jwt}`
+        const token = reqData?.jwt || localStorage.getItem('jwt');
+        const response = await api.post(API_BASE_URL, reqData.salonDetails, {
+            headers: {
+                Authorization: `Bearer ${token}`
             }
-        })
-        reqData.navigate('/salon-dashboard')
+        });
+        if (reqData.navigate) {
+            reqData.navigate('/salon-dashboard');
+        }
         dispatch({
-            type:CREATE_SALON_SUCCESS,
-            payload:response.data
-        })
+            type: CREATE_SALON_SUCCESS,
+            payload: response.data
+        });
     } catch (error) {
         dispatch({
-            type:CREATE_SALON_FAILURE,
-            payload:error.message
-        })
+            type: CREATE_SALON_FAILURE,
+            payload: error.response?.data?.message || error.message
+        });
     }
-}
+};
 
-
-
-export const updateSalon = ({salonId,salon,jwt}) => async(dispatch) => {
+export const updateSalon = ({ salonId, salon, jwt }) => async (dispatch) => {
     dispatch({
-        type:UPDATE_SALON_REQUEST
-    })
+        type: UPDATE_SALON_REQUEST
+    });
 
     try {
-        // const jwt = ''
-        const response = await api.put(`${API_BASE_URL}/${salonId}`,salon,{
-            headers:{
-                Authorization:`Bearer ${jwt}`
+        const token = jwt || localStorage.getItem('jwt');
+        const response = await api.put(`${API_BASE_URL}/${salonId}`, salon, {
+            headers: {
+                Authorization: `Bearer ${token}`
             }
-        })
+        });
         dispatch({
-            type:UPDATE_SALON_SUCCESS,
-            payload:response.data
-        })
+            type: UPDATE_SALON_SUCCESS,
+            payload: response.data
+        });
     } catch (error) {
         dispatch({
-            type:UPDATE_SALON_FAILURE,
-            payload:error.message
-        })
+            type: UPDATE_SALON_FAILURE,
+            payload: error.response?.data?.message || error.message
+        });
     }
-}
+};
 
-
-
-export const fetchSalons = () => async(dispatch) => {
+export const fetchSalons = () => async (dispatch) => {
     dispatch({
-        type:FETCH_SALONS_REQUEST
-    })
+        type: FETCH_SALONS_REQUEST
+    });
 
     try {
-        // const jwt = ''
-        const response = await api.get(API_BASE_URL,{
-            headers:{
-                Authorization:`Bearer ${localStorage.getItem('jwt')}`
+        const response = await api.get(API_BASE_URL, {
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem('jwt')}`
             }
-        })
+        });
         dispatch({
-            type:FETCH_SALONS_SUCCESS,
-            payload:response.data
-        })
+            type: FETCH_SALONS_SUCCESS,
+            payload: response.data
+        });
     } catch (error) {
         dispatch({
-            type:FETCH_SALONS_FAILURE,
-            payload:error.message //36:19
-        })
+            type: FETCH_SALONS_FAILURE,
+            payload: error.response?.data?.message || error.message
+        });
     }
-}   
+};
 
-
-export const fetchSalonById = (salonId) => async(dispatch) => {
+export const fetchSalonById = (salonId) => async (dispatch) => {
     dispatch({
-        type:FETCH_SALON_BY_ID_REQUEST
-    })
+        type: FETCH_SALON_BY_ID_REQUEST
+    });
 
     try {
-        const jwt = ''
-        const response = await api.get(`${API_BASE_URL}/${salonId}`,{
-            headers:{
-                Authorization:`Bearer ${localStorage.getItem('jwt')}`
+        const response = await api.get(`${API_BASE_URL}/${salonId}`, {
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem('jwt')}`
             }
-        })
+        });
         dispatch({
-            type:FETCH_SALON_BY_ID_SUCCESS,
-            payload:response.data
-        })
+            type: FETCH_SALON_BY_ID_SUCCESS,
+            payload: response.data
+        });
     } catch (error) {
         dispatch({
-            type:FETCH_SALON_BY_ID_FAILURE,
-            payload:error.message
-        })
+            type: FETCH_SALON_BY_ID_FAILURE,
+            payload: error.response?.data?.message || error.message
+        });
     }
-}  
+};
 
-
-
-export const fetchSalonByOwner = (jwt) => async(dispatch) => {
+export const fetchSalonByOwner = (jwt) => async (dispatch) => {
     dispatch({
-        type:FETCH_SALON_BY_OWNER_REQUEST
-    })
+        type: FETCH_SALON_BY_OWNER_REQUEST
+    });
 
     try {
-        const jwt = ''
-        const response = await api.get(`${API_BASE_URL}/owner`,{
-            headers:{
-                Authorization:`Bearer ${jwt}`
+        const token = (typeof jwt === 'object' && jwt !== null ? jwt.jwt : jwt) || localStorage.getItem('jwt');
+        const response = await api.get(`${API_BASE_URL}/owner`, {
+            headers: {
+                Authorization: `Bearer ${token}`
             }
-        })
+        });
         dispatch({
-            type:FETCH_SALON_BY_OWNER_SUCCESS,
-            payload:response.data
-        })
+            type: FETCH_SALON_BY_OWNER_SUCCESS,
+            payload: response.data
+        });
     } catch (error) {
         dispatch({
-            type:FETCH_SALON_BY_OWNER_FAILURE,
-            payload:error.message
-        })
+            type: FETCH_SALON_BY_OWNER_FAILURE,
+            payload: error.response?.data?.message || error.message
+        });
     }
-} 
+};
 
-
-
-export const searchSalons = ({jwt,city}) => async(dispatch) => {
+export const searchSalons = ({ jwt, city }) => async (dispatch) => {
     dispatch({
-        type:SEARCH_SALONS_REQUEST
-    })
+        type: SEARCH_SALONS_REQUEST
+    });
 
     try {
-        const jwt = ''
-        const response = await api.get(`${API_BASE_URL}/search`,{
-            headers:{
-                Authorization:`Bearer ${jwt}`
+        const token = jwt || localStorage.getItem('jwt');
+        const response = await api.get(`${API_BASE_URL}/search`, {
+            headers: {
+                Authorization: `Bearer ${token}`
             },
-            params:{
-                city:city
+            params: {
+                city: city
             }
-        })
+        });
         dispatch({
-            type:SEARCH_SALONS_REQUEST,
-            payload:response.data
-        })
+            type: SEARCH_SALONS_SUCCESS,
+            payload: response.data
+        });
     } catch (error) {
         dispatch({
-            type:SEARCH_SALONS_FAILURE,
-            payload:error.message
-        })
+            type: SEARCH_SALONS_FAILURE,
+            payload: error.response?.data?.message || error.message
+        });
     }
-} 
-
-
-
-
+};

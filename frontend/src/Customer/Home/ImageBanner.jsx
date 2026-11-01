@@ -145,6 +145,8 @@ const ImageBanner = ({
 
   // GSAP ScrollTrigger clip-path animation matching original Banner
   useGSAP(() => {
+    const el = document.getElementById("image-banner-frame");
+    if (!el) return;
     gsap.set("#image-banner-frame", {
       clipPath: "polygon(14% 0, 72% 0, 88% 90%, 0 95%)",
       borderRadius: "0% 0% 40% 10%",
