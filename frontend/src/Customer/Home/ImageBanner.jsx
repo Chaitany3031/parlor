@@ -3,9 +3,32 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import { TiLocationArrow } from "react-icons/ti";
-import { FiChevronLeft, FiChevronRight, FiPlay, FiPause } from "react-icons/fi";
 import Button from "./Button";
 import VideoPreview from "./VideoPreview";
+
+const ChevronLeftIcon = () => (
+  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+  </svg>
+);
+
+const ChevronRightIcon = () => (
+  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+  </svg>
+);
+
+const PlayIcon = () => (
+  <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+    <path d="M8 5v14l11-7z" />
+  </svg>
+);
+
+const PauseIcon = () => (
+  <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+  </svg>
+);
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -225,7 +248,7 @@ const ImageBanner = ({
           aria-label="Previous slide"
           className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-40 p-3 sm:p-4 rounded-full bg-black/40 hover:bg-pink-600/80 text-white backdrop-blur-md border border-white/20 transition-all duration-300 hover:scale-110 shadow-lg cursor-pointer"
         >
-          <FiChevronLeft size={24} />
+          <ChevronLeftIcon />
         </button>
 
         <button
@@ -233,7 +256,7 @@ const ImageBanner = ({
           aria-label="Next slide"
           className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-40 p-3 sm:p-4 rounded-full bg-black/40 hover:bg-pink-600/80 text-white backdrop-blur-md border border-white/20 transition-all duration-300 hover:scale-110 shadow-lg cursor-pointer"
         >
-          <FiChevronRight size={24} />
+          <ChevronRightIcon />
         </button>
 
         {/* Foreground Content & Typography */}
@@ -311,7 +334,7 @@ const ImageBanner = ({
               title={isPlaying ? "Pause Slideshow" : "Play Slideshow"}
               aria-label={isPlaying ? "Pause Slideshow" : "Play Slideshow"}
             >
-              {isPlaying ? <FiPause size={14} /> : <FiPlay size={14} />}
+              {isPlaying ? <PauseIcon /> : <PlayIcon />}
             </button>
 
             {/* Slide Index Badge */}
