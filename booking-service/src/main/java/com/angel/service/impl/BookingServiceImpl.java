@@ -6,6 +6,7 @@ import com.angel.dto.SalonDTO;
 import com.angel.dto.ServiceDTO;
 import com.angel.dto.UserDTO;
 import com.angel.modal.Booking;
+import com.angel.modal.PaymentOrder;
 import com.angel.modal.SalonReport;
 import com.angel.repository.BookingRepository;
 import com.angel.service.BookingService;
@@ -132,5 +133,12 @@ public class BookingServiceImpl implements BookingService {
         report.setTotalBookings(totalBookings);
         report.setTotalRefund(totalRefund);
         return report;
+    }
+
+    @Override
+    public Booking bookingSuccess(PaymentOrder order) throws Exception {
+        Booking existingBooking = getBookingById(order.getBookingId());
+        existingBooking.setStatus(BookingStatus.CONFIRMED);
+        return bookingRepository.save(existingBooking);
     }
 }

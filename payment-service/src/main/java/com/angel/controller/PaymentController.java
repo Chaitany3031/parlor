@@ -6,6 +6,7 @@ import com.angel.modal.PaymentOrder;
 import com.angel.payload.dto.BookingDTO;
 import com.angel.payload.response.PaymentLinkResponse;
 import com.angel.service.PaymentService;
+import com.angel.service.client.UserFeignClient;
 import com.razorpay.RazorpayException;
 import com.stripe.exception.StripeException;
 import lombok.RequiredArgsConstructor;
@@ -17,17 +18,17 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class PaymentController {
     private final PaymentService paymentService;
+    private final UserFeignClient userFeignClient;
     @PostMapping("/create")
     public ResponseEntity<PaymentLinkResponse> createPaymentLink(
             @RequestBody BookingDTO bookingDTO,
-            @RequestParam PaymentMethod paymentMethod
-            ) throws StripeException, RazorpayException {
-        UserDTO userDTO = new UserDTO();
-        userDTO.setFullName("Kiyansh");
-        userDTO.setEmail("ck2130@gmail.com");
-        userDTO.setId(1L);
+            @RequestParam PaymentMethod paymentMethod,
+            @RequestHeader("Authorization") String jwt
+            ) throws Exception {
+        UserDTO userDTO = userFeignClient.getUserProfile(jwt).getBody();
 
         PaymentLinkResponse res = paymentService.createOrder(userDTO,bookingDTO,paymentMethod);
+
 
         return ResponseEntity.ok(res);
     }

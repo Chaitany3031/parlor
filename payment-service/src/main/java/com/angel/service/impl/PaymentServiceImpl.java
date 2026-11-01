@@ -2,6 +2,8 @@ package com.angel.service.impl;
 
 import com.angel.domain.PaymentMethod;
 import com.angel.domain.PaymentOrderStatus;
+import com.angel.messaging.BookingEventProducer;
+import com.angel.messaging.NotificationEventProducer;
 import com.angel.payload.dto.BookingDTO;
 import com.angel.dto.UserDTO;
 import com.angel.modal.PaymentOrder;
@@ -18,6 +20,7 @@ import com.stripe.model.checkout.Session;
 import com.stripe.param.checkout.SessionCreateParams;
 import lombok.RequiredArgsConstructor;
 import org.json.JSONObject;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +29,8 @@ import org.springframework.stereotype.Service;
 public class PaymentServiceImpl implements PaymentService {
 
     private final PaymentOrderRepository paymentOrderRepository;
+    private final BookingEventProducer bookingEventProducer;
+    private final NotificationEventProducer notificationEventProducer;
 
     @Value("${stripe.api.secret}")
     private String stripeSecretKey;
@@ -150,6 +155,11 @@ public class PaymentServiceImpl implements PaymentService {
                     String status = payment.get("status");
                     if(status.equals("captured")){
     //                    produce kafka event
+                        bookingEventProducer.sentBookingUpdateEvent(paymentOrder);
+                        notificationEventProducer.sentNotification(paymentOrder.getBookingId(),
+                                paymentOrder.getUserId(),
+                                paymentOrder.getSalonId());
+
                         paymentOrder.setStatus(PaymentOrderStatus.SUCCESS);
                         paymentOrderRepository.save(paymentOrder);
                         return true;

@@ -40,10 +40,22 @@ spring:
               predicates:
                 - Path=/api/categories/**
 
+
+            - id: NOTIFICATION-SERVICE
+              uri: lb://NOTIFICATION-SERVICE
+              predicates:
+                - Path=/api/notifications/**
+
+
             - id: PAYMENT-SERVICE
               uri: lb://PAYMENT-SERVICE
               predicates:
                 - Path=/api/payments/**
+
+            - id: REVIEW-SERVICE
+              uri: lb://REVIEW-SERVICE
+              predicates:
+                - Path=/api/reviews/**
 
   security:
     oauth2:

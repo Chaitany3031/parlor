@@ -6,6 +6,7 @@ import com.angel.dto.SalonDTO;
 import com.angel.dto.ServiceDTO;
 import com.angel.dto.UserDTO;
 import com.angel.modal.Booking;
+import com.angel.modal.PaymentOrder;
 import com.angel.modal.SalonReport;
 
 import java.time.LocalDate;
@@ -20,4 +21,5 @@ public interface BookingService {
     Booking updateBooking(Long bookingId , BookingStatus status) throws Exception;
     List<Booking> getBookingsByDate(LocalDate date , Long salonId);
     SalonReport getSalonReport(Long salonId);
+    Booking bookingSuccess(PaymentOrder order) throws Exception;
 }

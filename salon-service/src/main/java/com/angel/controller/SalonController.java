@@ -69,7 +69,7 @@ public class SalonController {
     }
 
     @GetMapping("/{salonId}")
-    public ResponseEntity<List<SalonDTO>> getSalonById(
+    public ResponseEntity<SalonDTO> getSalonById(
             @PathVariable Long salonId,
             @RequestHeader(value = "Authorization", required = false) String jwt
     ) throws Exception {
@@ -87,7 +87,7 @@ public class SalonController {
                 }
             }
         }
-        return ResponseEntity.ok(List.of(salonDTO));
+        return ResponseEntity.ok(salonDTO);
     }
 
     @GetMapping("/search")

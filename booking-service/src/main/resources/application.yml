@@ -6,11 +6,19 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+    show-sql: true
   datasource:
-    url: jdbc:mysql://localhost:3306/bookingdb
+    url: jdbc:mysql://localhost:3306/bookingdb?createDatabaseIfNotExist=true
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
+
+  rabbitmq:
+    port: 5672
+    host: ${RABBITMQ_HOST:localhost}
+    username: guest
+    password: guest
+
 eureka:
   instance:
     prefer-ip-address: true
@@ -19,5 +27,3 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://localhost:8070/eureka/
-
-spring.jpa.show-sql: true

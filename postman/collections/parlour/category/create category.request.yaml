@@ -11,6 +11,6 @@ body:
 auth:
   type: bearer
   credentials:
-    token: "{{jwt}}"
+    token: '{{salon_jwt}}'
 settings: {}
 order: 1000

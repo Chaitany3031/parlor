@@ -1,5 +1,3 @@
-
-
 server:
   port: 5003
 spring:
@@ -8,8 +6,9 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+    show-sql: true
   datasource:
-    url: jdbc:mysql://localhost:3306/categorydb
+    url: jdbc:mysql://localhost:3306/categorydb?createDatabaseIfNotExist=true
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -21,5 +20,3 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://localhost:8070/eureka/
-
-spring.jpa.show-sql: true

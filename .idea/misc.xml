@@ -12,6 +12,8 @@
         <option value="$PROJECT_DIR$/payment-service/pom.xml" />
         <option value="$PROJECT_DIR$/eureka-server/pom.xml" />
         <option value="$PROJECT_DIR$/gateway-server/pom.xml" />
+        <option value="$PROJECT_DIR$/notifications/pom.xml" />
+        <option value="$PROJECT_DIR$/review/pom.xml" />
       </list>
     </option>
   </component>

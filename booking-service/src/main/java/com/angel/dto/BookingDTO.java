@@ -1,7 +1,6 @@
 package com.angel.dto;
 
 import com.angel.domain.BookingStatus;
-import jakarta.persistence.ElementCollection;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -16,4 +15,5 @@ public class BookingDTO {
     private LocalDateTime endTime;
     private Set<Long> serviceIds;
     private BookingStatus status=BookingStatus.PENDING;
+    private int totalPrice;
 }
