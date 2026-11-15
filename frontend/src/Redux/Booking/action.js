@@ -1,3 +1,4 @@
+import { data } from "react-router-dom";
 import api from "../../config/api";
 import {
     CREATE_BOOKING_FAILURE,
@@ -43,11 +44,15 @@ export const createBooking = (reqData) => async (dispatch) => {
             {
                 headers: {
                     Authorization: `Bearer ${jwt}`
+                },
+                params:{
+                    salonId,paymentMethod:"RAZORPAY"
                 }
             }
         );
 
         if (response.data && response.data.payment_link_url) {
+            console.log(' create booking ',data);
             window.location.href = response.data.payment_link_url;
         }
 

@@ -9,7 +9,7 @@ import SalonList from '../Salon/SalonList'
 const Home = () => {
   return (
    <>
-   <div className="space-y-20">
+   <div className="space-y-20 bg-pink-300">
     <section>
         {/* Existing Video Banner (uncomment to switch back): */}
         {/* <Banner/> */}

@@ -10,10 +10,12 @@ import Home from '../Customer/Home/Home'
 import Notifications from '../Customer/Notification/Notifications'
 import NotFound from '../NotFound/NotFound'
 import Auth from '../Auth/Auth'
+import Payment from '../Salon/Payment/Payment'
+import PaymentSuccess from '../Customer/Payment/PaymentSuccess'
 
 const CustomerRoutes = () => {
   return (
-    <div>
+    <div className='pb-20'>
         <Navbar/>
         <Routes>
         {/* <Route path='/salon-dashboard/*' element={<SalonDashboard/>} />  */}
@@ -23,6 +25,7 @@ const CustomerRoutes = () => {
         <Route path='/salon/:id' element={<SalonDetails/>}/>
         <Route path='/login' element={<Auth/>}/>
         <Route path='/register' element={<Auth/>}/>
+        <Route path='/payment-success/:id' element={<PaymentSuccess/>}/>
         <Route path='*' element={<NotFound/>}/>
       </Routes>
         

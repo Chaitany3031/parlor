@@ -11,7 +11,7 @@ import {
 } from "./mockData";
 
 export const API_BASE_URL =
-  import.meta.env.VITE_API_GATEWAY_URL || "http://localhost:5000";
+  import.meta.env.VITE_API_GATEWAY_URL || "";
 
 // Helper to safely execute fetch with timeout
 async function safeFetch(url, options = {}, timeoutMs = 2500) {

@@ -4,6 +4,7 @@ import com.angel.domain.BookingStatus;
 import lombok.Data;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Set;
 
 @Data
@@ -16,4 +17,7 @@ public class BookingDTO {
     private Set<Long> serviceIds;
     private BookingStatus status=BookingStatus.PENDING;
     private int totalPrice;
+    private Set<ServiceDTO> serviceDTOS;
+    private UserDTO userDTO;
+    private SalonDTO salonDTO;
 }

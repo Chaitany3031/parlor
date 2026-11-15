@@ -1,10 +1,8 @@
 package com.angel.controller;
 
+import com.angel.mapper.ReviewMapper;
 import com.angel.modal.Review;
-import com.angel.payload.dto.ApiResponse;
-import com.angel.payload.dto.ReviewRequest;
-import com.angel.payload.dto.SalonDTO;
-import com.angel.payload.dto.UserDTO;
+import com.angel.payload.dto.*;
 import com.angel.service.ReviewService;
 import com.angel.service.client.SalonFeignClient;
 import com.angel.service.client.UserFeignClient;
@@ -33,12 +31,21 @@ public class ReviewController {
     }
 
     @GetMapping("/salon/{salonId}")
-    public ResponseEntity<List<Review>> createReview(
+    public ResponseEntity<List<ReviewDTO>> getReviews(
             @PathVariable Long salonId,
             @RequestHeader("Authorization") String jwt) throws Exception {
         SalonDTO salonDTO = salonFeignClient.getSalonById(salonId).getBody();
         List<Review> reviews = reviewService.getReviewsBySalonId(salonDTO.getId());
-        return ResponseEntity.ok(reviews);
+        List<ReviewDTO> reviewDTOS = reviews.stream().map((review)->{
+            UserDTO userDTO = null;
+                    try{
+userDTO = userFeignClient.getUserById(review.getUserId()).getBody();
+                    } catch (Exception e) {
+                        throw new RuntimeException(e);
+                    }
+                    return ReviewMapper.toDTO(review,userDTO);
+        }).toList();
+        return ResponseEntity.ok(reviewDTOS);
     }
 
     @PutMapping("/{reviewId}")

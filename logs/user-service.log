@@ -8,23 +8,23 @@
 
  :: Spring Boot ::                (v4.1.1)
 
-2026-10-12T02:10:29.314+05:30  INFO 3028 --- [user-service] [           main] com.angel.UserServiceApplication         : Starting UserServiceApplication v0.0.1-SNAPSHOT using Java 17.0.20.1 with PID 3028 (C:\Users\chaitanya\OneDrive\Desktop\parlor\user-service\target\user-service-0.0.1-SNAPSHOT.jar started by chaitanya in C:\Windows\System32)
-2026-10-12T02:10:29.322+05:30  INFO 3028 --- [user-service] [           main] com.angel.UserServiceApplication         : No active profile set, falling back to 1 default profile: "default"
-2026-10-12T02:10:30.111+05:30  INFO 3028 --- [user-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-10-12T02:10:30.239+05:30  INFO 3028 --- [user-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 120 ms. Found 1 JPA repository interface.
-2026-10-12T02:10:30.489+05:30  INFO 3028 --- [user-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=5c1e2441-d94a-37a3-a1e1-527ba6701296
-2026-10-12T02:10:31.013+05:30  INFO 3028 --- [user-service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 5001 (http)
-2026-10-12T02:10:31.041+05:30  INFO 3028 --- [user-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-12T02:10:31.041+05:30  INFO 3028 --- [user-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
-2026-10-12T02:10:31.095+05:30  INFO 3028 --- [user-service] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1715 ms
-2026-10-12T02:10:31.358+05:30  INFO 3028 --- [user-service] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-10-12T02:10:31.442+05:30  INFO 3028 --- [user-service] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
-2026-10-12T02:10:31.938+05:30  INFO 3028 --- [user-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-10-12T02:10:31.968+05:30  INFO 3028 --- [user-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-10-12T02:10:32.384+05:30  INFO 3028 --- [user-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4cb58e8b
-2026-10-12T02:10:32.387+05:30  INFO 3028 --- [user-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-10-12T02:10:32.470+05:30  INFO 3028 --- [user-service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/userdb]
+2026-11-02T21:15:08.167+05:30  INFO 17888 --- [user-service] [           main] com.angel.UserServiceApplication         : Starting UserServiceApplication v0.0.1-SNAPSHOT using Java 17.0.20.1 with PID 17888 (C:\Users\chaitanya\OneDrive\Desktop\parlor\user-service\target\user-service-0.0.1-SNAPSHOT.jar started by chaitanya in C:\Users\chaitanya\OneDrive\Desktop\parlor)
+2026-11-02T21:15:08.177+05:30  INFO 17888 --- [user-service] [           main] com.angel.UserServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-11-02T21:15:10.760+05:30  INFO 17888 --- [user-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-02T21:15:11.267+05:30  INFO 17888 --- [user-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 470 ms. Found 1 JPA repository interface.
+2026-11-02T21:15:11.995+05:30  INFO 17888 --- [user-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=5c1e2441-d94a-37a3-a1e1-527ba6701296
+2026-11-02T21:15:13.394+05:30  INFO 17888 --- [user-service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 5001 (http)
+2026-11-02T21:15:13.438+05:30  INFO 17888 --- [user-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-02T21:15:13.441+05:30  INFO 17888 --- [user-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-11-02T21:15:13.552+05:30  INFO 17888 --- [user-service] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 5190 ms
+2026-11-02T21:15:14.153+05:30  INFO 17888 --- [user-service] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-02T21:15:14.484+05:30  INFO 17888 --- [user-service] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-11-02T21:15:16.626+05:30  INFO 17888 --- [user-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-02T21:15:16.770+05:30  INFO 17888 --- [user-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-02T21:15:17.740+05:30  INFO 17888 --- [user-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6fc6f68f
+2026-11-02T21:15:17.746+05:30  INFO 17888 --- [user-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-02T21:15:18.099+05:30  INFO 17888 --- [user-service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/userdb?createDatabaseIfNotExist=true]
 	Database driver: MySQL Connector/J
 	Database dialect: MySQLDialect
 	Database version: 8.0.46
@@ -35,54 +35,174 @@
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-10-12T02:10:33.557+05:30  INFO 3028 --- [user-service] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-10-12T02:10:33.627+05:30  INFO 3028 --- [user-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-10-12T02:10:33.697+05:30  INFO 3028 --- [user-service] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-10-12T02:10:33.828+05:30  WARN 3028 --- [user-service] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-10-12T02:10:34.590+05:30  INFO 3028 --- [user-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
-2026-10-12T02:10:34.630+05:30  WARN 3028 --- [user-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-10-12T02:10:34.654+05:30  INFO 3028 --- [user-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2026-10-12T02:10:34.679+05:30  INFO 3028 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2026-10-12T02:10:34.682+05:30  INFO 3028 --- [user-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-10-12T02:10:34.690+05:30  INFO 3028 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2026-10-12T02:10:34.690+05:30  INFO 3028 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2026-10-12T02:10:34.691+05:30  INFO 3028 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2026-10-12T02:10:34.691+05:30  INFO 3028 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2026-10-12T02:10:34.691+05:30  INFO 3028 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2026-10-12T02:10:34.691+05:30  INFO 3028 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2026-10-12T02:10:34.691+05:30  INFO 3028 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2026-10-12T02:10:35.070+05:30  INFO 3028 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2026-10-12T02:10:35.072+05:30  INFO 3028 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2026-10-12T02:10:35.073+05:30  INFO 3028 --- [user-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-10-12T02:10:35.074+05:30  INFO 3028 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1791751235073 with initial instances count: 7
-2026-10-12T02:10:35.077+05:30  INFO 3028 --- [user-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USER-SERVICE with eureka with status UP
-2026-10-12T02:10:35.077+05:30  INFO 3028 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1791751235077, current=UP, previous=STARTING]
-2026-10-12T02:10:35.078+05:30  INFO 3028 --- [user-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/LAPTOP-D5R0UOU6:user-service:5001: registering service...
-2026-10-12T02:10:35.104+05:30  INFO 3028 --- [user-service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 5001 (http) with context path '/'
-2026-10-12T02:10:35.105+05:30  INFO 3028 --- [user-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 5001
-2026-10-12T02:10:35.114+05:30  INFO 3028 --- [user-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/LAPTOP-D5R0UOU6:user-service:5001 - registration status: 204
-2026-10-12T02:10:35.252+05:30  INFO 3028 --- [user-service] [           main] com.angel.UserServiceApplication         : Started UserServiceApplication in 6.625 seconds (process running for 7.352)
-2026-10-12T02:10:56.577+05:30  INFO 3028 --- [user-service] [nio-5001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-10-12T02:10:56.578+05:30  INFO 3028 --- [user-service] [nio-5001-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-10-12T02:10:56.580+05:30  INFO 3028 --- [user-service] [nio-5001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-user created successfully
-Hibernate: select next_val as id_val from user_seq for update
-Hibernate: update user_seq set next_val= ? where next_val=?
-Hibernate: insert into user (created_at,email,full_name,password,phone,role,updated_at,username,id) values (?,?,?,?,?,?,?,?,?)
-2026-10-12T02:15:34.699+05:30  INFO 3028 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-10-12T02:20:34.703+05:30  INFO 3028 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-10-12T02:25:34.711+05:30  INFO 3028 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-10-12T02:30:34.724+05:30  INFO 3028 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-10-12T02:35:34.728+05:30  INFO 3028 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-10-12T02:40:34.735+05:30  INFO 3028 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-10-12T02:45:34.751+05:30  INFO 3028 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-user created successfully
-Hibernate: insert into user (created_at,email,full_name,password,phone,role,updated_at,username,id) values (?,?,?,?,?,?,?,?,?)
-Hibernate: insert into user (created_at,email,full_name,password,phone,role,updated_at,username,id) values (?,?,?,?,?,?,?,?,?)
-Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0
-Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.id=?
-Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.id=?
-Hibernate: update user set email=?,full_name=?,password=?,phone=?,role=?,updated_at=?,username=? where id=?
-Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.id=?
-Hibernate: delete from user where id=?
-2026-10-12T02:50:34.752+05:30  INFO 3028 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T21:15:21.917+05:30  INFO 17888 --- [user-service] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-02T21:15:22.138+05:30  INFO 17888 --- [user-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-02T21:15:22.366+05:30  INFO 17888 --- [user-service] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-02T21:15:23.170+05:30  WARN 17888 --- [user-service] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-11-02T21:15:25.339+05:30  INFO 17888 --- [user-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-11-02T21:15:25.450+05:30  WARN 17888 --- [user-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-11-02T21:15:25.515+05:30  INFO 17888 --- [user-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-11-02T21:15:25.587+05:30  INFO 17888 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-11-02T21:15:25.601+05:30  INFO 17888 --- [user-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T21:15:25.636+05:30  INFO 17888 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-02T21:15:25.636+05:30  INFO 17888 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-02T21:15:25.636+05:30  INFO 17888 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-02T21:15:25.636+05:30  INFO 17888 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-02T21:15:25.636+05:30  INFO 17888 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-02T21:15:25.636+05:30  INFO 17888 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-11-02T21:15:25.643+05:30  INFO 17888 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-02T21:15:26.684+05:30  INFO 17888 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-11-02T21:15:26.700+05:30  INFO 17888 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-11-02T21:15:26.700+05:30  INFO 17888 --- [user-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-11-02T21:15:26.709+05:30  INFO 17888 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1793634326709 with initial instances count: 0
+2026-11-02T21:15:26.724+05:30  INFO 17888 --- [user-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USER-SERVICE with eureka with status UP
+2026-11-02T21:15:26.724+05:30  INFO 17888 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1793634326724, current=UP, previous=STARTING]
+2026-11-02T21:15:26.724+05:30  INFO 17888 --- [user-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/LAPTOP-D5R0UOU6:user-service:5001: registering service...
+2026-11-02T21:15:26.788+05:30  INFO 17888 --- [user-service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 5001 (http) with context path '/'
+2026-11-02T21:15:26.788+05:30  INFO 17888 --- [user-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 5001
+2026-11-02T21:15:26.852+05:30  INFO 17888 --- [user-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/LAPTOP-D5R0UOU6:user-service:5001 - registration status: 204
+2026-11-02T21:15:27.213+05:30  INFO 17888 --- [user-service] [           main] com.angel.UserServiceApplication         : Started UserServiceApplication in 21.198 seconds (process running for 22.256)
+2026-11-02T21:15:56.701+05:30  INFO 17888 --- [user-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-02T21:15:56.703+05:30  INFO 17888 --- [user-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-02T21:15:56.703+05:30  INFO 17888 --- [user-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-02T21:15:56.703+05:30  INFO 17888 --- [user-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-02T21:15:56.703+05:30  INFO 17888 --- [user-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-02T21:15:56.703+05:30  INFO 17888 --- [user-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-11-02T21:15:56.703+05:30  INFO 17888 --- [user-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-02T21:15:56.758+05:30  INFO 17888 --- [user-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-11-02T21:20:25.656+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T21:25:25.696+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T21:26:04.753+05:30  INFO 17888 --- [user-service] [nio-5001-exec-9] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-02T21:26:04.753+05:30  INFO 17888 --- [user-service] [nio-5001-exec-9] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-02T21:26:04.785+05:30  INFO 17888 --- [user-service] [nio-5001-exec-9] o.s.web.servlet.DispatcherServlet        : Completed initialization in 32 ms
+2026-11-02T21:30:25.738+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+2026-11-02T21:35:25.764+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T21:40:25.783+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T21:45:25.787+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T21:50:25.799+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T21:55:25.804+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T22:00:25.811+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T22:05:25.816+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T22:10:25.822+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T22:15:25.835+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T22:20:25.841+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+2026-11-02T22:25:25.845+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+2026-11-02T22:30:25.858+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T22:35:25.873+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T22:40:25.877+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+2026-11-02T22:45:25.881+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+2026-11-02T22:50:25.887+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+2026-11-02T22:55:25.893+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+2026-11-02T23:00:25.908+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T23:05:25.919+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T23:10:25.935+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T23:15:25.944+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+2026-11-02T23:20:25.959+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from user u1_0 where u1_0.email=?
+2026-11-02T23:25:25.969+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T23:30:25.982+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T23:35:26.000+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T23:40:26.008+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T23:45:26.018+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T23:50:26.049+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T23:55:26.111+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-03T00:00:26.158+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-03T00:05:26.180+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-03T00:10:26.201+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-03T00:15:26.211+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-03T00:20:26.242+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-03T00:25:26.265+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-03T00:30:26.282+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-03T00:35:26.297+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-03T00:40:26.358+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-03T00:45:26.412+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-03T00:50:26.439+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-03T00:55:26.444+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-03T01:00:26.455+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-03T01:05:26.474+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-03T01:10:26.490+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-03T01:15:26.499+05:30  INFO 17888 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

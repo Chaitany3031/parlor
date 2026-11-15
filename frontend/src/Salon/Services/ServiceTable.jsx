@@ -6,6 +6,11 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { fetchServicesBySalonId } from '../../Redux/ServiceOffering/action';
+import IconButton from '@mui/material/IconButton';
+import Edit from '@mui/icons-material';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -40,6 +45,22 @@ const rows = [
 ];
 
 export default function ServiceTable() {
+  const dispatch = useDispatch()
+  const {salon,service} =   useSelector(store=>store)
+  useEffect(()=>{
+    if(salon.salon){
+    dispatch(
+      fetchServicesBySalonId({
+        salonId:salon.salon.id,
+        jwt: localStorage.getItem('jwt'),
+        categotyId:null
+      }))
+      dispatch(getCategoriesBySalon({jwt:localStorage.getItem('jwt'),
+    salonId:salon.salon?.id
+  }))
+    }
+  },[salon.salon])
+  
   return (
    <>
    <h1 className="pb-5 font-bold text-xl">Services</h1>
@@ -56,18 +77,19 @@ export default function ServiceTable() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
-            <StyledTableRow key={row.name}>
+          {service.services.map((service) => (
+            <StyledTableRow key={service.name}>
               <StyledTableCell component="th" scope="row">
                <div className='flex gap-1 flex-wrap'>
-                <img className='w-20 rounded-md' src="" alt="" />
+                <img className='w-20 rounded-md' src={service.image} alt="" />
                 </div>
               </StyledTableCell>
-              <StyledTableCell align="right">{row.calories}</StyledTableCell>
-              <StyledTableCell align="right">{row.fat}</StyledTableCell>
+              <StyledTableCell align="right">{service.name}</StyledTableCell>
+              <StyledTableCell align="right">{service.price }</StyledTableCell>
               <StyledTableCell align="right">
-                <p>Kaveri</p>
-                <p>kxvx@gmail.com</p>
+                <IconButton>
+                   <Edit/>
+                </IconButton>
               </StyledTableCell>
              {/* <StyledTableCell align="right">{row.protein}</StyledTableCell>
              <StyledTableCell align="right">{row.protein}</StyledTableCell>  */}

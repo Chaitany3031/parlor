@@ -11,6 +11,7 @@ import SalonDashboard from './Salon/SalonDashboard'
 import SalonDetail from './Customer/Salon/SalonDetails/SalonDetail'
 import CustomerRoutes from './Routes/CustomerRoutes'
 import LoginForm from './Auth/LoginForm'
+import Auth from './Auth/Auth'
 // import { Notifications } from '@mui/icons-material'
 
 const App = () => {
@@ -23,8 +24,8 @@ const App = () => {
       {/* <Notifications/> */}
       <Routes>
         <Route path='/salon-dashboard/*' element={<SalonDashboard/>} />
-        <Route path='/register' element={<SalonDashboard/>} />
-        <Route path='/login' element={<LoginForm/>} />
+        <Route path='/register' element={<Auth/>} />
+        <Route path='/login' element={<Auth/>} />
         <Route path='*' element={<CustomerRoutes/>} />
       </Routes>
     </ThemeProvider>
@@ -32,3 +33,7 @@ const App = () => {
 }
 
 export default App
+
+
+// i am making the project watching this video and coding each line https://youtu.be/chcQgIr41XQ
+// some components got messed up i am getting lot errors in console resolve all of them final app should run bug free error free actual in video the redux code was pasted without typing on screen recording and i made it write with help of you ai so the things in my project and the project in the video is messed up

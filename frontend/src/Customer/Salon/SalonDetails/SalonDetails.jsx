@@ -1,15 +1,20 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import SalonDetail from './SalonDetail'
 import { Button, Divider } from '@mui/material'
 import SalonServiceDetails from './SalonServiceDetails'
 import Review from '../../Review/Review'
 import CreateReviewForm from '../../Review/CreateReviewForm'
+import { useParams } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { fetchSalonById } from '../../../Redux/Salon/action'
 
 const tabs = [{name:"All services"},{name:"Reviews"},{name:"Create Review"}]
 
 const SalonDetails = () => {
   const [activeTab,setActiveTab] = useState(tabs[0]) 
   const handleActiveTab=(tab)=>()=>setActiveTab(tab)
+  
+  
   return (
     <div className='px-5 lg:px-20'>
       <SalonDetail/>

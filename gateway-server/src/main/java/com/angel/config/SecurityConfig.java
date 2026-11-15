@@ -26,6 +26,7 @@ public class SecurityConfig {
     public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity httpSecurity){
         httpSecurity.authorizeExchange(
                 exchanges -> exchanges
+                        .pathMatchers(HttpMethod.OPTIONS).permitAll()
                         .pathMatchers("/auth/**").permitAll()
                         .pathMatchers("/api/notifications/ws/**").permitAll()
                         .pathMatchers(HttpMethod.GET, "/api/salons/**", "/salons/**").permitAll()
@@ -50,13 +51,10 @@ public class SecurityConfig {
         return httpSecurity.build();
     }
 
-    private CorsConfigurationSource corsConfigurationSource() {
+    @Bean
+    public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
-        corsConfiguration.setAllowedOrigins(Arrays.asList(
-                //20:05:32
-                "http://localhost:3000",
-                "http://localhost:5170"
-        ));
+        corsConfiguration.addAllowedOriginPattern("*");
         corsConfiguration.setAllowedMethods(Arrays.asList("GET","POST","PUT","DELETE","OPTIONS","PATCH"));
         corsConfiguration.setAllowedHeaders(Collections.singletonList("*"));
         corsConfiguration.setExposedHeaders(Collections.singletonList("Authorization"));

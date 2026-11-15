@@ -12,8 +12,16 @@ import HomePage from './Home/HomePage'
 import Payment from './Payment/Payment'
 import Notifications from '../Customer/Notification/Notifications'
 import SalonRoutes from '../Routes/SalonRoutes'
+import { fetchSalonByOwner } from '../Redux/Salon/action'
+import { getUser } from '../Redux/Auth/action'
+import { useDispatch } from 'react-redux'
 
 const SalonDashboard = () => {
+  const dispatch = useDispatch()
+  useEffect(()=>{
+        dispatch(fetchSalonByOwner(localStorage.getItem('jwt')))
+        dispatch(getUser(localStorage.getItem('jwt')))
+    },[])
   return (
     <div className='min-h-screen'>
       <Navbar DrawerList={SalonDrawerList} />

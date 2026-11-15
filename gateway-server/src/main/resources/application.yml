@@ -7,11 +7,32 @@ spring:
 
   cloud:
     gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_UNIQUE
       server:
         webflux:
           discovery:
             locator:
               enabled: true
+
+          globalcors:
+            add-to-simple-url-handler-mapping: true
+            cors-configurations:
+              '[/**]':
+                allowedOriginPatterns:
+                  - "*"
+                allowedMethods:
+                  - GET
+                  - POST
+                  - PUT
+                  - DELETE
+                  - OPTIONS
+                  - PATCH
+                allowedHeaders: "*"
+                exposedHeaders:
+                  - "Authorization"
+                allowCredentials: true
+                maxAge: 3600
 
           routes:
 
@@ -45,6 +66,11 @@ spring:
               uri: lb://NOTIFICATION-SERVICE
               predicates:
                 - Path=/api/notifications/**
+
+            - id: REVIEW
+              uri: lb://REVIEW
+              predicates:
+                - Path=/api/reviews/**
 
 
             - id: PAYMENT-SERVICE

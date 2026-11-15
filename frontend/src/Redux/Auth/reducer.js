@@ -15,7 +15,8 @@ const initialState = {
     user:null,
     isLoading:false,
     error:null,
-    customers:[]
+    customers:[],
+    jwt:null
 }
 
 

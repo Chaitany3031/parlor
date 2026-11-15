@@ -1,0 +1,17 @@
+$kind: http-request
+url: http://localhost:5000/api/notifications
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"salonId\":2,\r
+
+    \    \"userId\":3,\r
+
+    \    \"bookingId\":8,\r
+
+    \    \"description\":\"hey sweetie kxvx\"\r
+
+    }"
+order: 2000

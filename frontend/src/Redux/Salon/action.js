@@ -84,6 +84,10 @@ export const fetchSalons = () => async (dispatch) => {
                 Authorization: `Bearer ${localStorage.getItem('jwt')}`
             }
         });
+
+        console.log('Salons fetched --------- ',response.data);
+        
+
         dispatch({
             type: FETCH_SALONS_SUCCESS,
             payload: response.data

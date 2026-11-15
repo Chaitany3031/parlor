@@ -2,19 +2,19 @@ import React from 'react'
 import StarIcon from '@mui/icons-material/Star'
 import { useNavigate } from 'react-router-dom'
 
-const SalonCard = () => {
+const SalonCard = ({item}) => {
   const navigate = useNavigate()
   return (
-    <div onClick={()=>navigate('/salon/2')} className='cursor-pointer' >
+    <div onClick={()=>navigate(`/salon/${item.id}`)} className='cursor-pointer' >
       <div className='w-56 md:w-80 rounded-md bg-pink-500'>
-      <img className='w-full h-[15rem] object-cover rounded-t-md' src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80" alt="Salon" />
+      <img className='w-full h-[15rem] object-cover rounded-t-md' src={item.images[0]} alt="Salon" />
       <div className="p-5 space-y-2">
-        <h1>Angels Parlor</h1>
+        <h1>{item.name}</h1>
         <div className='text-white text-sm p-1 bg-pink-500 rounded-full w-14 flex items-center justify-center gap-1'>
           2.130<StarIcon sx={{fontSize:"16px"}} />
         </div>
         <p>Professional services...</p>
-        <p>Uran Kamtha</p>
+        <p>{item.address}</p>
       </div>
       </div>
     </div>

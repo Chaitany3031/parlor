@@ -39,6 +39,9 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
     public AuthResponse signup(SignupDTO req) throws Exception {
+        if (req.getUsername() == null || req.getUsername().isBlank()) {
+            req.setUsername(req.getEmail());
+        }
         keyCloakService.createUser(req);
         User user = new User();
         user.setUsername(req.getUsername());

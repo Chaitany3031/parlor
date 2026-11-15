@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ReviewCard from './ReviewCard'
 import { Divider } from '@mui/material'
 import RatingCard from './RatingCard'
+import {fetchReviews} from '../../Redux/Review/action'
+import { useDispatch, useSelector } from 'react-redux'
+import { useParams } from 'react-router-dom'
 
 const Review = () => {
+    const dispatch = useDispatch()
+  const { review } = useSelector(store => store)
+  const {id} = useParams()
+  useEffect(()=>{
+    dispatch(fetchReviews({
+        salonId:id,
+        jwt:localStorage.getItem('jwt')
+    }))
+  },[])
   return (
     <div className='pt-10 flex flex-col lg:flex-row gap-20'>
         <section className='w-full md:w-1/2 lg:w-[40%] space-y-2'>
@@ -15,7 +27,7 @@ const Review = () => {
         <section className="w-full md:w-1/2 lg:w-[60%]">
         <div className="mt-10">
             <div className="space-y-5">
-                {[1,1,1,1].map((i)=><div className='space-y-7'><ReviewCard/><Divider/></div>)}
+                {review.reviews.map((i)=><div className='space-y-7'><ReviewCard item={item} /><Divider/></div>)}
             </div>
         </div>
         </section>

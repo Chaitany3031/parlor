@@ -8,23 +8,23 @@
 
  :: Spring Boot ::                (v4.1.1)
 
-2026-10-12T02:17:00.317+05:30  INFO 32240 --- [category-service] [           main] com.angel.CategoryServiceApplication     : Starting CategoryServiceApplication v0.0.1-SNAPSHOT using Java 17.0.20.1 with PID 32240 (C:\Users\chaitanya\OneDrive\Desktop\parlor\category-service\target\category-service-0.0.1-SNAPSHOT.jar started by chaitanya in C:\Windows\System32)
-2026-10-12T02:17:00.320+05:30  INFO 32240 --- [category-service] [           main] com.angel.CategoryServiceApplication     : No active profile set, falling back to 1 default profile: "default"
-2026-10-12T02:17:01.111+05:30  INFO 32240 --- [category-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-10-12T02:17:01.249+05:30  INFO 32240 --- [category-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 132 ms. Found 1 JPA repository interface.
-2026-10-12T02:17:01.441+05:30  INFO 32240 --- [category-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=eec43859-89e0-32fe-8994-f9c28a666a62
-2026-10-12T02:17:01.870+05:30  INFO 32240 --- [category-service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 5003 (http)
-2026-10-12T02:17:01.879+05:30  INFO 32240 --- [category-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-12T02:17:01.879+05:30  INFO 32240 --- [category-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
-2026-10-12T02:17:01.913+05:30  INFO 32240 --- [category-service] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1528 ms
-2026-10-12T02:17:02.114+05:30  INFO 32240 --- [category-service] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-10-12T02:17:02.187+05:30  INFO 32240 --- [category-service] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
-2026-10-12T02:17:02.662+05:30  INFO 32240 --- [category-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-10-12T02:17:02.699+05:30  INFO 32240 --- [category-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-10-12T02:17:03.178+05:30  INFO 32240 --- [category-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e789704
-2026-10-12T02:17:03.178+05:30  INFO 32240 --- [category-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-10-12T02:17:03.277+05:30  INFO 32240 --- [category-service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/categorydb]
+2026-11-02T21:15:16.949+05:30  INFO 6136 --- [category-service] [           main] com.angel.CategoryServiceApplication     : Starting CategoryServiceApplication v0.0.1-SNAPSHOT using Java 17.0.20.1 with PID 6136 (C:\Users\chaitanya\OneDrive\Desktop\parlor\category-service\target\category-service-0.0.1-SNAPSHOT.jar started by chaitanya in C:\Users\chaitanya\OneDrive\Desktop\parlor)
+2026-11-02T21:15:16.959+05:30  INFO 6136 --- [category-service] [           main] com.angel.CategoryServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-11-02T21:15:19.178+05:30  INFO 6136 --- [category-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-02T21:15:19.651+05:30  INFO 6136 --- [category-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 450 ms. Found 1 JPA repository interface.
+2026-11-02T21:15:20.277+05:30  INFO 6136 --- [category-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8694f5da-b82d-3432-9157-92efaca0fdc4
+2026-11-02T21:15:21.568+05:30  INFO 6136 --- [category-service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 5003 (http)
+2026-11-02T21:15:21.625+05:30  INFO 6136 --- [category-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-02T21:15:21.627+05:30  INFO 6136 --- [category-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-11-02T21:15:21.733+05:30  INFO 6136 --- [category-service] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 4617 ms
+2026-11-02T21:15:22.324+05:30  INFO 6136 --- [category-service] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-02T21:15:22.613+05:30  INFO 6136 --- [category-service] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-11-02T21:15:24.097+05:30  INFO 6136 --- [category-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-02T21:15:24.247+05:30  INFO 6136 --- [category-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-02T21:15:25.092+05:30  INFO 6136 --- [category-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@76d0a290
+2026-11-02T21:15:25.105+05:30  INFO 6136 --- [category-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-02T21:15:25.382+05:30  INFO 6136 --- [category-service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/categorydb?createDatabaseIfNotExist=true]
 	Database driver: MySQL Connector/J
 	Database dialect: MySQLDialect
 	Database version: 8.0.46
@@ -35,48 +35,79 @@
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-10-12T02:17:04.319+05:30  INFO 32240 --- [category-service] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-10-12T02:17:04.391+05:30  INFO 32240 --- [category-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-10-12T02:17:04.448+05:30  INFO 32240 --- [category-service] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-10-12T02:17:04.710+05:30  WARN 32240 --- [category-service] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-10-12T02:17:05.509+05:30  INFO 32240 --- [category-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
-2026-10-12T02:17:05.556+05:30  WARN 32240 --- [category-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-10-12T02:17:05.583+05:30  INFO 32240 --- [category-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2026-10-12T02:17:05.603+05:30  INFO 32240 --- [category-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2026-10-12T02:17:05.607+05:30  INFO 32240 --- [category-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-10-12T02:17:05.612+05:30  INFO 32240 --- [category-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2026-10-12T02:17:05.612+05:30  INFO 32240 --- [category-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2026-10-12T02:17:05.612+05:30  INFO 32240 --- [category-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2026-10-12T02:17:05.612+05:30  INFO 32240 --- [category-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2026-10-12T02:17:05.612+05:30  INFO 32240 --- [category-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2026-10-12T02:17:05.612+05:30  INFO 32240 --- [category-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2026-10-12T02:17:05.612+05:30  INFO 32240 --- [category-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2026-10-12T02:17:05.955+05:30  INFO 32240 --- [category-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2026-10-12T02:17:05.957+05:30  INFO 32240 --- [category-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2026-10-12T02:17:05.958+05:30  INFO 32240 --- [category-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-10-12T02:17:05.959+05:30  INFO 32240 --- [category-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1791751625959 with initial instances count: 7
-2026-10-12T02:17:05.959+05:30  INFO 32240 --- [category-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application CATEGORY-SERVICE with eureka with status UP
-2026-10-12T02:17:05.959+05:30  INFO 32240 --- [category-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1791751625959, current=UP, previous=STARTING]
-2026-10-12T02:17:05.959+05:30  INFO 32240 --- [category-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CATEGORY-SERVICE/LAPTOP-D5R0UOU6:category-service:5003: registering service...
-2026-10-12T02:17:06.008+05:30  INFO 32240 --- [category-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CATEGORY-SERVICE/LAPTOP-D5R0UOU6:category-service:5003 - registration status: 204
-2026-10-12T02:17:06.018+05:30  INFO 32240 --- [category-service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 5003 (http) with context path '/'
-2026-10-12T02:17:06.019+05:30  INFO 32240 --- [category-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 5003
-2026-10-12T02:17:06.209+05:30  INFO 32240 --- [category-service] [           main] com.angel.CategoryServiceApplication     : Started CategoryServiceApplication in 6.529 seconds (process running for 7.208)
-2026-10-12T02:17:42.885+05:30  INFO 32240 --- [category-service] [nio-5003-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-10-12T02:17:42.886+05:30  INFO 32240 --- [category-service] [nio-5003-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-10-12T02:17:42.887+05:30  INFO 32240 --- [category-service] [nio-5003-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-Hibernate: select c1_0.id,c1_0.image,c1_0.name,c1_0.salon_id from category c1_0 where c1_0.id=?
-Hibernate: delete from category where id=?
-2026-10-12T02:22:05.623+05:30  INFO 32240 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-10-12T02:27:05.625+05:30  INFO 32240 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-10-12T02:32:05.631+05:30  INFO 32240 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-10-12T02:37:05.634+05:30  INFO 32240 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-10-12T02:42:05.650+05:30  INFO 32240 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-Hibernate: select next_val as id_val from category_seq for update
-Hibernate: update category_seq set next_val= ? where next_val=?
-Hibernate: insert into category (image,name,salon_id,id) values (?,?,?,?)
-Hibernate: select c1_0.id,c1_0.image,c1_0.name,c1_0.salon_id from category c1_0 where c1_0.id=?
-Hibernate: select c1_0.id,c1_0.image,c1_0.name,c1_0.salon_id from category c1_0 where c1_0.salon_id=?
-Hibernate: select c1_0.id,c1_0.image,c1_0.name,c1_0.salon_id from category c1_0 where c1_0.id=?
-Hibernate: delete from category where id=?
-2026-10-12T02:47:05.656+05:30  INFO 32240 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T21:15:28.842+05:30  INFO 6136 --- [category-service] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-02T21:15:29.153+05:30  INFO 6136 --- [category-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-02T21:15:29.467+05:30  INFO 6136 --- [category-service] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-02T21:15:30.410+05:30  WARN 6136 --- [category-service] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-11-02T21:15:31.259+05:30  INFO 6136 --- [category-service] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'SALON-SERVICE' URL not provided. Will try picking an instance via load-balancing.
+2026-11-02T21:15:33.224+05:30  INFO 6136 --- [category-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-11-02T21:15:33.291+05:30  WARN 6136 --- [category-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-11-02T21:15:33.363+05:30  INFO 6136 --- [category-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-11-02T21:15:33.443+05:30  INFO 6136 --- [category-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-11-02T21:15:33.475+05:30  INFO 6136 --- [category-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T21:15:33.541+05:30  INFO 6136 --- [category-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-02T21:15:33.541+05:30  INFO 6136 --- [category-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-02T21:15:33.541+05:30  INFO 6136 --- [category-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-02T21:15:33.541+05:30  INFO 6136 --- [category-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-02T21:15:33.541+05:30  INFO 6136 --- [category-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-02T21:15:33.541+05:30  INFO 6136 --- [category-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-11-02T21:15:33.541+05:30  INFO 6136 --- [category-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-02T21:15:34.656+05:30  INFO 6136 --- [category-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-11-02T21:15:34.663+05:30  INFO 6136 --- [category-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-11-02T21:15:34.669+05:30  INFO 6136 --- [category-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-11-02T21:15:34.673+05:30  INFO 6136 --- [category-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1793634334672 with initial instances count: 2
+2026-11-02T21:15:34.681+05:30  INFO 6136 --- [category-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application CATEGORY-SERVICE with eureka with status UP
+2026-11-02T21:15:34.681+05:30  INFO 6136 --- [category-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1793634334681, current=UP, previous=STARTING]
+2026-11-02T21:15:34.690+05:30  INFO 6136 --- [category-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CATEGORY-SERVICE/LAPTOP-D5R0UOU6:category-service:5003: registering service...
+2026-11-02T21:15:34.748+05:30  INFO 6136 --- [category-service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 5003 (http) with context path '/'
+2026-11-02T21:15:34.748+05:30  INFO 6136 --- [category-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 5003
+2026-11-02T21:15:34.800+05:30  INFO 6136 --- [category-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CATEGORY-SERVICE/LAPTOP-D5R0UOU6:category-service:5003 - registration status: 204
+2026-11-02T21:15:35.173+05:30  INFO 6136 --- [category-service] [           main] com.angel.CategoryServiceApplication     : Started CategoryServiceApplication in 19.608 seconds (process running for 20.665)
+2026-11-02T21:20:33.554+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T21:25:33.590+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T21:30:33.596+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T21:35:33.629+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T21:40:33.650+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T21:45:33.655+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T21:50:33.666+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T21:55:33.669+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T22:00:33.685+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T22:05:33.724+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T22:10:33.740+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T22:15:33.754+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T22:20:33.765+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T22:25:33.796+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T22:30:33.801+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T22:35:33.811+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T22:40:33.817+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T22:45:33.834+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T22:50:33.837+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T22:55:33.848+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T23:00:33.861+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T23:05:33.864+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T23:10:33.873+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T23:15:33.883+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T23:20:33.899+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T23:25:33.940+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T23:30:33.975+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T23:35:33.978+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T23:40:34.007+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T23:45:34.023+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T23:50:34.055+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-02T23:55:34.073+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-03T00:00:34.099+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-03T00:05:34.121+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-03T00:10:34.142+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-03T00:15:34.147+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-03T00:20:34.159+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-03T00:25:34.178+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-03T00:30:34.183+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-03T00:35:34.202+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-03T00:40:34.236+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-03T00:45:34.248+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-03T00:50:34.269+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-03T00:55:34.274+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-03T01:00:34.299+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-03T01:05:34.307+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-03T01:10:34.322+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-03T01:15:34.334+05:30  INFO 6136 --- [category-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
