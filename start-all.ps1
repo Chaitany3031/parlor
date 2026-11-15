@@ -211,3 +211,9 @@ if ($offlineCount -eq 0) {
 } else {
     Write-Host "`n$offlineCount service(s) are OFFLINE. Review the corresponding log files in the 'logs' folder." -ForegroundColor Yellow
 }
+
+
+Write-Host "`nAll microservices are active. Monitoring heartbeat..." -ForegroundColor Cyan
+while ($true) {
+    Start-Sleep -Seconds 60
+}
