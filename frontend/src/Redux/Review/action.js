@@ -29,18 +29,21 @@ export const createReview = ({ salonId, reviewData, jwt }) => async (dispatch) =
     }
 };
 
-export const fetchReviewsBySalon = (salonId) => async (dispatch) => {
+export const fetchReviewsBySalon = (param) => async (dispatch) => {
     dispatch({ type: FETCH_REVIEWS_BY_SALON_REQUEST });
     try {
-        const token = localStorage.getItem('jwt');
+        const salonId = typeof param === 'object' && param !== null ? (param.salonId || param.id) : param;
+        const token = (typeof param === 'object' && param !== null ? param.jwt : null) || localStorage.getItem('jwt');
         const response = await api.get(`${API_BASE_URL}/salon/${salonId}`, {
-            headers: { Authorization: `Bearer ${token}` }
+            headers: token ? { Authorization: `Bearer ${token}` } : {}
         });
         dispatch({ type: FETCH_REVIEWS_BY_SALON_SUCCESS, payload: response.data });
     } catch (error) {
         dispatch({ type: FETCH_REVIEWS_BY_SALON_FAILURE, payload: error.response?.data?.message || error.message });
     }
 };
+
+export const fetchReviews = fetchReviewsBySalon;
 
 export const updateReview = ({ reviewId, reviewData, jwt }) => async (dispatch) => {
     dispatch({ type: UPDATE_REVIEW_REQUEST });

@@ -1,16 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import SalonDrawerList from './components/SalonDrawerList'
 import Navbar from '../Admin Salon/Navbar'
-import BookingTable from './Booking/BookingTable'
-import ServiceTable from './Services/ServiceTable'
-import TransactionTable from './Transaction/TransactionTable'
-import Category from './Category/Category'
-import { Route, Routes } from 'react-router-dom'
-// import { Home, Notifications } from '@mui/icons-material'
-import CreateServiceForm from './Services/CreateServiceForm'
-import HomePage from './Home/HomePage'
-import Payment from './Payment/Payment'
-import Notifications from '../Customer/Notification/Notifications'
 import SalonRoutes from '../Routes/SalonRoutes'
 import { fetchSalonByOwner } from '../Redux/Salon/action'
 import { getUser } from '../Redux/Auth/action'
@@ -18,23 +8,24 @@ import { useDispatch } from 'react-redux'
 
 const SalonDashboard = () => {
   const dispatch = useDispatch()
-  useEffect(()=>{
-        dispatch(fetchSalonByOwner(localStorage.getItem('jwt')))
-        dispatch(getUser(localStorage.getItem('jwt')))
-    },[])
+  
+  useEffect(() => {
+    const jwt = localStorage.getItem('jwt')
+    if (jwt) {
+      dispatch(fetchSalonByOwner(jwt))
+      dispatch(getUser(jwt))
+    }
+  }, [dispatch])
+
   return (
     <div className='min-h-screen'>
       <Navbar DrawerList={SalonDrawerList} />
       <section className="lg:flex lg:h-[90vh]">
-        <div className=" hidden lg:block h-full">
-          <SalonDrawerList/>
+        <div className="hidden lg:block h-full">
+          <SalonDrawerList />
         </div>
         <div className='p-10 w-full lg:w-[80%] overflow-y-auto'>
-          <SalonRoutes/>
-          {/* <BookingTable/> */}
-          {/* <ServiceTable/> */}
-          {/* <TransactionTable/> */}
-          {/* <Category/> */}
+          <SalonRoutes />
         </div>
       </section>
     </div>

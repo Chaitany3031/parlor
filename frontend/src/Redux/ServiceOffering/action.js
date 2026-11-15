@@ -67,6 +67,8 @@ export const createService = ({ serviceData, jwt }) => async (dispatch) => {
     }
 };
 
+export const createServiceAction = createService;
+
 export const updateService = ({ id, serviceData, jwt }) => async (dispatch) => {
     dispatch({ type: UPDATE_SERVICE_REQUEST });
     try {

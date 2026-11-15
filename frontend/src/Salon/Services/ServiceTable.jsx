@@ -10,7 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchServicesBySalonId } from '../../Redux/ServiceOffering/action';
 import IconButton from '@mui/material/IconButton';
-import Edit from '@mui/icons-material';
+import Edit from '@mui/icons-material/Edit';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {

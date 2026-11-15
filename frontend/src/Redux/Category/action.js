@@ -16,12 +16,15 @@ const API_BASE_URL = '/api/categories';
 export const fetchCategoriesBySalon = (salonId) => async (dispatch) => {
     dispatch({ type: FETCH_CATEGORIES_REQUEST });
     try {
-        const response = await api.get(`${API_BASE_URL}/salon/${salonId}`);
+        const id = typeof salonId === 'object' && salonId !== null ? (salonId.salonId || salonId.id) : salonId;
+        const response = await api.get(`${API_BASE_URL}/salon/${id}`);
         dispatch({ type: FETCH_CATEGORIES_SUCCESS, payload: response.data });
     } catch (error) {
         dispatch({ type: FETCH_CATEGORIES_FAILURE, payload: error.response?.data?.message || error.message });
     }
 };
+
+export const getCategoriesBySalon = fetchCategoriesBySalon;
 
 export const fetchCategoryById = (id) => async (dispatch) => {
     dispatch({ type: FETCH_CATEGORY_BY_ID_REQUEST });
